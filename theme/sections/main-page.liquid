@@ -1,0 +1,21 @@
+{%- comment -%}
+  Default page template (legal, info pages). Editorial column,
+  same typographic grammar as Journal. Content from Shopify admin.
+{%- endcomment -%}
+
+<article class="article">
+  <header class="article__hero">
+    <h1 class="article__title t-display">{{ page.title }}</h1>
+  </header>
+  <div class="article__body">
+    {{ page.content }}
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Page",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

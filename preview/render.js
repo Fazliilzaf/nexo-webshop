@@ -148,6 +148,7 @@ async function main() {
     arg === "product" ? "product"
     : arg === "ingredients" ? "ingredients"
     : arg === "brand" ? "brand"
+    : arg === "legalpage" ? "legalpage"
     : arg === "journal" ? "journal"
     : arg === "article" ? "article"
     : "index";
@@ -158,6 +159,7 @@ async function main() {
     mode === "product" ? "product.json"
     : mode === "ingredients" ? "page.ingredients.json"
     : mode === "brand" ? "page.brand.json"
+    : mode === "legalpage" ? "page.json"
     : mode === "journal" ? "blog.json"
     : mode === "article" ? "article.json"
     : "index.json";
@@ -221,6 +223,14 @@ async function main() {
   } else if (mode === "brand") {
     pageGlobals = {
       template: { name: "page", suffix: "brand" }
+    };
+  } else if (mode === "legalpage") {
+    pageGlobals = {
+      template: { name: "page", suffix: null },
+      page: {
+        title: "Köpvillkor",
+        content: "<p>Avtal, priser inklusive 25 % moms, betalning (Klarna, Swish, kort), leverans och ångerrätt.</p><h2>Priser och moms</h2><p>Alla priser anges i svenska kronor (SEK) inklusive moms.</p>"
+      }
     };
   } else if (mode === "journal" || mode === "article") {
     /* DEV-ONLY fixtures: content built solely from approved material
@@ -338,7 +348,7 @@ async function main() {
     return;
   }
 
-  if (mode === "journal" || mode === "article") {
+  if (mode === "journal" || mode === "article" || mode === "legalpage") {
     fs.writeFileSync(path.join(__dirname, mode + ".html"), out);
     console.log(`preview/${mode}.html written (${localeName})`);
     return;

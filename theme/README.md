@@ -66,6 +66,9 @@ no glass, no JS, only type, space and principles.
 
 - Page handle `ingredienser` → theme template `page.ingredients`
 - Page handle `om-nexo` → theme template `page.brand`
+- Legal pages (default template `page`, content from `production/legal/`):
+  `integritetspolicy` · `kopvillkor` · `frakt-och-leverans` ·
+  `returer-och-angerratt` — publish only when all [ORG] tokens are replaced
 - Blog handle `journal` (templates `blog` + `article` apply automatically)
 - Products with handles above + `borste` (brush — renders via the accessory
   branch of the PDP template: no step nav, no ritual strip, no +n) and

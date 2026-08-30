@@ -43,10 +43,10 @@
         {{ 'footer.address' | t }} · {{ 'footer.email' | t }}
       </p>
       <nav aria-label="{{ 'footer.legal.terms' | t }}">
-        <a href="#">{{ 'footer.legal.terms' | t }}</a>
-        <a href="#">{{ 'footer.legal.privacy' | t }}</a>
-        <a href="#">{{ 'footer.legal.shipping' | t }}</a>
-        <a href="#">{{ 'footer.legal.returns' | t }}</a>
+        <a href="{{ routes.root_url }}pages/kopvillkor">{{ 'footer.legal.terms' | t }}</a>
+        <a href="{{ routes.root_url }}pages/integritetspolicy">{{ 'footer.legal.privacy' | t }}</a>
+        <a href="{{ routes.root_url }}pages/frakt-och-leverans">{{ 'footer.legal.shipping' | t }}</a>
+        <a href="{{ routes.root_url }}pages/returer-och-angerratt">{{ 'footer.legal.returns' | t }}</a>
       </nav>
     </div>
   </div>
