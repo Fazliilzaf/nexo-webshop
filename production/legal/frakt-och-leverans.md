@@ -1,6 +1,6 @@
 # Frakt & leverans — NEXO
 
-*Utkast 2026-08-30. Publiceras inte förrän alla [ORG]-token är ersatta.*
+**DRAFT — LEGAL REVIEW REQUIRED.** Publiceras inte förrän fraktbolag, priser och leveransalternativ är bekräftade i den riktiga butiken.
 
 ## Fraktkostnad
 

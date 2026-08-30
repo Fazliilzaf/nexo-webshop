@@ -1,6 +1,6 @@
 # Returer & ångerrätt — NEXO
 
-*Utkast 2026-08-30. Publiceras inte förrän alla [ORG]-token är ersatta. Låt jurist granska.*
+**DRAFT — LEGAL REVIEW REQUIRED.** Publiceras inte förrän (a) jurist granskat (särskilt hygienundantaget och 30 dagars frivilligt öppet köp kontra lagstadgad ångerrätt), (b) alla [ORG]-token är ersatta.
 
 ## 30 dagars öppet köp
 

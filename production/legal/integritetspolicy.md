@@ -1,6 +1,6 @@
 # Integritetspolicy — NEXO
 
-*Utkast 2026-08-30. Publiceras inte förrän alla [ORG]-token är ersatta. Låt jurist granska.*
+**DRAFT — LEGAL REVIEW REQUIRED.** Publiceras inte förrän (a) jurist granskat, (b) alla [ORG]-token är ersatta, (c) mottagare/biträden matchar den faktiska production-stacken.
 
 Den här integritetspolicyn beskriver hur [ORG.NAMN] ("NEXO", "vi"), org.nr [ORG.NR], [ADRESS], behandlar personuppgifter när du besöker ne8xo.com, handlar hos oss eller kontaktar oss.
 
@@ -24,7 +24,7 @@ E-post: contact@ne8xo.com · Telefon: [TELEFON]
 Vi säljer aldrig personuppgifter. Vi delar endast med de tjänsteleverantörer som krävs för att driva butiken:
 
 - **Shopify** (butiksplattform och hosting)
-- **Betalningspartners**: Klarna, Swish och kortinlösare — de behandlar uppgifter som krävs för betalning enligt sina egna villkor
+- **Betalningspartners**: [BETALNINGSPARTNERS — fylls i först när de är aktiverade i butiken] — de behandlar uppgifter som krävs för betalning enligt sina egna villkor
 - **Fraktpartners**: [FRAKTBOLAG] för leverans
 - **E-postleverantör** för nyhetsbrev: [E-POSTPLATTFORM]
 

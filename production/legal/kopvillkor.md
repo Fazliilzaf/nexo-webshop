@@ -1,6 +1,6 @@
 # Köpvillkor — NEXO
 
-*Utkast 2026-08-30. Publiceras inte förrän alla [ORG]-token är ersatta. Låt jurist granska.*
+**DRAFT — LEGAL REVIEW REQUIRED.** Publiceras inte förrän (a) jurist granskat, (b) alla [ORG]-token är ersatta, (c) innehållet matchar den faktiska production-stacken (betalning, frakt, plattform).
 
 Dessa villkor gäller för köp hos [ORG.NAMN], org.nr [ORG.NR], [ADRESS] ("NEXO", "vi") via ne8xo.com. Kontakt: contact@ne8xo.com · [TELEFON]
 
@@ -14,7 +14,7 @@ Alla priser anges i svenska kronor (SEK) inklusive 25 % moms. Fraktkostnad tillk
 
 ## Betalning
 
-Vi erbjuder betalning via Klarna, Swish och kort (Visa/Mastercard). Betalningen hanteras av våra betalningspartners enligt deras villkor. Vid fakturabetalning via Klarna gäller Klarnas egna villkor.
+[BETALNINGSMETODER — fylls i först när de är aktiverade och bekräftade i den riktiga butiken. Lista aldrig en betalmetod i publicerad text innan den faktiskt är live.] Betalningen hanteras av våra betalningspartners enligt deras villkor.
 
 ## Leverans
 
@@ -30,7 +30,7 @@ Har du fått en felaktig eller skadad vara? Kontakta contact@ne8xo.com så snart
 
 ## Tvist
 
-Vid tvist följer vi Allmänna reklamationsnämndens (ARN) rekommendationer, arn.se. Du kan även använda EU:s plattform för tvistlösning online (ODR), ec.europa.eu/consumers/odr.
+Vid tvist följer vi Allmänna reklamationsnämndens (ARN) rekommendationer, arn.se.
 
 ## Övrigt
 
