@@ -31,7 +31,8 @@
       <p class="t-mono t-ghost">{{ 'journal.related' | t }}</p>
       <a class="article__related-link" href="{{ related.url }}">
         <span class="article__related-name t-display">{{ related.title }}</span>
-        {%- if related.price > 0 -%}
+        {%- assign related_price = related.price | plus: 0 -%}
+        {%- if related_price > 0 -%}
           <span class="t-mono">{{ related.price | money }}</span>
         {%- endif -%}
         <span class="t-mono t-griege">→</span>

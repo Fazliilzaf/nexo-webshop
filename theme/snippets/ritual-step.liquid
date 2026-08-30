@@ -45,8 +45,15 @@
       <div class="ritual__info-row t-mono">
         <span>{{ base | append: '.volume' | t }}</span>
         <span class="ritual__price">
-          {%- if product and product.price > 0 -%}
-            {{ product.price | money }}
+          {%- if product -%}
+            {%- assign price_number = product.price | plus: 0 -%}
+            {%- if price_number > 0 -%}
+              {{ product.price | money }}
+            {%- else -%}
+              <span aria-hidden="true">0,00 kr</span>
+              <span class="dev-badge">{{ 'general.price.tbd' | t }}</span>
+              <span class="visually-hidden">{{ 'general.price.tbd_note' | t }}</span>
+            {%- endif -%}
           {%- else -%}
             <span aria-hidden="true">0,00 kr</span>
             <span class="dev-badge">{{ 'general.price.tbd' | t }}</span>

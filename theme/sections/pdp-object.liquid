@@ -142,7 +142,8 @@
       <div class="pdp__row t-mono">
         <span>{{ volume }}</span>
         <span class="pdp__price">
-          {%- if product.price > 0 -%}
+          {%- assign price_number = product.price | plus: 0 -%}
+          {%- if price_number > 0 -%}
             {{ product.price | money }}
           {%- else -%}
             <span aria-hidden="true">0,00 kr</span>
@@ -282,7 +283,8 @@
     {%- if product.selected_or_first_available_variant -%}
     "sku": {{ product.selected_or_first_available_variant.sku | default: '' | json }},
     {%- endif -%}
-    {%- if product.price > 0 -%}
+    {%- assign price_number = product.price | plus: 0 -%}
+    {%- if price_number > 0 -%}
     "offers": {
       "@type": "Offer",
       "price": {{ product.price | divided_by: 100.0 | json }},

@@ -45,8 +45,14 @@
         <p class="bundle__desc t-smoke">{{ 'bundle.description' | t }}</p>
 
         <div class="bundle__price t-mono">
-          {%- if ritual_product and ritual_product.price > 0 -%}
-            {{ ritual_product.price | money }}
+          {%- if ritual_product -%}
+            {%- assign price_number = ritual_product.price | plus: 0 -%}
+            {%- if price_number > 0 -%}
+              {{ ritual_product.price | money }}
+            {%- else -%}
+              <span aria-hidden="true">0,00 kr</span>
+              <span class="dev-badge">{{ 'general.price.tbd' | t }}</span>
+            {%- endif -%}
           {%- else -%}
             <span aria-hidden="true">0,00 kr</span>
             <span class="dev-badge">{{ 'general.price.tbd' | t }}</span>
