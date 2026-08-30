@@ -1,0 +1,179 @@
+{
+  "_source": "Google Drive › NEXO › Produktinfo › NEXO-Innehåll.docx + Etiketter/Final (print labels)",
+  "_note": "Prices, images, weights and the volumes marked TODO are NOT in the brand material. Fazli must supply them before launch. Do not invent them.",
+  "brand": {
+    "name": "NEXO",
+    "origin": "Made in Sweden",
+    "claims": ["Vegan", "Cruelty free"],
+    "wordmarkNote": "The wordmark is NE / XO stacked with an infinity glyph tucked between the two lines. Never re-typeset it — always use the supplied SVG.",
+    "productSuffixSystem": "+1, +2, +3 — the three steps of the ritual. Always render as a superscript-scale griege numeral next to the product name."
+  },
+  "products": [
+    {
+      "handle": "lather-me-up",
+      "step": "+1",
+      "type": "Shampoo",
+      "volume": "250 ml / 8.45 fl.oz",
+      "sku": "NEXO-SH-250",
+      "price": "TODO",
+      "images": "TODO — product photography not yet in Drive. Use the label PDF render as a temporary flat placeholder.",
+      "sv": {
+        "name": "Lather Me Up",
+        "category": "Schampo",
+        "tagline": "Rengör utan att torka ut.",
+        "description": "Ett milt och återfuktande schampo som rengör utan att torka ut. Formulan innehåller sheasmör och provitamin B5 som hjälper håret att kännas mjukt, smidigt och glansfullt, samtidigt som hårbotten får en fräsch och behaglig känsla.",
+        "keyIngredients": [
+          { "name": "Shea Butter Derivatives", "benefit": "hjälper till att bevara fukt och ger en mjuk känsla" },
+          { "name": "Panthenol (Provitamin B5)", "benefit": "bidrar till en glansfull och välmående look" },
+          { "name": "Rosmarinolja", "benefit": "ger en naturligt frisk och örtig doft" },
+          { "name": "Mjuka tensider", "benefit": "rengör skonsamt och bygger ett lätt, krämigt skum" }
+        ],
+        "inci": [
+          ["Aqua (Vatten)", "Bas som löser och transporterar ingredienser."],
+          ["Disodium Cocoamphodiacetate", "Milt rengörande tensid som inte torkar ut hårbotten."],
+          ["Shea Butter Glycereth-8 Esters", "Mjukgör och hjälper till att bevara fukt i hår och hårbotten."],
+          ["Cocamidopropyl Betaine", "Mild tensid som ger ett mjukt och krämigt skum."],
+          ["Glycerin", "Drar till sig och håller kvar fukt i håret."],
+          ["Sodium Chloride (Salt)", "Justerar viskositeten och gör schampot lagom tjockt."],
+          ["Rosmarinus Officinalis (Rosmarin) Leaf Oil", "Ger en frisk örtig doft och en uppfriskande känsla på hårbotten."],
+          ["Panthenol (Provitamin B5)", "Hjälper håret att kännas mjukt, slätt och glansfullt."],
+          ["Hydroxypropyl Guar", "Gör håret mer lättkammat och mjukare."],
+          ["Hydroxypropyltrimonium Chloride", "Minskar statisk elektricitet och friss."],
+          ["Sodium Levulinate", "Naturligt konserveringsmedel som håller produkten fräsch."],
+          ["Sodium Glycolate", "Hjälper till att bevara fukt och balansera pH."],
+          ["Caprylyl/Capryl Glucoside", "Mild rengörande och formula-stabiliserande ingrediens."],
+          ["Parfum (Doft)", "Ger produkten en behaglig arom."],
+          ["Sodium Anisate", "Naturligt konserveringsmedel."],
+          ["Acacia Senegal Gum", "Ger struktur och stabiliserar formulan."],
+          ["Xanthan Gum", "Gör formulan mjuk och krämig."],
+          ["Alcohol", "Hjälper till att lösa och fördela ingredienser."],
+          ["Lactic Acid (Mjölksyra)", "Balanserar pH till hårbottennivå."],
+          ["Camphor", "Ger en svalkande, uppfriskande känsla."],
+          ["Beta-Pinenes", "Naturligt växtextrakt som bidrar till en fräsch doft."]
+        ]
+      },
+      "en": {
+        "name": "Lather Me Up",
+        "category": "Shampoo",
+        "tagline": "Cleanses without stripping.",
+        "description": "A gentle, moisturising shampoo that cleanses without drying out. Shea butter and provitamin B5 help hair feel soft, supple and luminous, while the scalp is left fresh and comfortable.",
+        "keyIngredients": [
+          { "name": "Shea Butter Derivatives", "benefit": "helps retain moisture and leaves a soft feel" },
+          { "name": "Panthenol (Provitamin B5)", "benefit": "supports a glossy, healthy-looking finish" },
+          { "name": "Rosemary Oil", "benefit": "gives a naturally fresh, herbal scent" },
+          { "name": "Gentle surfactants", "benefit": "cleanse mildly and build a light, creamy lather" }
+        ],
+        "inciNote": "Translate the INCI table from sv.inci; keep the INCI names themselves untranslated."
+      }
+    },
+    {
+      "handle": "mist-me-crazy",
+      "step": "+2",
+      "type": "Leave-in spray",
+      "volume": "TODO",
+      "sku": "NEXO-SP",
+      "price": "TODO",
+      "images": "TODO",
+      "sv": {
+        "name": "Mist Me Crazy",
+        "category": "Spray",
+        "tagline": "Mjukhet och glans, utan tyngd.",
+        "description": "En lätt och fräsch leave-in-spray som ger mjukhet, glans och en uppfriskande känsla. Perfekt att använda i både fuktigt och torrt hår för att minska friss och göra håret enklare att hantera utan att tynga ner.",
+        "keyIngredients": [
+          { "name": "Panthenol (Provitamin B5)", "benefit": "hjälper håret att kännas mjukt och välvårdat" },
+          { "name": "Aloe Vera", "benefit": "återfuktar och ger en lugnande känsla för hår och hårbotten" },
+          { "name": "Rosmarinolja", "benefit": "bidrar med en frisk och ren doft" },
+          { "name": "Lätta mjukgörande oljor", "benefit": "ger naturlig glans utan att bli tungt" }
+        ],
+        "inci": [
+          ["Aqua (Vatten)", "Bas som bär de aktiva ingredienserna."],
+          ["Panthenol (Provitamin B5)", "Ger mjukhet, glans och en vårdad känsla i håret."],
+          ["C15-19 Alkane", "Lätt mjukgörande olja som inte tynger ner håret."],
+          ["C14-22 Alcohols", "Stabiliserar formulan och ger mjuk känsla."],
+          ["Aloe Barbadensis (Aloe Vera) Leaf Juice", "Återfuktar och ger en behaglig känsla för hårbotten."],
+          ["Rosmarinus Officinalis (Rosmarin) Leaf Oil", "Ger en fräsch och örtig doft."],
+          ["Phenoxyethanol", "Konserveringsmedel som skyddar mot bakterier."],
+          ["C12-20 Alkyl Glucoside", "Mild tensid som stabiliserar blandningen."],
+          ["Polyacrylate Crosspolymer-6", "Ger mjuk fördelning av sprayen på håret."],
+          ["Caprylyl Glycol", "Återfuktande och formelstabiliserande."],
+          ["Biosaccharide Gum-1", "Binder fukt och ger en mjuk, slät känsla."],
+          ["T-Butyl Alcohol", "Stabiliserar formulan."],
+          ["Lactic Acid", "Justerar pH för att matcha hår och hud."],
+          ["Parfum (Doft)", "Ger en behaglig arom."],
+          ["Camphor", "Ger en lätt svalkande känsla."],
+          ["Beta-Pinenes & Limonene", "Naturliga växtbaserade doftkomponenter."]
+        ]
+      },
+      "en": {
+        "name": "Mist Me Crazy",
+        "category": "Spray",
+        "tagline": "Softness and shine, no weight.",
+        "description": "A light, fresh leave-in spray that adds softness, shine and a refreshing feel. Use on damp or dry hair to reduce frizz and make hair easier to manage — without weighing it down.",
+        "keyIngredients": [
+          { "name": "Panthenol (Provitamin B5)", "benefit": "helps hair feel soft and cared for" },
+          { "name": "Aloe Vera", "benefit": "hydrates and soothes hair and scalp" },
+          { "name": "Rosemary Oil", "benefit": "adds a fresh, clean scent" },
+          { "name": "Light emollient oils", "benefit": "give natural shine without heaviness" }
+        ],
+        "inciNote": "Translate the INCI table from sv.inci; keep the INCI names themselves untranslated."
+      }
+    },
+    {
+      "handle": "whip-me-good",
+      "step": "+3",
+      "type": "Cream",
+      "volume": "TODO",
+      "sku": "NEXO-CR",
+      "price": "TODO",
+      "images": "TODO",
+      "sv": {
+        "name": "Whip Me Good",
+        "category": "Kräm",
+        "tagline": "Skydd och mjukhet, dag efter dag.",
+        "description": "En mjukgörande och skyddande kräm för hårbotten och torr hud. Den rika formulan hjälper till att bevara fukt och skapa ett mjukt, smidigt och behagligt resultat. Kan användas dagligen vid behov.",
+        "keyIngredients": [
+          { "name": "Lanolin & Sötmandelolja", "benefit": "ger näring och hjälper till att hålla huden mjuk och smidig" },
+          { "name": "Panthenol (Provitamin B5)", "benefit": "bidrar till en lugnande och återfuktande känsla" },
+          { "name": "Bivax", "benefit": "hjälper till att bevara fukt och skydda huden" },
+          { "name": "Rosmarinolja", "benefit": "ger en fräsch, örtig doft" }
+        ],
+        "inci": [
+          ["Lanolin", "Mjukgör, skyddar och bevarar fukt i huden."],
+          ["Aqua (Vatten)", "Bas i formulan."],
+          ["Petrolatum & Paraffinum Liquidum", "Skyddande mjukgörande ingredienser som håller huden smidig."],
+          ["Panthenol (Provitamin B5)", "Lugnar och hjälper huden att kännas återfuktad."],
+          ["Prunus Amygdalus Dulcis (Sötmandel) Oil", "Närande och mjukgör huden."],
+          ["Cera Alba (Bivax)", "Hjälper till att hålla kvar fukt och skydda huden."],
+          ["Cetearyl Alcohol", "Mjukgör och stabiliserar formulan."],
+          ["Hydrogenated Coco-Glycerides", "Mjukgör och ger konsistens."],
+          ["Lanolin Alcohol", "Stärker hudens mjukhet och skydd."],
+          ["Ozokerite", "Ger stabil konsistens."],
+          ["Rosmarinus Officinalis Leaf Oil", "Ger en fräsch och örtig doft."],
+          ["Phenoxyethanol & Parabener", "Konserverar och håller produkten säker och fräsch."],
+          ["Biosaccharide Gum-1", "Binder fukt och gör huden mjuk."],
+          ["Parfum, Camphor, Beta-Pinenes, Limonene", "Doft och uppfriskande känsla."]
+        ]
+      },
+      "en": {
+        "name": "Whip Me Good",
+        "category": "Cream",
+        "tagline": "Protection and softness, day after day.",
+        "description": "A softening, protective cream for the scalp and dry skin. The rich formula helps retain moisture for a soft, supple and comfortable result. Can be used daily as needed.",
+        "keyIngredients": [
+          { "name": "Lanolin & Sweet Almond Oil", "benefit": "nourish and help keep skin soft and supple" },
+          { "name": "Panthenol (Provitamin B5)", "benefit": "soothing and hydrating" },
+          { "name": "Beeswax", "benefit": "helps retain moisture and protect the skin" },
+          { "name": "Rosemary Oil", "benefit": "adds a fresh, herbal scent" }
+        ],
+        "inciNote": "Translate the INCI table from sv.inci; keep the INCI names themselves untranslated."
+      }
+    }
+  ],
+  "bundle": {
+    "handle": "the-ritual",
+    "sv": { "name": "Ritualen +1 +2 +3", "description": "Alla tre stegen. Tvätta, vårda, skydda." },
+    "en": { "name": "The Ritual +1 +2 +3", "description": "All three steps. Cleanse, condition, protect." },
+    "price": "TODO",
+    "note": "Sell this as the hero offer on the homepage. Bundles carry the AOV for a three-SKU brand."
+  }
+}

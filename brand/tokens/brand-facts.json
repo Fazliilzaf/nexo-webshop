@@ -1,0 +1,27 @@
+{
+  "_note": "Brand FACTS only. These are fixed because they are the brand, not because they are a design opinion. Everything about layout, composition, motion, imagery and art direction is yours to invent.",
+  "name": "NEXO",
+  "origin": "Made in Sweden",
+  "claims": ["Vegan", "Cruelty free"],
+  "color": {
+    "griege": "#A8A09D",
+    "_note": "The one official brand colour, from the printed colour chip. Build whatever palette you want around it — this value itself never changes."
+  },
+  "typeface": {
+    "display": "Buda Light",
+    "_note": "The wordmark's face, supplied as woff2/ttf and also on Google Fonts. Available in Light 300 only, and it breaks below ~28px. Use it, ignore it, or pair it with anything — your call. Body typeface is entirely your choice."
+  },
+  "wordmark": {
+    "files": "brand/logo/svg/ — black, white, griege, currentColor",
+    "construction": "NE over XO, with an infinity glyph tucked between the two lines",
+    "_rule": "Never re-typeset, re-space, rotate, outline or recolour outside the supplied variants."
+  },
+  "productSystem": {
+    "steps": ["+1 cleanse", "+2 condition", "+3 protect"],
+    "_rule": "The +1 / +2 / +3 marks are part of the product names and the logic of the range. Keep them. How you draw them is up to you."
+  },
+  "reference": {
+    "brand/reference/nexo-label-shampoo.png": "The printed label. Context, not a template — you are not obliged to echo it.",
+    "brand/reference/nexo-color-hex.jpg": "The official colour chip."
+  }
+}
