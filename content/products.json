@@ -4,7 +4,8 @@
   "brand": {
     "name": "NEXO",
     "origin": "Made in Sweden",
-    "claims": ["Vegan", "Cruelty free"],
+    "claims": ["Cruelty free"],
+    "_claimsNote": "VEGAN-märket är pausat sedan 2026-08-30. +3:s INCI innehåller Lanolin, Lanolin Alcohol och Cera Alba (animaliska). Märket kommer från fabrikens test; väntar på fabrikens skriftliga nuvarande INCI-spec + motivering. Återinför endast om dokumentationen stödjer det. Se OPEN-QUESTIONS.md.",
     "wordmarkNote": "The wordmark is NE / XO stacked with an infinity glyph tucked between the two lines. Never re-typeset it — always use the supplied SVG.",
     "productSuffixSystem": "+1, +2, +3 — the three steps of the ritual. Always render as a superscript-scale griege numeral next to the product name."
   },

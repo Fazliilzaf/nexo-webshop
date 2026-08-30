@@ -28,8 +28,8 @@ already be partially answered. Confirm before treating as final.
   Site copy stays on cosmetic benefits from `content/products.json`.
 - `serie/9.png` (Vitavele Cosmetics, other brand) is **permanently excluded**
   from frontend and art direction.
-- **Domain is still open** — neither `nexo.se` nor `ne8xo.com` is treated as
-  canonical in metadata until confirmed.
+- **Domain confirmed:** canonical = `ne8xo.com` (renewed 2026-08-30,
+  verified live). See domain decision below.
 
 **Asset decisions (2026-08-30):**
 - Repo (`brand/reference/products/`) is source of truth for product assets.
@@ -48,19 +48,23 @@ already be partially answered. Confirm before treating as final.
 - **Shopify:** no account yet — owner creates (Basic plan suffices) and adds
   collaborator access. Then: configure → import → connect → verify → QA.
 
-**Vegan claim (2026-08-30):** the VEGAN mark originates from the
-manufacturer's testing, not invented by the brand owner. However, +3's INCI
-objectively contains Lanolin, Lanolin Alcohol and Cera Alba — no test can
-make those vegan. **Action (owner):** request the factory's written current
-INCI spec for +3 + their vegan rationale. Two outcomes: (a) formula changed
-→ we update INCI from the factory spec; (b) claim is wrong → de-claim path
-(remove mark from future prints/stickers, keep "cruelty free" only if
-substantiated). Site stays claim-free until the document exists.
+**Vegan claim PAUSED (2026-08-30):** the VEGAN mark is removed from all
+data surfaces until the factory's written current INCI spec + rationale
+for +3 exists (INCI objectively contains Lanolin, Lanolin Alcohol, Cera
+Alba — no test makes those vegan; the mark came from the factory's
+testing). `claims` is now `["Cruelty free"]` (factory-stated) in
+`content/products.json` and `brand/tokens/brand-facts.json`, annotated.
+The site renders no claims regardless. Two outcomes when the document
+arrives: (a) formula changed → update INCI from the factory spec;
+(b) claim wrong → de-claim permanent (remove mark from future
+prints/stickers).
 
-**Domain (2026-08-30):** `ne8xo.com` expired 2026-08-12 and is in
-redemptionPeriod — **renew immediately** (printed on all physical labels).
-Canonical = ne8xo.com once renewal is confirmed; nexo.se is held by a third
-party (for sale) — optional later redirect.
+**Domain (2026-08-30):** `ne8xo.com` RENEWED — verified live
+(`status: ok`, Loopia NS). **Canonical domain confirmed: ne8xo.com**
+(printed on all physical labels). nexo.se is held by a third party (for
+sale) — optional later redirect. Domain sweep at connect-phase:
+canonical URLs, sitemap/robots, OG, JSON-LD, footer
+(contact@ne8xo.com now wired), mailto, label/site consistency.
 
 ## Blocking (cannot launch without)
 
