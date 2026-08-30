@@ -148,6 +148,8 @@ async function main() {
     arg === "product" ? "product"
     : arg === "ingredients" ? "ingredients"
     : arg === "brand" ? "brand"
+    : arg === "journal" ? "journal"
+    : arg === "article" ? "article"
     : "index";
   const handle = process.argv[3] || "lather-me-up";
 
@@ -156,6 +158,8 @@ async function main() {
     mode === "product" ? "product.json"
     : mode === "ingredients" ? "page.ingredients.json"
     : mode === "brand" ? "page.brand.json"
+    : mode === "journal" ? "blog.json"
+    : mode === "article" ? "article.json"
     : "index.json";
   const tpl = JSON.parse(
     fs.readFileSync(path.join(THEME, "templates", tplFile), "utf8")
@@ -166,6 +170,22 @@ async function main() {
   );
 
   function buildProduct(h) {
+    if (h === "borste") {
+      /* synthetic accessory mock — the brush has no entry in
+         content/products.json (no INCI, no ritual step) */
+      return {
+        handle: "borste",
+        title: "NEXO Borste",
+        vendor: "NEXO",
+        price: 0,
+        available: true,
+        url: "/products/borste",
+        description: "",
+        images: [],
+        selected_or_first_available_variant: null,
+        metafields: { nexo: {} }
+      };
+    }
     const entry = catalog.products.find((p) => p.handle === h);
     const sv = entry.sv;
     const volume =
@@ -202,6 +222,66 @@ async function main() {
     pageGlobals = {
       template: { name: "page", suffix: "brand" }
     };
+  } else if (mode === "journal" || mode === "article") {
+    /* DEV-ONLY fixtures: content built solely from approved material
+       (usage texts, transparency facts, products.json explanations).
+       Real articles are written in Shopify admin. */
+    const articles = [
+      {
+        title: "Så bygger du ritualen: +1, +2, +3",
+        handle: "sa-bygger-du-ritualen",
+        url: "/blogs/journal/sa-bygger-du-ritualen",
+        published_at: "2026-08-30",
+        tags: ["RITUAL", "HOW-TO"],
+        excerpt: "Tvätta, vårda, skydda — i den ordningen. Så får varje steg rätt förutsättningar.",
+        content:
+          "<p>Tre produkter, en ordning. Ritualen börjar med rengöring, fortsätter med vård och avslutas med skydd. Ordningen är inte ett förslag — den är själva idén.</p>" +
+          "<h2>+1 Rengör</h2><p>Massera försiktigt in i fuktigt hår och hårbotten tills det bildas ett mjukt lödder. Skölj noggrant. Upprepa vid behov.</p>" +
+          "<h2>+2 Vårda</h2><p>Spraya jämnt från cirka 10–15 cm avstånd. Låt torka eller massera försiktigt in. Fungerar i både fuktigt och torrt hår.</p>" +
+          "<h2>+3 Skydda</h2><p>Använd dagligen vid behov. Arbeta in en liten mängd i hårbotten eller på torr hud.</p>",
+        metafields: { nexo: {} }
+      },
+      {
+        title: "Varför vi publicerar varje ingrediens",
+        handle: "varfor-vi-publicerar-varje-ingrediens",
+        url: "/blogs/journal/varfor-vi-publicerar-varje-ingrediens",
+        published_at: "2026-08-30",
+        tags: ["PHILOSOPHY", "INGREDIENTS"],
+        excerpt: "Transparens är inte en fotnot. Det är hela affärsidén.",
+        content:
+          "<p>De flesta ingredienslistor är skrivna för att uppfylla ett lagkrav. Våra är skrivna för att läsas.</p>" +
+          "<p>Varje ingrediens i alla tre steg är publicerad, med en förklaring på vanlig svenska. Inte för att det är enklast — utan för att en formula du kan försvara ingrediens för ingrediens är en formula värd att köpa.</p>" +
+          "<blockquote>Om du inte kan förklara vad en ingrediens gör där, ska den inte vara där.</blockquote>",
+        metafields: { nexo: {} }
+      },
+      {
+        title: "Panthenol, på vanlig svenska",
+        handle: "panthenol-pa-vanlig-svenska",
+        url: "/blogs/journal/panthenol-pa-vanlig-svenska",
+        published_at: "2026-08-30",
+        tags: ["INGREDIENTS", "HAIR"],
+        excerpt: "Provitamin B5 finns i alla tre stegen. Det är därför.",
+        content:
+          "<p>Panthenol — provitamin B5 — återkommer i hela ritualen. I INCI-listan är namnet tekniskt. Funktionen är enkel: det hjälper håret att kännas mjukt, slätt och glansfullt.</p>" +
+          "<p>I +1 bidrar det till en glansfull, välmående look. I +2 hjälper det håret att kännas mjukt och välvårdat. I +3 verkar det lugnande och återfuktande. Samma ingrediens, tre roller — en av 43 som alla finns förklarade i ingrediensbiblioteket.</p>",
+        metafields: { nexo: {} }
+      }
+    ];
+    const journalBlog = {
+      title: "Journal",
+      handle: "journal",
+      url: "/blogs/journal",
+      articles
+    };
+    pageGlobals = {
+      template: { name: mode === "journal" ? "blog" : "article" },
+      blog: journalBlog
+    };
+    if (mode === "article") {
+      const picked = articles.find((a) => a.handle === process.argv[3]) || articles[0];
+      picked.metafields.nexo.product = { value: buildProduct("lather-me-up") };
+      pageGlobals.article = picked;
+    }
   } else if (mode === "ingredients") {    const functionsDoc = JSON.parse(
       fs.readFileSync(path.join(ROOT, "content", "ingredient-functions.json"), "utf8")
     );
@@ -255,6 +335,12 @@ async function main() {
   if (mode === "brand") {
     fs.writeFileSync(path.join(__dirname, "brand.html"), out);
     console.log(`preview/brand.html written (${localeName})`);
+    return;
+  }
+
+  if (mode === "journal" || mode === "article") {
+    fs.writeFileSync(path.join(__dirname, mode + ".html"), out);
+    console.log(`preview/${mode}.html written (${localeName})`);
     return;
   }
 

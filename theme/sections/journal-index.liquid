@@ -1,0 +1,53 @@
+{%- comment -%}
+  JOURNAL — NEXO as a publication. A magazine index, not a
+  blog card grid. Big Buda titles, mono metadata, negative space.
+{%- endcomment -%}
+
+<div class="journal">
+
+  <header class="journal__hero">
+    <p class="t-mono t-griege">{{ 'journal.kicker' | t }}</p>
+    <h1 class="journal__title t-display">{{ blog.title | default: 'Journal' }}</h1>
+    <p class="t-mono t-ghost">{{ 'journal.topics' | t }}</p>
+  </header>
+
+  {%- if blog.articles.size > 0 -%}
+    <ol class="journal__index">
+      {%- for article in blog.articles -%}
+        {%- assign words = article.content | strip_html | split: ' ' | size -%}
+        {%- assign minutes = words | divided_by: 200 | at_least: 1 -%}
+        <li class="journal__entry {% if forloop.first %}journal__entry--first{% endif %}">
+          <a href="{{ article.url }}" class="journal__entry-link">
+            <span class="journal__no t-mono t-ghost">
+              {{ forloop.index | prepend: '00' | slice: -3, 3 }}
+            </span>
+            <span class="journal__entry-body">
+              <span class="journal__entry-title t-display">{{ article.title }}</span>
+              {%- if article.excerpt != blank -%}
+                <span class="journal__excerpt t-smoke">{{ article.excerpt | strip_html | truncate: 140 }}</span>
+              {%- endif -%}
+            </span>
+            <span class="journal__meta t-mono t-ghost">
+              {{ 'journal.read_min' | t: count: minutes }}
+              {%- if article.tags.size > 0 %} / {{ article.tags | join: ' / ' }}{% endif %}
+            </span>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ol>
+  {%- else -%}
+    <div class="journal__empty">
+      <p class="journal__empty-title t-display">{{ 'journal.empty_title' | t }}</p>
+      <p class="t-smoke">{{ 'journal.empty_body' | t }}</p>
+    </div>
+  {%- endif -%}
+
+</div>
+
+{% schema %}
+{
+  "name": "Journal index",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

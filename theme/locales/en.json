@@ -147,6 +147,15 @@
       "returns": "Returns"
     }
   },
+  "journal": {
+    "kicker": "Journal",
+    "read_min": "{{ count }} min",
+    "empty_title": "The Journal is on its way.",
+    "empty_body": "This is where we collect ritual, ingredient knowledge and the NEXO product philosophy. Publishing starts soon.",
+    "back": "Back to Journal",
+    "related": "In this article",
+    "topics": "Ritual · Ingredients · Product philosophy · Hair knowledge · NEXO"
+  },
   "brand": {
     "kicker": "About NEXO",
     "hero_1": "Three products.",
@@ -165,6 +174,7 @@
     "cta_library": "Read every ingredient"
   },
   "pdp": {
+    "accessory_kicker": "Accessory / Tool",
     "what_it_is": "What it is",
     "key_ingredients": "Key ingredients",
     "how_to_use": "How to use it",
@@ -176,7 +186,8 @@
     "usage": {
       "one": "Massage gently into damp hair and scalp until a soft lather forms. Rinse thoroughly. Repeat if needed.",
       "two": "Spray evenly from about 10–15 cm. Leave to dry or massage in gently. Use on damp or dry hair, any time of day.",
-      "three": "Use daily as needed. Work a small amount into the scalp or onto dry skin."
+      "three": "Use daily as needed. Work a small amount into the scalp or onto dry skin.",
+      "accessory": "See the packaging for usage instructions."
     }
   },
   "products": {

@@ -66,15 +66,20 @@ no glass, no JS, only type, space and principles.
 
 - Page handle `ingredienser` → theme template `page.ingredients`
 - Page handle `om-nexo` → theme template `page.brand`
-- Products with handles above + metafields (namespace `nexo`):
-  `tagline`, `volume`, `usage`, `key_ingredients` (JSON), `inci` (JSON)
+- Blog handle `journal` (templates `blog` + `article` apply automatically)
+- Products with handles above + `borste` (brush — renders via the accessory
+  branch of the PDP template: no step nav, no ritual strip, no +n) and
+  metafields (namespace `nexo`): `tagline`, `volume`, `usage`,
+  `key_ingredients` (JSON), `inci` (JSON)
 - Shop metafield `nexo.ingredient_functions` (JSON) ←
   `content/ingredient-functions.json`
+- Articles: commerce appears only when
+  `article.metafields.nexo.product` (product reference) is set
 
 ## Not built yet (next phases)
 
-Journal · search · account/order history · subscriptions (selling plans) ·
-cart page · legal pages · cookie consent · brush/accessory placement.
+Search · account/order history · subscriptions (selling plans) ·
+cart page · legal pages · cookie consent.
 
 ## Dev preview (no Shopify required)
 

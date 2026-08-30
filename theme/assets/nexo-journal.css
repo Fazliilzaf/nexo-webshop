@@ -1,0 +1,180 @@
+/* ============================================================
+   NEXO — Liquid Ritual · Journal
+   A publication, not a blog. Magazine index + narrow editorial
+   article column. No cards, no glass, no thumbnails.
+   ============================================================ */
+
+/* ---------- Index ---------- */
+
+.journal {
+  position: relative;
+  z-index: var(--z-content);
+  background: var(--nexo-black);
+  padding: calc(7rem + env(safe-area-inset-top)) var(--pad-page) 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.journal__hero {
+  display: grid;
+  gap: 1.2rem;
+  margin-bottom: clamp(4rem, 10vw, 7rem);
+}
+.journal__title {
+  font-size: var(--t-mega);
+  color: var(--nexo-bone);
+}
+
+.journal__index { display: grid; }
+
+.journal__entry {
+  border-top: var(--hairline) solid var(--nexo-seam);
+}
+.journal__entry-link {
+  display: grid;
+  grid-template-columns: 3.5em 1fr;
+  gap: 0.6rem 1.5rem;
+  padding: 2rem 0;
+  transition: opacity 200ms var(--ease-glass);
+}
+.journal__entry-link:hover .journal__entry-title { color: var(--nexo-griege); }
+
+.journal__no { padding-top: 0.9em; }
+
+.journal__entry-body { display: grid; gap: 0.5rem; }
+.journal__entry-title {
+  font-size: var(--t-big);
+  color: var(--nexo-bone);
+  transition: color 200ms var(--ease-glass);
+  max-width: 20ch;
+}
+.journal__entry--first .journal__entry-title { font-size: var(--t-huge); }
+.journal__excerpt { max-width: 52ch; line-height: 1.6; }
+
+.journal__meta {
+  grid-column: 2;
+  color: var(--nexo-ghost);
+}
+
+.journal__empty {
+  display: grid;
+  gap: 1rem;
+  padding: 5rem 0;
+  max-width: 46ch;
+}
+.journal__empty-title { font-size: var(--t-big); color: var(--nexo-bone); }
+
+/* ---------- Article ---------- */
+
+.article {
+  position: relative;
+  z-index: var(--z-content);
+  background: var(--nexo-black);
+  padding: calc(7rem + env(safe-area-inset-top)) var(--pad-page) 6rem;
+}
+
+.article__hero {
+  max-width: 62ch;
+  margin: 0 auto clamp(3rem, 8vw, 5rem);
+  display: grid;
+  gap: 1.4rem;
+}
+.article__title {
+  font-size: var(--t-huge);
+  color: var(--nexo-bone);
+}
+.article__meta { color: var(--nexo-ghost); }
+
+/* The editorial column — readability is the feature */
+.article__body {
+  max-width: 62ch;
+  margin: 0 auto;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--nexo-smoke);
+}
+.article__body p + p { margin-top: 1.4em; }
+.article__body h2 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: var(--t-big);
+  color: var(--nexo-bone);
+  margin: 2.2em 0 0.6em;
+}
+.article__body h3 {
+  font-family: var(--font-mono);
+  font-size: var(--t-micro);
+  font-weight: 400;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--nexo-griege);
+  margin: 2em 0 0.6em;
+}
+.article__body strong { color: var(--nexo-bone); font-weight: 500; }
+.article__body em { font-style: italic; }
+.article__body a {
+  color: var(--nexo-griege);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+.article__body ul, .article__body ol {
+  padding-left: 1.2em;
+  margin: 1.4em 0;
+  display: grid;
+  gap: 0.5em;
+}
+.article__body ul { list-style: none; }
+.article__body ul li::before {
+  content: "—";
+  color: var(--nexo-griege);
+  margin-right: 0.6em;
+}
+.article__body ol { list-style: decimal; }
+.article__body blockquote {
+  margin: 2em 0;
+  padding-left: 1.4em;
+  border-left: 1px solid var(--nexo-griege);
+  font-family: var(--font-display);
+  font-size: var(--t-lead);
+  color: var(--nexo-bone);
+}
+.article__body img {
+  margin: 2.4em 0;
+  width: 100%;
+  height: auto;
+}
+
+/* Related product — a footnote, not an ad */
+.article__related {
+  max-width: 62ch;
+  margin: 4rem auto 0;
+  padding-top: 1.5rem;
+  border-top: var(--hairline) solid var(--nexo-seam);
+  display: grid;
+  gap: 0.8rem;
+}
+.article__related-link {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+}
+.article__related-name {
+  font-size: var(--t-lead);
+  color: var(--nexo-bone);
+}
+.article__related-link:hover .article__related-name { color: var(--nexo-griege); }
+
+.article__back {
+  max-width: 62ch;
+  margin: 3rem auto 0;
+}
+.article__back a { color: var(--nexo-smoke); }
+.article__back a:hover { color: var(--nexo-bone); }
+
+@media (min-width: 1024px) {
+  .journal__entry-link {
+    grid-template-columns: 5em 1fr auto;
+    align-items: baseline;
+  }
+  .journal__meta { grid-column: auto; text-align: right; }
+}

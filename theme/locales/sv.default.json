@@ -147,6 +147,15 @@
       "returns": "Returer"
     }
   },
+  "journal": {
+    "kicker": "Journal",
+    "read_min": "{{ count }} min",
+    "empty_title": "Journalen är på väg.",
+    "empty_body": "Här samlar vi ritual, ingredienskunskap och NEXO:s produktfilosofi. Publicering startar inom kort.",
+    "back": "Tillbaka till Journal",
+    "related": "I artikeln",
+    "topics": "Ritual · Ingredienser · Produktfilosofi · Hårkunskap · NEXO"
+  },
   "brand": {
     "kicker": "Om NEXO",
     "hero_1": "Tre produkter.",
@@ -165,6 +174,7 @@
     "cta_library": "Läs varje ingrediens"
   },
   "pdp": {
+    "accessory_kicker": "Tillbehör / Verktyg",
     "what_it_is": "Vad det är",
     "key_ingredients": "Nyckelingredienser",
     "how_to_use": "Så använder du det",
@@ -176,7 +186,8 @@
     "usage": {
       "one": "Massera försiktigt in i fuktigt hår och hårbotten tills det bildas ett mjukt lödder. Skölj noggrant. Upprepa vid behov.",
       "two": "Spraya jämnt från cirka 10–15 cm avstånd. Låt torka eller massera försiktigt in. Använd i fuktigt eller torrt hår, när som helst på dagen.",
-      "three": "Använd dagligen vid behov. Arbeta in en liten mängd i hårbotten eller på torr hud."
+      "three": "Använd dagligen vid behov. Arbeta in en liten mängd i hårbotten eller på torr hud.",
+      "accessory": "Se förpackningens bruksanvisning."
     }
   },
   "products": {

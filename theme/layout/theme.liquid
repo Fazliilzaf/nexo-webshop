@@ -40,6 +40,9 @@
     {%- if template.name == 'page' and template.suffix == 'brand' -%}
       {{ 'nexo-brand.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
+    {%- if template.name == 'blog' or template.name == 'article' -%}
+      {{ 'nexo-journal.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
     {{ 'nexo-cart.css' | asset_url | stylesheet_tag }}
 
     <script type="application/ld+json">
