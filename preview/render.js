@@ -144,12 +144,19 @@ engine.registerTag("form", FormTag);
 
 async function main() {
   const arg = process.argv[2];
-  const mode = arg === "product" ? "product" : arg === "ingredients" ? "ingredients" : "index";
+  const mode =
+    arg === "product" ? "product"
+    : arg === "ingredients" ? "ingredients"
+    : arg === "brand" ? "brand"
+    : "index";
   const handle = process.argv[3] || "lather-me-up";
 
   /* homepage sections, in template order */
   const tplFile =
-    mode === "product" ? "product.json" : mode === "ingredients" ? "page.ingredients.json" : "index.json";
+    mode === "product" ? "product.json"
+    : mode === "ingredients" ? "page.ingredients.json"
+    : mode === "brand" ? "page.brand.json"
+    : "index.json";
   const tpl = JSON.parse(
     fs.readFileSync(path.join(THEME, "templates", tplFile), "utf8")
   );
@@ -191,8 +198,11 @@ async function main() {
       template: { name: "product" },
       product: buildProduct(handle)
     };
-  } else if (mode === "ingredients") {
-    const functionsDoc = JSON.parse(
+  } else if (mode === "brand") {
+    pageGlobals = {
+      template: { name: "page", suffix: "brand" }
+    };
+  } else if (mode === "ingredients") {    const functionsDoc = JSON.parse(
       fs.readFileSync(path.join(ROOT, "content", "ingredient-functions.json"), "utf8")
     );
     const allProducts = {};
@@ -239,6 +249,12 @@ async function main() {
   if (mode === "ingredients") {
     fs.writeFileSync(path.join(__dirname, "ingredients.html"), out);
     console.log(`preview/ingredients.html written (${localeName})`);
+    return;
+  }
+
+  if (mode === "brand") {
+    fs.writeFileSync(path.join(__dirname, "brand.html"), out);
+    console.log(`preview/brand.html written (${localeName})`);
     return;
   }
 

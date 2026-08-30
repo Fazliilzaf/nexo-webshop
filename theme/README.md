@@ -22,12 +22,18 @@ assets/      nexo-tokens.css   design tokens (griege #A8A09D is fixed)
                                cropped from the Produktserie renders — no baked text
 layout/      theme.liquid
 sections/    nexo-header, ritual-experience, ritual-bundle,
-             ingredient-teaser, nexo-footer
+             ingredient-teaser, nexo-footer, pdp-object,
+             ingredients-library, brand-story
 snippets/    ritual-step, cart-drawer
 locales/     sv.default.json + en.json — zero hardcoded strings in Liquid/JS
-templates/   index.json
+templates/   index.json, product.json, page.ingredients.json, page.brand.json
 config/      settings_schema.json, settings_data.json
 ```
+
+The three signature moments: **homepage = FEEL** (ritual scroll),
+**PDP = BUY** (flat object, instant commerce), **Ingredients = TRUST**
+(the lens). **Brand = UNDERSTAND NEXO** — the quiet counterweight:
+no glass, no JS, only type, space and principles.
 
 ## Design law (keep these when extending)
 
@@ -49,14 +55,26 @@ config/      settings_schema.json, settings_data.json
   `whip-me-good`, `the-ritual`).
 - ADD buttons are `disabled` until those products exist.
 - Footer company details are `[ORG]` tokens (see OPEN-QUESTIONS.md).
-- Ingredient teaser CTA points to `/pages/ingredienser` (page not built yet).
 - Legal footer links are `#` placeholders.
+- `pdp-mist-1.dev.jpg` / `pdp-mist-2.dev.jpg` — DEV-ONLY: the spray renders
+  contain the "ECRAZY" typo. Replace with re-rendered images (same filenames
+  minus `.dev`) before launch. Never use "ECRAZY" in copy or alt text.
+- +3 cream imagery uses the JAR only. The pump bottle in combo material is an
+  unconfirmed variant — do not use (blocker in OPEN-QUESTIONS.md).
+
+## Pages to create in Shopify admin
+
+- Page handle `ingredienser` → theme template `page.ingredients`
+- Page handle `om-nexo` → theme template `page.brand`
+- Products with handles above + metafields (namespace `nexo`):
+  `tagline`, `volume`, `usage`, `key_ingredients` (JSON), `inci` (JSON)
+- Shop metafield `nexo.ingredient_functions` (JSON) ←
+  `content/ingredient-functions.json`
 
 ## Not built yet (next phases)
 
-PDP · ingredient library page (the full lens experience) · brand story ·
-journal · search · account/order history · subscriptions (selling plans) ·
-cart page · legal pages · cookie consent.
+Journal · search · account/order history · subscriptions (selling plans) ·
+cart page · legal pages · cookie consent · brush/accessory placement.
 
 ## Dev preview (no Shopify required)
 

@@ -1,0 +1,58 @@
+{%- comment -%}
+  BRAND — emotional clarity. Space, type, principles, restraint.
+  No glass, no scroll theatre, no JS. The system gets to breathe.
+  Every statement traces back to locked brand facts — no invented
+  founder story, no claims beyond what the material supports.
+{%- endcomment -%}
+
+<div class="brand">
+
+  <header class="brand__hero">
+    <p class="t-mono t-griege">{{ 'brand.kicker' | t }}</p>
+    <h1 class="brand__title t-display">
+      {{ 'brand.hero_1' | t }}<br>
+      <span class="t-griege">{{ 'brand.hero_2' | t }}</span>
+    </h1>
+    <p class="brand__intro">{{ 'brand.intro' | t }}</p>
+  </header>
+
+  <ol class="brand__principles" aria-label="{{ 'brand.principles_kicker' | t }}">
+    <li class="brand__principle">
+      <p class="t-mono t-ghost">01</p>
+      <h2 class="brand__statement t-display">{{ 'brand.p1_title' | t }}</h2>
+      <p class="brand__support t-smoke">{{ 'brand.p1_body' | t }}</p>
+    </li>
+    <li class="brand__principle">
+      <p class="t-mono t-ghost">02</p>
+      <h2 class="brand__statement t-display">{{ 'brand.p2_title' | t }}</h2>
+      <p class="brand__support t-smoke">{{ 'brand.p2_body' | t }}</p>
+    </li>
+    <li class="brand__principle">
+      <p class="t-mono t-ghost">03</p>
+      <h2 class="brand__statement t-display">{{ 'brand.p3_title' | t }}</h2>
+      <p class="brand__support t-smoke">{{ 'brand.p3_body' | t }}</p>
+    </li>
+  </ol>
+
+  {%- comment -%} The one colour moment: the official chip, as art {%- endcomment -%}
+  <figure class="brand__chip" aria-label="{{ 'brand.chip_kicker' | t }} #A8A09D">
+    <p class="brand__chip-hex t-display">#A8A09D</p>
+    <figcaption class="t-mono">{{ 'brand.chip_kicker' | t }}</figcaption>
+  </figure>
+
+  <p class="brand__origin t-display">{{ 'brand.origin' | t }}</p>
+
+  <nav class="brand__out t-mono" aria-label="{{ 'brand.kicker' | t }}">
+    <a href="{{ routes.root_url }}#ritual">{{ 'brand.cta_ritual' | t }} →</a>
+    <a href="{{ routes.root_url }}pages/ingredienser">{{ 'brand.cta_library' | t }} →</a>
+  </nav>
+
+</div>
+
+{% schema %}
+{
+  "name": "Brand story",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

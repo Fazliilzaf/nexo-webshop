@@ -147,6 +147,23 @@
       "returns": "Returer"
     }
   },
+  "brand": {
+    "kicker": "Om NEXO",
+    "hero_1": "Tre produkter.",
+    "hero_2": "En ritual.",
+    "intro": "NEXO är svensk hårvård byggd som ett system. Tre steg, i rätt ordning, med namn som leker — och formler som inte gör det.",
+    "principles_kicker": "Principer",
+    "p1_title": "Ett system, inte tre produkter.",
+    "p1_body": "+1 rengör. +2 vårdar. +3 skyddar. Ordningen är själva idén.",
+    "p2_title": "Lekfulla namn. Allvarliga formler.",
+    "p2_body": "Etiketten är matt svart och talar lågt. Innehållet tål att granskas.",
+    "p3_title": "Transparens är inte en fotnot.",
+    "p3_body": "Varje ingrediens är publicerad, med en förklaring på vanlig svenska. Det är så vi förtjänar förtroende.",
+    "chip_kicker": "Officiell färg",
+    "origin": "Tillverkat i Sverige.",
+    "cta_ritual": "Upplev ritualen",
+    "cta_library": "Läs varje ingrediens"
+  },
   "pdp": {
     "what_it_is": "Vad det är",
     "key_ingredients": "Nyckelingredienser",

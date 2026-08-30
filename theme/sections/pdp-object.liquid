@@ -8,11 +8,16 @@
 {%- liquid
   assign step_key = 'one'
   assign asset_prefix = 'pdp-lather'
+  assign asset_ext = '.jpg'
   assign prev_key = 'three'
   assign next_key = 'two'
   if product.handle == 'mist-me-crazy'
     assign step_key = 'two'
     assign asset_prefix = 'pdp-mist'
+    comment
+      DEV-ONLY: spray renders contain the "ECRAZY" typo — replace before launch
+    endcomment
+    assign asset_ext = '.dev.jpg'
     assign prev_key = 'one'
     assign next_key = 'three'
   elsif product.handle == 'whip-me-good'
@@ -37,8 +42,12 @@
   assign inci = meta.inci.value
   assign description = product.description | default: meta.description.value
 
-  assign image_1 = asset_prefix | append: '-1.jpg'
-  assign image_2 = asset_prefix | append: '-2.jpg'
+  assign image_1 = asset_prefix | append: '-1' | append: asset_ext
+  assign image_2 = asset_prefix | append: '-2' | append: asset_ext
+  assign has_image_2 = true
+  if product.handle == 'whip-me-good'
+    assign has_image_2 = false
+  endif
 
   assign prev_handle = 'whip-me-good'
   assign next_handle = 'mist-me-crazy'
@@ -183,7 +192,7 @@
         loading="lazy"
       >
     </figure>
-  {%- elsif product.images.size == 0 -%}
+  {%- elsif product.images.size == 0 and has_image_2 -%}
     <figure class="pdp__object pdp__object--wide">
       <img
         src="{{ image_2 | asset_url }}"
