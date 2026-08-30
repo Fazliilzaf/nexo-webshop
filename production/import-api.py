@@ -128,10 +128,13 @@ def main():
                 print(f"  FAIL {status}: {handle} → {resp.get('error')}")
                 failed += 1
                 continue
-        # publish to the online store channel (storefront stays password-protected)
+        # publish to the online store channel (status=active alone is NOT
+        # enough for all_products — needs published + published_scope=web;
+        # the storefront itself stays password-protected)
         if pid and not DRY:
             status, resp = call("PUT", f"/products/{pid}.json",
-                                {"product": {"id": pid, "status": "active"}})
+                                {"product": {"id": pid, "status": "active",
+                                             "published": True, "published_scope": "web"}})
             if status != 200:
                 print(f"  FAIL publish {status}: {handle} → {resp.get('error')}")
                 failed += 1
