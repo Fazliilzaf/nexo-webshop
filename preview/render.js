@@ -94,6 +94,7 @@ engine.registerFilter("json", (v) => JSON.stringify(v));
 engine.registerFilter("handle", (v) =>
   String(v).toLowerCase().replace(/[^a-z0-9]+/g, "-")
 );
+engine.registerFilter("image_url", (src, ...args) => src);
 
 /* --- custom tags: schema (drop), section (render file), form (wrap) --- */
 class SchemaTag extends Tag {
@@ -142,16 +143,79 @@ engine.registerTag("section", SectionTag);
 engine.registerTag("form", FormTag);
 
 async function main() {
+  const arg = process.argv[2];
+  const mode = arg === "product" ? "product" : arg === "ingredients" ? "ingredients" : "index";
+  const handle = process.argv[3] || "lather-me-up";
+
   /* homepage sections, in template order */
+  const tplFile =
+    mode === "product" ? "product.json" : mode === "ingredients" ? "page.ingredients.json" : "index.json";
   const tpl = JSON.parse(
-    fs.readFileSync(path.join(THEME, "templates", "index.json"), "utf8")
+    fs.readFileSync(path.join(THEME, "templates", tplFile), "utf8")
   );
+
+  const catalog = JSON.parse(
+    fs.readFileSync(path.join(ROOT, "content", "products.json"), "utf8")
+  );
+
+  function buildProduct(h) {
+    const entry = catalog.products.find((p) => p.handle === h);
+    const sv = entry.sv;
+    const volume =
+      h === "lather-me-up" ? "250 ml" : h === "mist-me-crazy" ? "100 ml" : "30 ml";
+    return {
+      handle: h,
+      title: sv.name,
+      vendor: "NEXO",
+      price: 0,
+      available: true,
+      url: "/products/" + h,
+      description: sv.description,
+      images: [],
+      selected_or_first_available_variant: null,
+      metafields: {
+        nexo: {
+          tagline: { value: sv.tagline },
+          volume: { value: volume },
+          key_ingredients: { value: sv.keyIngredients },
+          inci: { value: sv.inci }
+          /* usage intentionally unset → locale fallback path is tested */
+        }
+      }
+    };
+  }
+
+  let pageGlobals = {};
+  if (mode === "product") {
+    pageGlobals = {
+      template: { name: "product" },
+      product: buildProduct(handle)
+    };
+  } else if (mode === "ingredients") {
+    const functionsDoc = JSON.parse(
+      fs.readFileSync(path.join(ROOT, "content", "ingredient-functions.json"), "utf8")
+    );
+    const allProducts = {};
+    catalog.products.forEach((p) => {
+      allProducts[p.handle] = buildProduct(p.handle);
+    });
+    pageGlobals = {
+      template: { name: "page", suffix: "ingredients" },
+      all_products: allProducts,
+      shop: Object.assign({}, globals.shop, {
+        metafields: {
+          nexo: { ingredient_functions: { value: functionsDoc.functions } }
+        }
+      })
+    };
+  }
+
   let contentForLayout = "";
   for (const id of tpl.order) {
     const file = path.join(THEME, "sections", tpl.sections[id].type + ".liquid");
     const html = await engine.render(
       engine.parse(fs.readFileSync(file, "utf8")),
-      globals
+      pageGlobals
     );
     contentForLayout += html + "\n";
   }
@@ -163,8 +227,20 @@ async function main() {
 
   let out = await engine.render(
     engine.parse(layoutSrc),
-    Object.assign({}, globals, { content_for_layout: contentForLayout })
+    Object.assign({}, pageGlobals, { content_for_layout: contentForLayout })
   );
+
+  if (mode === "product") {
+    fs.writeFileSync(path.join(__dirname, "product.html"), out);
+    console.log(`preview/product.html written (${handle}, ${localeName})`);
+    return;
+  }
+
+  if (mode === "ingredients") {
+    fs.writeFileSync(path.join(__dirname, "ingredients.html"), out);
+    console.log(`preview/ingredients.html written (${localeName})`);
+    return;
+  }
 
   /* asset references inside section html also need the relative path */
   fs.writeFileSync(path.join(__dirname, "index.html"), out);

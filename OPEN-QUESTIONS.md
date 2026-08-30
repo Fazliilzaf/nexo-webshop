@@ -31,6 +31,16 @@ already be partially answered. Confirm before treating as final.
 - **Domain is still open** — neither `nexo.se` nor `ne8xo.com` is treated as
   canonical in metadata until confirmed.
 
+**Asset decisions (2026-08-30):**
+- Repo (`brand/reference/products/`) is source of truth for product assets.
+- `pdp/spray-1.png` + `pdp/spray-2.png` contain a render typo ("MIST ME
+  ECRAZY") — **temporary/dev-only**, must be re-rendered before launch. Never
+  use "ECRAZY" in storefront copy or alt text.
+- **+3 cream: the JAR is the primary packaging** until confirmed otherwise.
+  The pump bottle in `pdp/combo.png` is NOT a confirmed SKU — do not use it as
+  +3 product imagery. → Blocker: confirm jar vs pump.
+- The brush is an accessory/tool — never part of +1/+2/+3 numbering. No +4.
+
 ## Blocking (cannot launch without)
 
 | # | Question | Placeholder to use meanwhile |

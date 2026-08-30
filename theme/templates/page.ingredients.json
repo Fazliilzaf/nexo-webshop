@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "ingredients-library" }
+  },
+  "order": ["main"]
+}

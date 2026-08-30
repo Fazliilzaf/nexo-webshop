@@ -31,6 +31,12 @@
       <link rel="preload" as="image" href="{{ 'material-lather.jpg' | asset_url }}" fetchpriority="high">
       {{ 'nexo-ritual.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
+    {%- if template.name == 'product' -%}
+      {{ 'nexo-pdp.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+    {%- if template.name == 'page' and template.suffix == 'ingredients' -%}
+      {{ 'nexo-ingredients.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
     {{ 'nexo-cart.css' | asset_url | stylesheet_tag }}
 
     <script type="application/ld+json">
@@ -63,6 +69,9 @@
     <script src="{{ 'nexo-cart.js' | asset_url }}" defer></script>
     {%- if template.name == 'index' -%}
       <script src="{{ 'nexo-ritual.js' | asset_url }}" defer></script>
+    {%- endif -%}
+    {%- if template.name == 'page' and template.suffix == 'ingredients' -%}
+      <script src="{{ 'nexo-ingredients.js' | asset_url }}" defer></script>
     {%- endif -%}
   </body>
 </html>

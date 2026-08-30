@@ -1,0 +1,262 @@
+{%- comment -%}
+  PDP — PRODUCT AS OBJECT.
+  The product is the hero object; commerce is brutally legible;
+  glass is absent (interface returns in cart/nav only).
+  Data priority: product metafields (nexo.*) > locale fallbacks.
+{%- endcomment -%}
+
+{%- liquid
+  assign step_key = 'one'
+  assign asset_prefix = 'pdp-lather'
+  assign prev_key = 'three'
+  assign next_key = 'two'
+  if product.handle == 'mist-me-crazy'
+    assign step_key = 'two'
+    assign asset_prefix = 'pdp-mist'
+    assign prev_key = 'one'
+    assign next_key = 'three'
+  elsif product.handle == 'whip-me-good'
+    assign step_key = 'three'
+    assign asset_prefix = 'pdp-whip'
+    assign prev_key = 'two'
+    assign next_key = 'one'
+  endif
+
+  assign base = 'ritual.steps.' | append: step_key
+  assign prev_base = 'ritual.steps.' | append: prev_key
+  assign next_base = 'ritual.steps.' | append: next_key
+  assign meta = product.metafields.nexo
+
+  assign tagline_fallback = base | append: '.tagline' | t
+  assign volume_fallback = base | append: '.volume' | t
+  assign usage_fallback = 'pdp.usage.' | append: step_key | t
+  assign tagline = meta.tagline.value | default: tagline_fallback
+  assign volume = meta.volume.value | default: volume_fallback
+  assign usage = meta.usage.value | default: usage_fallback
+  assign key_ingredients = meta.key_ingredients.value
+  assign inci = meta.inci.value
+  assign description = product.description | default: meta.description.value
+
+  assign image_1 = asset_prefix | append: '-1.jpg'
+  assign image_2 = asset_prefix | append: '-2.jpg'
+
+  assign prev_handle = 'whip-me-good'
+  assign next_handle = 'mist-me-crazy'
+  if step_key == 'two'
+    assign prev_handle = 'lather-me-up'
+    assign next_handle = 'whip-me-good'
+  elsif step_key == 'three'
+    assign prev_handle = 'mist-me-crazy'
+    assign next_handle = 'lather-me-up'
+  endif
+  assign prev_product = all_products[prev_handle]
+  assign next_product = all_products[next_handle]
+-%}
+
+<article class="pdp" data-pdp>
+  <nav class="pdp__steps t-mono" aria-label="{{ 'pdp.in_ritual' | t }}">
+    {%- if prev_product -%}
+      <a href="{{ prev_product.url }}" class="pdp__step-link">
+        ← {{ prev_base | append: '.step' | t }} {{ prev_base | append: '.verb' | t }}
+      </a>
+    {%- else -%}
+      <span class="t-ghost">← {{ prev_base | append: '.step' | t }} {{ prev_base | append: '.verb' | t }}</span>
+    {%- endif -%}
+    <span class="pdp__steps-current t-griege">
+      {{ base | append: '.step' | t }} {{ base | append: '.verb' | t }}
+    </span>
+    {%- if next_product -%}
+      <a href="{{ next_product.url }}" class="pdp__step-link">
+        {{ next_base | append: '.step' | t }} {{ next_base | append: '.verb' | t }} →
+      </a>
+    {%- else -%}
+      <span class="t-ghost">{{ next_base | append: '.step' | t }} {{ next_base | append: '.verb' | t }} →</span>
+    {%- endif -%}
+  </nav>
+
+  <div class="pdp__hero">
+    <figure class="pdp__object">
+      {%- if product.images.size > 0 -%}
+        <img
+          src="{{ product.images[0] | image_url: width: 1400 }}"
+          alt="{{ product.images[0].alt | default: product.title | escape }}"
+          width="1400"
+          height="1050"
+          fetchpriority="high"
+        >
+      {%- else -%}
+        <img
+          src="{{ image_1 | asset_url }}"
+          alt="{{ product.title }}"
+          width="1400"
+          height="933"
+          fetchpriority="high"
+        >
+      {%- endif -%}
+    </figure>
+
+    <div class="pdp__commerce">
+      <p class="t-mono t-griege">
+        {{ base | append: '.index' | t }} / {{ base | append: '.verb' | t }}
+        <span class="t-ghost">· {{ base | append: '.category' | t }}</span>
+      </p>
+
+      <h1 class="pdp__name t-display">{{ product.title }}</h1>
+
+      <p class="pdp__tagline">{{ tagline }}</p>
+
+      <div class="pdp__row t-mono">
+        <span>{{ volume }}</span>
+        <span class="pdp__price">
+          {%- if product.price > 0 -%}
+            {{ product.price | money }}
+          {%- else -%}
+            <span aria-hidden="true">0,00 kr</span>
+            <span class="dev-badge">{{ 'general.price.tbd' | t }}</span>
+          {%- endif -%}
+        </span>
+      </div>
+
+      {%- if product.selected_or_first_available_variant -%}
+        <button
+          type="button"
+          class="btn pdp__add"
+          data-add
+          data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+        >
+          {{ 'ritual.add' | t }}
+        </button>
+      {%- else -%}
+        <button type="button" class="btn pdp__add" data-add disabled>
+          {{ 'ritual.add' | t }}
+        </button>
+      {%- endif -%}
+
+      <a class="pdp__inci-link t-mono" href="#inside">
+        {{ base | append: '.ingredients_count' | t }} ·
+        {{ base | append: '.ingredients_cta' | t }} →
+      </a>
+    </div>
+  </div>
+
+  {%- if description != blank -%}
+    <section class="pdp__block" aria-labelledby="pdp-what">
+      <h2 id="pdp-what" class="pdp__kicker t-mono t-griege">{{ 'pdp.what_it_is' | t }}</h2>
+      <p class="pdp__text">{{ description }}</p>
+    </section>
+  {%- endif -%}
+
+  {%- if key_ingredients and key_ingredients.size > 0 -%}
+    <section class="pdp__block" aria-labelledby="pdp-key">
+      <h2 id="pdp-key" class="pdp__kicker t-mono t-griege">{{ 'pdp.key_ingredients' | t }}</h2>
+      <ul class="pdp__ingredients">
+        {%- for ingredient in key_ingredients -%}
+          <li class="pdp__ingredient">
+            <span class="t-mono">{{ ingredient.name }}</span>
+            <span class="pdp__ingredient-benefit t-smoke">{{ ingredient.benefit }}</span>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+  {%- endif -%}
+
+  <section class="pdp__block" aria-labelledby="pdp-use">
+    <h2 id="pdp-use" class="pdp__kicker t-mono t-griege">{{ 'pdp.how_to_use' | t }}</h2>
+    <p class="pdp__text">{{ usage }}</p>
+    <p class="pdp__follow t-mono t-ghost">
+      {{ 'pdp.follow_up' | t }}
+      {% if next_product -%}
+        <a href="{{ next_product.url }}">{{ next_base | append: '.step' | t }} {{ 'products.' | append: next_handle | append: '.name' | t }}</a>
+      {%- else -%}
+        {{ next_base | append: '.step' | t }} {{ 'products.' | append: next_handle | append: '.name' | t }}
+      {%- endif -%}
+    </p>
+  </section>
+
+  {%- if product.images.size > 1 -%}
+    <figure class="pdp__object pdp__object--wide">
+      <img
+        src="{{ product.images[1] | image_url: width: 1400 }}"
+        alt="{{ product.images[1].alt | default: product.title | escape }}"
+        width="1400"
+        height="1050"
+        loading="lazy"
+      >
+    </figure>
+  {%- elsif product.images.size == 0 -%}
+    <figure class="pdp__object pdp__object--wide">
+      <img
+        src="{{ image_2 | asset_url }}"
+        alt="{{ product.title }}"
+        width="1400"
+        height="933"
+        loading="lazy"
+      >
+    </figure>
+  {%- endif -%}
+
+  {%- if inci and inci.size > 0 -%}
+    <section class="pdp__block" id="inside" aria-labelledby="pdp-inside">
+      <h2 id="pdp-inside" class="pdp__kicker t-mono t-griege">{{ 'pdp.whats_inside' | t }}</h2>
+      <details class="pdp__inci">
+        <summary class="t-mono">
+          {{ 'pdp.full_inci' | t }} ({{ inci.size }})
+        </summary>
+        <ol class="pdp__inci-list">
+          {%- for entry in inci -%}
+            <li class="pdp__inci-row">
+              <span class="t-mono">{{ entry[0] }}</span>
+              <span class="pdp__inci-why t-smoke">{{ entry[1] }}</span>
+            </li>
+          {%- endfor -%}
+        </ol>
+      </details>
+    </section>
+  {%- endif -%}
+
+  <section class="pdp__ritual" aria-labelledby="pdp-ritual">
+    <h2 id="pdp-ritual" class="pdp__kicker t-mono t-griege">{{ 'pdp.in_ritual' | t }}</h2>
+    <ol class="pdp__ritual-steps t-mono">
+      {%- for key in (1..3) -%}
+        {%- assign k = 'one' -%}
+        {%- if forloop.index == 2 -%}{%- assign k = 'two' -%}{%- endif -%}
+        {%- if forloop.index == 3 -%}{%- assign k = 'three' -%}{%- endif -%}
+        <li class="{% if k == step_key %}is-current{% endif %}">
+          {{ 'ritual.steps.' | append: k | append: '.step' | t }}
+          {{ 'ritual.steps.' | append: k | append: '.verb' | t }}
+        </li>
+      {%- endfor -%}
+    </ol>
+    <a class="btn btn--ghost" href="{{ routes.root_url }}#bundle">{{ 'pdp.complete_ritual' | t }} →</a>
+  </section>
+</article>
+
+{%- comment -%} Product JSON-LD {%- endcomment -%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "brand": { "@type": "Brand", "name": "NEXO" },
+    {%- if description != blank -%}"description": {{ description | strip_html | truncate: 300 | json }},{%- endif -%}
+    {%- if product.selected_or_first_available_variant -%}
+    "sku": {{ product.selected_or_first_available_variant.sku | default: '' | json }},
+    {%- endif -%}
+    {%- if product.price > 0 -%}
+    "offers": {
+      "@type": "Offer",
+      "price": {{ product.price | divided_by: 100.0 | json }},
+      "priceCurrency": {{ cart.currency.iso_code | json }},
+      "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}"
+    }
+    {%- endif -%}
+  }
+</script>
+
+{% schema %}
+{
+  "name": "PDP object",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

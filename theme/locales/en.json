@@ -72,7 +72,7 @@
         "category": "Cream",
         "tagline": "Protection and softness, day after day.",
         "volume": "30 ml",
-        "ingredients_count": "15 ingredients",
+        "ingredients_count": "14 ingredients",
         "ingredients_cta": "Every one explained"
       }
     },
@@ -92,10 +92,19 @@
     "kicker": "The ingredient library",
     "title_1": "Everything",
     "title_2": "we put in.",
+    "title_3": "And why.",
     "teaser": "Every ingredient, and what it does. Published, explained in plain language, defensible one by one.",
     "cta": "Explore the ingredient library",
     "lens_hint": "Drag the lens across the names",
-    "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin"
+    "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin",
+    "unique_count": "{{ count }} unique ingredients",
+    "per_product": "What each step contains, and why.",
+    "found_in": "Found in",
+    "search_label": "Search ingredients",
+    "search_placeholder": "E.g. panthenol",
+    "search_empty": "No ingredient matches.",
+    "tap_hint": "Tap a name to understand it",
+    "view_product": "View product"
   },
   "cart": {
     "title": "Cart",
@@ -136,6 +145,21 @@
       "privacy": "Privacy policy",
       "shipping": "Shipping & delivery",
       "returns": "Returns"
+    }
+  },
+  "pdp": {
+    "what_it_is": "What it is",
+    "key_ingredients": "Key ingredients",
+    "how_to_use": "How to use it",
+    "whats_inside": "What's inside",
+    "full_inci": "Full INCI, every ingredient explained",
+    "in_ritual": "In the ritual",
+    "follow_up": "Follow up with",
+    "complete_ritual": "Complete the ritual",
+    "usage": {
+      "one": "Massage gently into damp hair and scalp until a soft lather forms. Rinse thoroughly. Repeat if needed.",
+      "two": "Spray evenly from about 10–15 cm. Leave to dry or massage in gently. Use on damp or dry hair, any time of day.",
+      "three": "Use daily as needed. Work a small amount into the scalp or onto dry skin."
     }
   },
   "products": {

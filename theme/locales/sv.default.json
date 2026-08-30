@@ -72,7 +72,7 @@
         "category": "Kräm",
         "tagline": "Skydd och mjukhet, dag efter dag.",
         "volume": "30 ml",
-        "ingredients_count": "15 ingredienser",
+        "ingredients_count": "14 ingredienser",
         "ingredients_cta": "Varje en förklarad"
       }
     },
@@ -92,10 +92,19 @@
     "kicker": "Ingrediensbiblioteket",
     "title_1": "Allt",
     "title_2": "vi stoppar i.",
+    "title_3": "Och varför.",
     "teaser": "Varje ingrediens, och vad den gör. Publicerad, översatt till vanlig svenska, försvarbar en för en.",
     "cta": "Utforska ingrediensbiblioteket",
     "lens_hint": "Dra linsen över namnen",
-    "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin"
+    "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin",
+    "unique_count": "{{ count }} unika ingredienser",
+    "per_product": "Vad respektive steg innehåller, och varför.",
+    "found_in": "Finns i",
+    "search_label": "Sök ingrediens",
+    "search_placeholder": "T.ex. panthenol",
+    "search_empty": "Ingen ingrediens matchar.",
+    "tap_hint": "Tryck på ett namn för att förstå det",
+    "view_product": "Se produkten"
   },
   "cart": {
     "title": "Varukorg",
@@ -136,6 +145,21 @@
       "privacy": "Integritetspolicy",
       "shipping": "Frakt & leverans",
       "returns": "Returer"
+    }
+  },
+  "pdp": {
+    "what_it_is": "Vad det är",
+    "key_ingredients": "Nyckelingredienser",
+    "how_to_use": "Så använder du det",
+    "whats_inside": "Innehåll",
+    "full_inci": "Fullständig INCI, varje ingrediens förklarad",
+    "in_ritual": "I ritualen",
+    "follow_up": "Följ upp med",
+    "complete_ritual": "Gör ritualen komplett",
+    "usage": {
+      "one": "Massera försiktigt in i fuktigt hår och hårbotten tills det bildas ett mjukt lödder. Skölj noggrant. Upprepa vid behov.",
+      "two": "Spraya jämnt från cirka 10–15 cm avstånd. Låt torka eller massera försiktigt in. Använd i fuktigt eller torrt hår, när som helst på dagen.",
+      "three": "Använd dagligen vid behov. Arbeta in en liten mängd i hårbotten eller på torr hud."
     }
   },
   "products": {
