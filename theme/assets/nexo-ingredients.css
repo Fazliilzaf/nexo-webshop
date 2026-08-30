@@ -126,18 +126,30 @@
 .library__name {
   grid-area: name;
   color: var(--nexo-bone);
-  transition: transform 240ms var(--ease-glass), color 240ms var(--ease-glass);
-  transform-origin: left center;
+  transition: color 240ms var(--ease-glass);
   overflow-wrap: anywhere;
 }
 .library__fn { grid-area: fn; margin-top: 0.25em; }
 .library__found { grid-area: found; white-space: nowrap; }
 
+/* Focus enlargement uses font-size, not transform scale —
+   the row reflows instead of painting over the found-in column */
 .is-live .library__row.is-focus .library__name {
-  transform: scale(1.12);
+  font-size: clamp(0.82rem, 0.75rem + 0.35vw, 1rem);
   color: var(--nexo-bone);
 }
 .is-live .library__row.is-focus .library__fn { color: var(--nexo-griege); }
+
+/* Narrow screens: found-in drops to its own row —
+   long INCI names get the full width to wrap */
+@media (max-width: 480px) {
+  .library__rowhead {
+    grid-template-columns: 2.2em 1fr;
+    grid-template-areas: "no name" "no fn" "no found";
+    row-gap: 0.25em;
+  }
+  .library__found { padding-top: 0.15em; }
+}
 
 /* Explanations: OPEN by default (no-JS = everything readable).
    JS (is-live) collapses them and opens only the focused row. */
