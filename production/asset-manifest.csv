@@ -1,0 +1,18 @@
+handle,asset,role,production_status,note
+lather-me-up,pdp-lather-1.jpg,primary PDP image,approved,"bottle on stone, correct +1 lockup"
+lather-me-up,pdp-lather-2.jpg,secondary PDP image,approved,lather texture on bottle
+lather-me-up,material-lather.jpg,homepage material,approved,"cropped silk, no baked text"
+mist-me-crazy,pdp-mist-1.dev.jpg,primary PDP image,DEV-ONLY-REPLACE-BEFORE-LAUNCH,render typo 'ECRAZY'
+mist-me-crazy,pdp-mist-2.dev.jpg,secondary PDP image,DEV-ONLY-REPLACE-BEFORE-LAUNCH,render typo 'ECRAZY'
+mist-me-crazy,material-mist.jpg,homepage material,approved,"cropped silk, no baked text"
+whip-me-good,pdp-whip-1.jpg,primary PDP image,approved,JAR is canonical +3 representation
+whip-me-good,material-whip.jpg,homepage material,approved,"cropped silk, no baked text"
+whip-me-good,ritual-combo.jpg,unused,excluded-unconfirmed-pump,contains unconfirmed cream pump bottle — never as +3 imagery
+the-ritual,ritual-group.jpg,bundle background,approved,"pump shampoo + spray + jar, candle"
+borste,pdp-brush.jpg,primary PDP image,approved-accessory,"render on stone, plain wordmark"
+borste,pdp-brush-photo.jpg,secondary PDP image,approved-accessory,real product photo IMG_3136
+brand,nexo-logo-black.svg,wordmark,approved,supplied variant
+brand,nexo-logo-white.svg,wordmark,approved,supplied variant
+brand,nexo-logo-griege.svg,wordmark,approved,supplied variant
+brand,nexo-logo-current.svg,wordmark,approved,supplied variant
+brand,buda-light.woff2,display font,approved,self-hosted
