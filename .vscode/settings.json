@@ -1,0 +1,10 @@
+{
+  "files.exclude": { "**/.DS_Store": true },
+  "editor.rulers": [80],
+  "[markdown]": { "editor.wordWrap": "on", "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    } },
+  "search.exclude": { "brand/fonts": true, "brand/reference": true }
+}
