@@ -35,6 +35,14 @@ BARCODES = {
     "mist-me-crazy": "7394359290414",
     "whip-me-good": "7394359290421",
 }
+# Prices DECIDED 2026-08-30 (SEK incl. VAT, in öre):
+# +1 329 kr · +2 269 kr · +3 249 kr · Ritual bundle 729 kr
+PRICES = {
+    "lather-me-up": "32900",
+    "mist-me-crazy": "26900",
+    "whip-me-good": "24900",
+    "the-ritual": "72900",
+}
 
 PRODUCT_COLUMNS = [
     "Handle", "Title", "Body (HTML)", "Vendor", "Type", "Tags", "Published",
@@ -52,7 +60,7 @@ PRODUCT_COLUMNS = [
 ]
 
 
-def product_row(handle, title, body, ptype, sku, barcode, tagline, volume,
+def product_row(handle, title, body, ptype, sku, barcode, price, tagline, volume,
                 usage, key_ingredients, inci, seo_title, seo_desc):
     return {
         "Handle": handle,
@@ -70,7 +78,7 @@ def product_row(handle, title, body, ptype, sku, barcode, tagline, volume,
         "Variant Inventory Qty": "",              # BLOCKED: unverified
         "Variant Inventory Policy": "deny",
         "Variant Fulfillment Service": "manual",
-        "Variant Price": "",                      # BLOCKED: hard blocker
+        "Variant Price": price,                   # decided 2026-08-30; empty = still blocked
         "Variant Barcode": barcode,
         "Variant Requires Shipping": "TRUE",
         "Variant Taxable": "TRUE",                # verify with accountant
@@ -101,7 +109,7 @@ def main():
         sv = p["sv"]
         ritual_rows.append(product_row(
             h, sv["name"], sv["description"], sv["category"],
-            p.get("sku", ""), BARCODES.get(h, ""),
+            p.get("sku", ""), BARCODES.get(h, ""), PRICES[h],
             sv["tagline"], VOLUMES[h], USAGES[h],
             sv["keyIngredients"], sv["inci"],
             f'{sv["name"]} {p["step"]} | NEXO',
@@ -111,13 +119,13 @@ def main():
     bundle = CATALOG["bundle"]
     ritual_rows.append(product_row(
         bundle["handle"], bundle["sv"]["name"], bundle["sv"]["description"],
-        "Ritual", "", "", "", "", "", None, None,
+        "Ritual", "", "", PRICES["the-ritual"], "", "", "", None, None,
         f'{bundle["sv"]["name"]} | NEXO', bundle["sv"]["description"],
     ))
     write_csv(os.path.join(OUT, "products.csv"), PRODUCT_COLUMNS, ritual_rows)
 
     accessory_rows = [product_row(
-        "borste", "NEXO Borste", "", "Tillbehör", "", "",
+        "borste", "NEXO Borste", "", "Tillbehör", "", "", "",
         "", "", "", None, None, "NEXO Borste | NEXO", "",
     )]
     write_csv(os.path.join(OUT, "products-accessory.csv"), PRODUCT_COLUMNS, accessory_rows)

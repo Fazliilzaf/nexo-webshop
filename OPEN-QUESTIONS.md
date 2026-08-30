@@ -34,12 +34,33 @@ already be partially answered. Confirm before treating as final.
 **Asset decisions (2026-08-30):**
 - Repo (`brand/reference/products/`) is source of truth for product assets.
 - `pdp/spray-1.png` + `pdp/spray-2.png` contain a render typo ("MIST ME
-  ECRAZY") — **temporary/dev-only**, must be re-rendered before launch. Never
-  use "ECRAZY" in storefront copy or alt text.
-- **+3 cream: the JAR is the primary packaging** until confirmed otherwise.
-  The pump bottle in `pdp/combo.png` is NOT a confirmed SKU — do not use it as
-  +3 product imagery. → Blocker: confirm jar vs pump.
+  ECRAZY") — **temporary/dev-only**, re-render ordered with correct "MIST ME
+  CRAZY". Never use "ECRAZY" in storefront copy or alt text.
+- **+3 cream: JAR confirmed as canonical packaging** (2026-08-30). The pump
+  bottle in `pdp/combo.png` is not a SKU — never use it as +3 imagery.
 - The brush is an accessory/tool — never part of +1/+2/+3 numbering. No +4.
+
+**Commercial decisions (2026-08-30):**
+- **Prices DECIDED (SEK incl. VAT):** +1 = 329 kr · +2 = 269 kr · +3 = 249 kr
+  · Ritual bundle = 729 kr. Wired into `production/build.py`.
+- **Shipping/returns baseline approved:** Postnord/Instabox/Budbee · free
+  shipping ≥500 kr · 2–4 working days · 30 dagars öppet köp.
+- **Shopify:** no account yet — owner creates (Basic plan suffices) and adds
+  collaborator access. Then: configure → import → connect → verify → QA.
+
+**Vegan claim (2026-08-30):** the VEGAN mark originates from the
+manufacturer's testing, not invented by the brand owner. However, +3's INCI
+objectively contains Lanolin, Lanolin Alcohol and Cera Alba — no test can
+make those vegan. **Action (owner):** request the factory's written current
+INCI spec for +3 + their vegan rationale. Two outcomes: (a) formula changed
+→ we update INCI from the factory spec; (b) claim is wrong → de-claim path
+(remove mark from future prints/stickers, keep "cruelty free" only if
+substantiated). Site stays claim-free until the document exists.
+
+**Domain (2026-08-30):** `ne8xo.com` expired 2026-08-12 and is in
+redemptionPeriod — **renew immediately** (printed on all physical labels).
+Canonical = ne8xo.com once renewal is confirmed; nexo.se is held by a third
+party (for sale) — optional later redirect.
 
 ## Blocking (cannot launch without)
 
