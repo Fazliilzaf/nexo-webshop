@@ -1,0 +1,12 @@
+{
+  "name": "nexo-preview",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Dev-only static renderer for visual QA of the NEXO theme (mocks Shopify globals via liquidjs).",
+  "scripts": {
+    "render": "node render.js"
+  },
+  "dependencies": {
+    "liquidjs": "^10.29.0"
+  }
+}

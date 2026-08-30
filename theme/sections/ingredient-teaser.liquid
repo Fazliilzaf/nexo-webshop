@@ -1,0 +1,43 @@
+{%- assign demo_items = 'ingredients.demo_list' | t | split: '|' -%}
+
+<section class="ingredients" id="ingredients" data-lens-section>
+  <div class="ingredients__inner">
+
+    <p class="t-mono t-griege">{{ 'ingredients.kicker' | t }}</p>
+    <h2 class="ingredients__title t-display">
+      {{ 'ingredients.title_1' | t }}<br>
+      {{ 'ingredients.title_2' | t }}
+    </h2>
+    <p class="ingredients__teaser t-smoke">{{ 'ingredients.teaser' | t }}</p>
+
+    <div class="ingredients__lens" data-lens>
+      <ul class="ingredients__flow t-mono" data-lens-flow>
+        {%- for item in demo_items -%}
+          <li data-lens-item>{{ item | strip }}</li>
+        {%- endfor -%}
+        {%- for item in demo_items -%}
+          <li data-lens-item aria-hidden="true">{{ item | strip }}</li>
+        {%- endfor -%}
+      </ul>
+      <div class="ingredients__glass glass" data-lens-glass aria-hidden="true">
+        <span class="glass__caustic"></span>
+      </div>
+    </div>
+
+    <p class="t-mono t-ghost ingredients__hint">{{ 'ingredients.lens_hint' | t }}</p>
+
+    <a class="btn btn--ghost" href="{{ routes.root_url }}pages/ingredienser">
+      {{ 'ingredients.cta' | t }}
+    </a>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ingredient teaser",
+  "tag": "section",
+  "settings": [],
+  "presets": [{ "name": "Ingredient teaser" }]
+}
+{% endschema %}

@@ -1,0 +1,77 @@
+/* ============================================================
+   NEXO — Liquid Ritual · Design tokens
+   The fixed: griege #A8A09D, wordmark, +1/+2/+3.
+   The free: everything below, built around them.
+   ============================================================ */
+
+:root {
+  /* --- Surfaces (the physical label world) --- */
+  --nexo-ink: #000000;            /* absolute black, sparingly */
+  --nexo-black: #0b0b0c;          /* page base — matte, not pure */
+  --nexo-coal: #131314;           /* raised flat surface */
+  --nexo-seam: rgba(168, 160, 157, 0.16); /* hairlines on black */
+
+  /* --- Brand --- */
+  --nexo-griege: #a8a09d;         /* the one official colour */
+  --nexo-griege-deep: #7d7673;    /* griege, sunk into black */
+  --nexo-bone: #e9e5e1;           /* primary text (label off-white) */
+  --nexo-smoke: rgba(233, 229, 225, 0.62); /* secondary text */
+  --nexo-ghost: rgba(233, 229, 225, 0.5);  /* tertiary / meta — floor for AA */
+
+  /* --- Glass (the optical layer above) --- */
+  --glass-fill: rgba(19, 19, 20, 0.42);
+  --glass-fill-strong: rgba(14, 14, 15, 0.62);
+  --glass-edge: rgba(233, 229, 225, 0.14);      /* top-light hairline */
+  --glass-edge-soft: rgba(233, 229, 225, 0.07);
+  --glass-specular: rgba(233, 229, 225, 0.10);  /* moving highlight */
+  --glass-blur: 18px;
+  --glass-radius: 20px;
+  /* pointer position, driven by nexo-glass.js (0..1) */
+  --gx: 0.5;
+  --gy: 0.4;
+
+  /* --- Type --- */
+  --font-display: "Buda Light", "Didot", "Times New Roman", serif;
+  --font-grot: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "IBM Plex Mono", Menlo,
+    Consolas, monospace;
+
+  /* Fluid display scale — the names are allowed to be enormous */
+  --t-mega: clamp(3.4rem, 18.5vw, 15rem);
+  --t-huge: clamp(2.6rem, 11vw, 8rem);
+  --t-big: clamp(1.9rem, 6.4vw, 4.2rem);
+  --t-lead: clamp(1.05rem, 2.6vw, 1.35rem);
+  --t-body: 1rem;
+  --t-small: 0.8125rem;
+  --t-micro: 0.6875rem;           /* mono labels, INCI, spec */
+
+  --tracking-mono: 0.14em;
+  --tracking-caps: 0.22em;
+
+  /* --- Rhythm --- */
+  --pad-page: clamp(1.25rem, 4.5vw, 4rem);
+  --hairline: 1px;
+
+  /* --- Motion --- */
+  --ease-glass: cubic-bezier(0.22, 0.68, 0.16, 1);
+  --ease-snap: cubic-bezier(0.3, 0.9, 0.2, 1);
+  --dur-glass: 420ms;
+
+  /* --- Z --- */
+  --z-material: 0;
+  --z-content: 2;
+  --z-glass: 5;
+  --z-nav: 40;
+  --z-rail: 45;
+  --z-dock: 50;
+  --z-cart: 60;
+}
+
+@font-face {
+  font-family: "Buda Light";
+  src: url("buda-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

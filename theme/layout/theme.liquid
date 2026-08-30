@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0b0c">
+
+    <title>
+      {{ page_title }}
+      {%- if current_page != 1 %} · {{ 'general.pagination.previous' | t | append: ' ' | append: current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} · {{ shop.name }}{% endunless -%}
+    </title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    {%- comment -%} hreflang for SV/EN {%- endcomment -%}
+    {%- for locale in shop.published_locales -%}
+      <link rel="alternate" hreflang="{{ locale.iso_code }}" href="{{ request.origin }}{{ locale.root_url }}{{ request.path }}">
+    {%- endfor -%}
+    <link rel="alternate" hreflang="x-default" href="{{ request.origin }}{{ request.path }}">
+
+    <link rel="preload" href="{{ 'buda-light.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    {{ 'nexo-tokens.css' | asset_url | stylesheet_tag }}
+    {{ 'nexo-base.css' | asset_url | stylesheet_tag }}
+    {{ 'nexo-glass.css' | asset_url | stylesheet_tag }}
+    {{ 'nexo-chrome.css' | asset_url | stylesheet_tag }}
+
+    {%- if template.name == 'index' -%}
+      <link rel="preload" as="image" href="{{ 'material-lather.jpg' | asset_url }}" fetchpriority="high">
+      {{ 'nexo-ritual.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+    {{ 'nexo-cart.css' | asset_url | stylesheet_tag }}
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": {{ shop.name | json }},
+        "url": {{ request.origin | json }},
+        "logo": {{ 'nexo-logo-black.svg' | asset_url | prepend: 'https:' | json }}
+      }
+    </script>
+
+    {{ content_for_header }}
+  </head>
+
+  <body class="template-{{ template.name | handle }}">
+    <a class="skip-link" href="#main">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+    {%- section 'nexo-header' -%}
+
+    <main id="main" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {%- section 'nexo-footer' -%}
+    {%- render 'cart-drawer' -%}
+
+    <script src="{{ 'nexo.js' | asset_url }}" defer></script>
+    <script src="{{ 'nexo-glass.js' | asset_url }}" defer></script>
+    <script src="{{ 'nexo-cart.js' | asset_url }}" defer></script>
+    {%- if template.name == 'index' -%}
+      <script src="{{ 'nexo-ritual.js' | asset_url }}" defer></script>
+    {%- endif -%}
+  </body>
+</html>

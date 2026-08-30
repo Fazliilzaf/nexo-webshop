@@ -1,0 +1,78 @@
+{%- comment -%}
+  Cart drawer — a glass layer rising from the bottom (mobile) /
+  sliding in from the right (desktop). Never a white Shopify drawer.
+  Ritual progress is computed client-side from /cart.js handles.
+{%- endcomment -%}
+
+<div class="cart" data-cart hidden>
+  <div class="cart__backdrop" data-cart-close></div>
+
+  <aside
+    class="cart__panel glass glass--strong"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cart-title"
+    data-cart-panel
+  >
+    <span class="glass__caustic" aria-hidden="true"></span>
+
+    <header class="cart__head">
+      <h2 id="cart-title" class="t-caps">{{ 'cart.title' | t }}</h2>
+      <button type="button" class="cart__close t-mono" data-cart-close>
+        {{ 'general.accessibility.close' | t }} ✕
+      </button>
+    </header>
+
+    <div class="cart__ritual" data-cart-ritual>
+      <p class="t-mono t-ghost">{{ 'cart.ritual.label' | t }}</p>
+      <ol class="cart__ritual-steps t-mono">
+        <li data-cart-step="1"><span>+1</span><i aria-hidden="true"></i></li>
+        <li data-cart-step="2"><span>+2</span><i aria-hidden="true"></i></li>
+        <li data-cart-step="3"><span>+3</span><i aria-hidden="true"></i></li>
+      </ol>
+      <p class="cart__ritual-status t-mono t-griege" data-cart-ritual-status></p>
+    </div>
+
+    <div class="cart__body" data-cart-body>
+      {%- if cart.item_count == 0 -%}
+        <div class="cart__empty">
+          <p class="t-smoke">{{ 'cart.empty' | t }}</p>
+          <a class="btn btn--ghost" href="{{ routes.root_url }}#ritual" data-cart-close>
+            {{ 'cart.empty_cta' | t }}
+          </a>
+        </div>
+      {%- else -%}
+        <ul class="cart__items" data-cart-items>
+          {%- for item in cart.items -%}
+            <li class="cart__item">
+              <div class="cart__item-info">
+                <p class="cart__item-title">{{ item.product.title }}</p>
+                <p class="t-mono t-ghost">{{ item.variant.title }}</p>
+              </div>
+              <p class="t-mono">{{ item.final_line_price | money }}</p>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+
+    <footer class="cart__foot" data-cart-foot {%- if cart.item_count == 0 %} hidden{% endif -%}>
+      <div class="cart__subtotal t-mono">
+        <span>{{ 'cart.subtotal' | t }}</span>
+        <span data-cart-total>{{ cart.total_price | money }}</span>
+      </div>
+      <a class="btn cart__checkout" href="{{ routes.cart_url }}">{{ 'cart.checkout' | t }}</a>
+    </footer>
+  </aside>
+
+  <script type="application/json" data-cart-locale>
+    {
+      "ofThree": {{ 'cart.ritual.of_three' | t: count: '__COUNT__' | json }},
+      "continue": {{ 'cart.ritual.continue' | t | json }},
+      "complete": {{ 'cart.ritual.complete' | t | json }},
+      "empty": {{ 'cart.empty' | t | json }},
+      "added": {{ 'ritual.added' | t | json }},
+      "add": {{ 'ritual.add' | t | json }}
+    }
+  </script>
+</div>

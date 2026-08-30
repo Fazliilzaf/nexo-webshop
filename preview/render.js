@@ -1,0 +1,186 @@
+/* Dev-only preview renderer.
+   Renders the Shopify theme (theme/) to a static preview/index.html
+   using liquidjs with mocked Shopify globals. NOT part of the theme. */
+
+const fs = require("fs");
+const path = require("path");
+const { Liquid, Tag, TokenKind } = require("liquidjs");
+
+const ROOT = path.resolve(__dirname, "..");
+const THEME = path.join(ROOT, "theme");
+
+const localeName = process.argv[2] === "en" ? "en" : "sv";
+const localeFile =
+  localeName === "en" ? "en.json" : "sv.default.json";
+const STRINGS = JSON.parse(
+  fs.readFileSync(path.join(THEME, "locales", localeFile), "utf8")
+);
+
+function lookup(key) {
+  return key.split(".").reduce((acc, part) => {
+    if (acc == null) return undefined;
+    return acc[part];
+  }, STRINGS);
+}
+
+function interpolate(str, params) {
+  return str.replace(/\{\{\s*(\w+)\s*\}\}/g, (_, name) =>
+    params && params[name] != null ? params[name] : `{{ ${name} }}`
+  );
+}
+
+/* --- mocked Shopify globals --- */
+
+const globals = {
+  page_title: "NEXO — Liquid Ritual",
+  page_description:
+    "NEXO är svensk lyxig hårvård i tre steg: +1 rengör, +2 vårdar, +3 skyddar.",
+  current_page: 1,
+  content_for_header: "",
+  template: { name: "index" },
+  shop: {
+    name: "NEXO",
+    published_locales: [
+      { iso_code: "sv", primary: true, root_url: "/" },
+      { iso_code: "en", primary: false, root_url: "/en" }
+    ]
+  },
+  request: {
+    locale: { iso_code: localeName },
+    origin: "http://localhost:8000",
+    path: "/",
+    design_mode: false
+  },
+  routes: {
+    root_url: "/",
+    cart_url: "/cart",
+    all_products_collection_url: "/collections/all"
+  },
+  cart: { item_count: 0, items: [], total_price: 0 },
+  all_products: {},
+  settings: {},
+  form: null
+};
+
+const engine = new Liquid({
+  root: [path.join(THEME, "snippets"), path.join(THEME, "sections")],
+  extname: ".liquid",
+  strictVariables: false,
+  strictFilters: false,
+  globals /* engine-level: partials rendered via {% render %} see these too */
+});
+
+/* --- filters --- */
+engine.registerFilter("t", (key, ...args) => {
+  const hit = lookup(key);
+  if (hit == null) return `[missing: ${key}]`;
+  /* liquidjs passes named filter args as [name, value] pairs */
+  const params = args.length ? Object.fromEntries(args) : undefined;
+  return interpolate(String(hit), params);
+});
+engine.registerFilter("asset_url", (name) => `../theme/assets/${name}`);
+engine.registerFilter(
+  "stylesheet_tag",
+  (url) => `<link rel="stylesheet" href="${url}">`
+);
+engine.registerFilter("money", (cents) => {
+  const n = (Number(cents) / 100).toLocaleString("sv-SE", {
+    style: "currency",
+    currency: "SEK"
+  });
+  return n;
+});
+engine.registerFilter("json", (v) => JSON.stringify(v));
+engine.registerFilter("handle", (v) =>
+  String(v).toLowerCase().replace(/[^a-z0-9]+/g, "-")
+);
+
+/* --- custom tags: schema (drop), section (render file), form (wrap) --- */
+class SchemaTag extends Tag {
+  constructor(token, remainTokens, liquid) {
+    super(token, remainTokens, liquid);
+    while (remainTokens.length) {
+      const t = remainTokens.shift();
+      if (t.kind === TokenKind.Tag && t.name === "endschema") break;
+    }
+  }
+  *render() {}
+}
+
+class SectionTag extends Tag {
+  constructor(token, remainTokens, liquid) {
+    super(token, remainTokens, liquid);
+    this.file = token.args.trim().replace(/^['"]|['"]$/g, "");
+    this.liquid = liquid;
+  }
+  *render(ctx) {
+    const tpl = this.liquid.parse(
+      fs.readFileSync(path.join(THEME, "sections", this.file + ".liquid"), "utf8")
+    );
+    return yield this.liquid.renderer.renderTemplates(tpl, ctx);
+  }
+}
+
+class FormTag extends Tag {
+  constructor(token, remainTokens, liquid) {
+    super(token, remainTokens, liquid);
+    this.templates = [];
+    const stream = liquid.parser.parseStream(remainTokens);
+    stream
+      .on("tag:endform", () => stream.stop())
+      .on("template", (tpl) => this.templates.push(tpl))
+      .start();
+  }
+  *render(ctx) {
+    const body = yield this.liquid.renderer.renderTemplates(this.templates, ctx);
+    return `<form method="post" action="#">${body}</form>`;
+  }
+}
+
+engine.registerTag("schema", SchemaTag);
+engine.registerTag("section", SectionTag);
+engine.registerTag("form", FormTag);
+
+async function main() {
+  /* homepage sections, in template order */
+  const tpl = JSON.parse(
+    fs.readFileSync(path.join(THEME, "templates", "index.json"), "utf8")
+  );
+  let contentForLayout = "";
+  for (const id of tpl.order) {
+    const file = path.join(THEME, "sections", tpl.sections[id].type + ".liquid");
+    const html = await engine.render(
+      engine.parse(fs.readFileSync(file, "utf8")),
+      globals
+    );
+    contentForLayout += html + "\n";
+  }
+
+  const layoutSrc = fs
+    .readFileSync(path.join(THEME, "layout", "theme.liquid"), "utf8")
+    /* liquidjs chokes on the Shopify '?' suffix */
+    .replace(/posted_successfully\?/g, "posted_successfully");
+
+  let out = await engine.render(
+    engine.parse(layoutSrc),
+    Object.assign({}, globals, { content_for_layout: contentForLayout })
+  );
+
+  /* asset references inside section html also need the relative path */
+  fs.writeFileSync(path.join(__dirname, "index.html"), out);
+
+  /* static variant — approximates prefers-reduced-motion / no-JS:
+     the ritual engine never loads, so .ritual--static stays in charge */
+  const staticOut = out.replace(
+    /<script src="\.\.\/theme\/assets\/nexo-ritual\.js" defer><\/script>/,
+    ""
+  );
+  fs.writeFileSync(path.join(__dirname, "static.html"), staticOut);
+
+  console.log(`preview/index.html + preview/static.html written (${localeName})`);
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

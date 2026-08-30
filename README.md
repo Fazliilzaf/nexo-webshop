@@ -26,9 +26,12 @@ brand/
   tokens/brand-facts.json De få saker som är låsta: färg, ordmärke, +1/+2/+3
   logo/svg/               Ordmärket i svart, vitt, griege och currentColor
   fonts/Buda-Light.*      Displaytypsnittet (woff2 + ttf)
-  reference/              Tryckta etiketter + officiella färgprovet
+  reference/              Tryckta etiketter + officiella färgprovet +
+                          products/ (label- och serierenderingar per produkt)
 content/
   products.json           Alla tre produkter: copy, nyckelingredienser, full INCI (SV + EN)
+theme/                    Temat "NEXO — Liquid Ritual" (Shopify OS 2.0, från grunden)
+preview/                  Dev-only statisk rendering för visuell QA utan Shopify
 ```
 
 ## Varumärket i korthet

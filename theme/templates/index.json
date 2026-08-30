@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "ritual": { "type": "ritual-experience" },
+    "bundle": { "type": "ritual-bundle" },
+    "ingredients": { "type": "ingredient-teaser" }
+  },
+  "order": ["ritual", "bundle", "ingredients"]
+}

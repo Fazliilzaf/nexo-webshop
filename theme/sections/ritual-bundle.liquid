@@ -1,0 +1,85 @@
+{%- assign ritual_product = all_products['the-ritual'] -%}
+
+<section class="bundle" id="bundle" data-bundle>
+  <div class="bundle__track" data-bundle-track>
+    <div class="bundle__stage">
+
+      <div class="bundle__group" aria-hidden="true" data-bundle-group>
+        <img
+          src="{{ 'ritual-group.jpg' | asset_url }}"
+          alt=""
+          width="1600"
+          height="1131"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="bundle__glow" aria-hidden="true" data-bundle-glow></div>
+
+      <div class="bundle__chips" aria-hidden="true">
+        <span class="bundle__lockline" data-bundle-lockline></span>
+        {%- for key in (1..3) -%}
+          <span class="bundle__chip glass" data-chip="{{ forloop.index }}">
+            <span class="t-mono t-griege">+{{ forloop.index }}</span>
+            <span class="bundle__chip-name t-mono">
+              {%- if forloop.index == 1 -%}
+                {{ 'ritual.steps.one.name_line_1' | t }} {{ 'ritual.steps.one.name_line_2' | t }}
+              {%- elsif forloop.index == 2 -%}
+                {{ 'ritual.steps.two.name_line_1' | t }} {{ 'ritual.steps.two.name_line_2' | t }}
+              {%- else -%}
+                {{ 'ritual.steps.three.name_line_1' | t }} {{ 'ritual.steps.three.name_line_2' | t }}
+              {%- endif -%}
+            </span>
+          </span>
+        {%- endfor -%}
+      </div>
+
+      <div class="bundle__core glass glass--strong" data-bundle-core>
+        <span class="glass__caustic" aria-hidden="true"></span>
+
+        <p class="t-mono t-griege">{{ 'bundle.kicker' | t }}</p>
+        <h2 class="bundle__title t-display">
+          {{ 'bundle.title_1' | t }}<br>
+          <span class="t-griege">{{ 'bundle.title_2' | t }}</span>
+        </h2>
+        <p class="bundle__desc t-smoke">{{ 'bundle.description' | t }}</p>
+
+        <div class="bundle__price t-mono">
+          {%- if ritual_product and ritual_product.price > 0 -%}
+            {{ ritual_product.price | money }}
+          {%- else -%}
+            <span aria-hidden="true">0,00 kr</span>
+            <span class="dev-badge">{{ 'general.price.tbd' | t }}</span>
+          {%- endif -%}
+        </div>
+
+        {%- if ritual_product and ritual_product.selected_or_first_available_variant -%}
+          <button
+            type="button"
+            class="btn bundle__cta"
+            data-add
+            data-variant-id="{{ ritual_product.selected_or_first_available_variant.id }}"
+          >
+            {{ 'bundle.cta' | t }}
+          </button>
+        {%- else -%}
+          <button type="button" class="btn bundle__cta" data-add-bundle disabled>
+            {{ 'bundle.cta' | t }}
+          </button>
+        {%- endif -%}
+
+        <p class="t-mono t-ghost">{{ 'bundle.note' | t }}</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ritual bundle",
+  "tag": "section",
+  "settings": [],
+  "presets": [{ "name": "Ritual bundle" }]
+}
+{% endschema %}

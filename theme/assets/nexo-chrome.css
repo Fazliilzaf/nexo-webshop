@@ -1,0 +1,164 @@
+/* ============================================================
+   NEXO — Liquid Ritual · Chrome (header, footer)
+   ============================================================ */
+
+/* ---------- Header: one glass bar floating over the world ---------- */
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: var(--z-nav);
+  padding: 0.75rem var(--pad-page) 0;
+  pointer-events: none;
+}
+
+.site-header__bar {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.55rem 1.1rem;
+  --glass-radius: 14px;
+  --glass-blur: 14px;
+  transition: transform var(--dur-glass) var(--ease-glass);
+}
+
+.site-header__brand { display: inline-flex; }
+.site-header__logo {
+  width: 30px;
+  height: auto;
+}
+
+.site-header__nav {
+  display: none;
+  gap: 2rem;
+}
+.site-header__link {
+  font-family: var(--font-mono);
+  font-size: var(--t-micro);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--nexo-smoke);
+  transition: color 160ms var(--ease-glass);
+}
+.site-header__link:hover { color: var(--nexo-bone); }
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.site-header__locale {
+  display: flex;
+  gap: 0.4em;
+  color: var(--nexo-ghost);
+}
+.site-header__locale a { color: var(--nexo-smoke); }
+.site-header__locale a:hover { color: var(--nexo-bone); }
+
+.site-header__cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--nexo-bone);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  font-size: var(--t-micro);
+}
+.site-header__cart-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.5em;
+  height: 1.5em;
+  padding: 0 0.2em;
+  border: var(--hairline) solid var(--nexo-seam);
+  border-radius: 999px;
+  color: var(--nexo-griege);
+}
+.site-header__cart-count[data-empty="true"] { color: var(--nexo-ghost); }
+
+@media (min-width: 900px) {
+  .site-header__nav { display: flex; }
+}
+
+/* ---------- Footer: raw, flat, editorial ---------- */
+
+.site-footer {
+  position: relative;
+  z-index: var(--z-content);
+  background: var(--nexo-black);
+  padding: clamp(3rem, 8vw, 6rem) var(--pad-page) 2.5rem;
+}
+
+.site-footer__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.site-footer__logo { width: 64px; height: auto; }
+
+.site-footer__tagline {
+  font-size: var(--t-big);
+  max-width: 14ch;
+  color: var(--nexo-griege);
+}
+
+.site-footer__newsletter {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 420px;
+}
+
+.site-footer__form {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.site-footer__form input {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0.6em 0.9em;
+  background: transparent;
+  border: var(--hairline) solid var(--nexo-seam);
+  color: var(--nexo-bone);
+  font: inherit;
+}
+.site-footer__form input::placeholder { color: var(--nexo-ghost); }
+.site-footer__form input:focus-visible {
+  outline: 2px solid var(--nexo-bone);
+  outline-offset: 2px;
+}
+
+.site-footer__meta {
+  display: grid;
+  gap: 0.6rem;
+  padding-top: 2rem;
+  border-top: var(--hairline) solid var(--nexo-seam);
+}
+.site-footer__meta nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.site-footer__meta a {
+  color: var(--nexo-smoke);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-color: var(--nexo-seam);
+}
+.site-footer__meta a:hover { color: var(--nexo-bone); }
+
+@media (min-width: 900px) {
+  .site-footer__inner {
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+  }
+  .site-footer__meta { grid-column: 1 / -1; }
+}

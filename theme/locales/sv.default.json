@@ -1,0 +1,155 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Hoppa till innehåll",
+      "close": "Stäng",
+      "loading": "Laddar…"
+    },
+    "cart": {
+      "title": "Varukorg",
+      "count": "Varukorg, {{ count }} artiklar"
+    },
+    "search": {
+      "title": "Sök"
+    },
+    "account": {
+      "title": "Konto"
+    },
+    "language": {
+      "label": "Språk"
+    },
+    "price": {
+      "tbd": "Pris TBD",
+      "tbd_note": "Priset är inte fastställt ännu"
+    },
+    "pagination": {
+      "previous": "Föregående",
+      "next": "Nästa"
+    }
+  },
+  "header": {
+    "nav": {
+      "ritual": "Ritualen",
+      "ingredients": "Ingredienser",
+      "journal": "Journal",
+      "about": "Om NEXO"
+    }
+  },
+  "ritual": {
+    "step_label": "Steg {{ step }} av 3",
+    "begin": "Dra för att påbörja ritualen",
+    "steps": {
+      "one": {
+        "step": "+1",
+        "index": "01",
+        "verb": "Rengör",
+        "name_line_1": "Lather",
+        "name_line_2": "Me Up",
+        "category": "Schampo",
+        "tagline": "Rengör utan att torka ut.",
+        "volume": "250 ml",
+        "ingredients_count": "21 ingredienser",
+        "ingredients_cta": "Varje en förklarad"
+      },
+      "two": {
+        "step": "+2",
+        "index": "02",
+        "verb": "Vårdar",
+        "name_line_1": "Mist",
+        "name_line_2": "Me Crazy",
+        "category": "Spray",
+        "tagline": "Mjukhet och glans, utan tyngd.",
+        "volume": "100 ml",
+        "ingredients_count": "16 ingredienser",
+        "ingredients_cta": "Varje en förklarad"
+      },
+      "three": {
+        "step": "+3",
+        "index": "03",
+        "verb": "Skyddar",
+        "name_line_1": "Whip",
+        "name_line_2": "Me Good",
+        "category": "Kräm",
+        "tagline": "Skydd och mjukhet, dag efter dag.",
+        "volume": "30 ml",
+        "ingredients_count": "15 ingredienser",
+        "ingredients_cta": "Varje en förklarad"
+      }
+    },
+    "add": "Lägg i varukorg",
+    "added": "Tillagd",
+    "progress_label": "Ritualens gång"
+  },
+  "bundle": {
+    "kicker": "+1 +2 +3",
+    "title_1": "Ritualen",
+    "title_2": "komplett",
+    "description": "Alla tre stegen. Tvätta, vårda, skydda.",
+    "cta": "Lägg hela ritualen i varukorgen",
+    "note": "Ett system, inte tre produkter."
+  },
+  "ingredients": {
+    "kicker": "Ingrediensbiblioteket",
+    "title_1": "Allt",
+    "title_2": "vi stoppar i.",
+    "teaser": "Varje ingrediens, och vad den gör. Publicerad, översatt till vanlig svenska, försvarbar en för en.",
+    "cta": "Utforska ingrediensbiblioteket",
+    "lens_hint": "Dra linsen över namnen",
+    "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin"
+  },
+  "cart": {
+    "title": "Varukorg",
+    "empty": "Varukorgen är tom.",
+    "empty_cta": "Påbörja ritualen",
+    "subtotal": "Delsumma",
+    "checkout": "Gå till kassan",
+    "remove": "Ta bort {{ title }}",
+    "quantity": "Antal",
+    "decrease": "Minska antal för {{ title }}",
+    "increase": "Öka antal för {{ title }}",
+    "ritual": {
+      "label": "Ritualen",
+      "of_three": "{{ count }} av 3.",
+      "continue": "Fortsätt ritualen",
+      "complete": "Ritualen är komplett."
+    }
+  },
+  "newsletter": {
+    "title": "Håll kontakten.",
+    "description": "Nyheter från NEXO. Sällan, och bara när det är värt det.",
+    "email": "E-postadress",
+    "submit": "Prenumerera",
+    "success": "Tack. Vi hörs.",
+    "error": "Något gick fel. Försök igen."
+  },
+  "footer": {
+    "tagline": "Tillverkat i Sverige. Ingrediens för ingrediens.",
+    "org": "[ORG]",
+    "org_number": "[ORG.NR]",
+    "vat": "[MOMS.NR]",
+    "address": "[ADRESS]",
+    "email": "[E-POST]",
+    "shipping": "Fri frakt över 500 kr · 2–4 arbetsdagar",
+    "returns": "30 dagars öppet köp",
+    "legal": {
+      "terms": "Köpvillkor",
+      "privacy": "Integritetspolicy",
+      "shipping": "Frakt & leverans",
+      "returns": "Returer"
+    }
+  },
+  "products": {
+    "lather-me-up": {
+      "name": "Lather Me Up"
+    },
+    "mist-me-crazy": {
+      "name": "Mist Me Crazy"
+    },
+    "whip-me-good": {
+      "name": "Whip Me Good"
+    },
+    "the-ritual": {
+      "name": "Ritualen +1 +2 +3"
+    }
+  }
+}

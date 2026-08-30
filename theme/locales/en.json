@@ -1,0 +1,155 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content",
+      "close": "Close",
+      "loading": "Loading…"
+    },
+    "cart": {
+      "title": "Cart",
+      "count": "Cart, {{ count }} items"
+    },
+    "search": {
+      "title": "Search"
+    },
+    "account": {
+      "title": "Account"
+    },
+    "language": {
+      "label": "Language"
+    },
+    "price": {
+      "tbd": "PRICE TBD",
+      "tbd_note": "Price not decided yet"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "header": {
+    "nav": {
+      "ritual": "The Ritual",
+      "ingredients": "Ingredients",
+      "journal": "Journal",
+      "about": "About NEXO"
+    }
+  },
+  "ritual": {
+    "step_label": "Step {{ step }} of 3",
+    "begin": "Drag to begin the ritual",
+    "steps": {
+      "one": {
+        "step": "+1",
+        "index": "01",
+        "verb": "Cleanse",
+        "name_line_1": "Lather",
+        "name_line_2": "Me Up",
+        "category": "Shampoo",
+        "tagline": "Cleanses without stripping.",
+        "volume": "250 ml",
+        "ingredients_count": "21 ingredients",
+        "ingredients_cta": "Every one explained"
+      },
+      "two": {
+        "step": "+2",
+        "index": "02",
+        "verb": "Condition",
+        "name_line_1": "Mist",
+        "name_line_2": "Me Crazy",
+        "category": "Leave-in spray",
+        "tagline": "Softness and shine, no weight.",
+        "volume": "100 ml",
+        "ingredients_count": "16 ingredients",
+        "ingredients_cta": "Every one explained"
+      },
+      "three": {
+        "step": "+3",
+        "index": "03",
+        "verb": "Protect",
+        "name_line_1": "Whip",
+        "name_line_2": "Me Good",
+        "category": "Cream",
+        "tagline": "Protection and softness, day after day.",
+        "volume": "30 ml",
+        "ingredients_count": "15 ingredients",
+        "ingredients_cta": "Every one explained"
+      }
+    },
+    "add": "Add to cart",
+    "added": "Added",
+    "progress_label": "Ritual progress"
+  },
+  "bundle": {
+    "kicker": "+1 +2 +3",
+    "title_1": "The Ritual,",
+    "title_2": "complete",
+    "description": "All three steps. Cleanse, condition, protect.",
+    "cta": "Add the complete ritual",
+    "note": "One system, not three products."
+  },
+  "ingredients": {
+    "kicker": "The ingredient library",
+    "title_1": "Everything",
+    "title_2": "we put in.",
+    "teaser": "Every ingredient, and what it does. Published, explained in plain language, defensible one by one.",
+    "cta": "Explore the ingredient library",
+    "lens_hint": "Drag the lens across the names",
+    "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty.",
+    "empty_cta": "Begin the ritual",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "remove": "Remove {{ title }}",
+    "quantity": "Quantity",
+    "decrease": "Decrease quantity of {{ title }}",
+    "increase": "Increase quantity of {{ title }}",
+    "ritual": {
+      "label": "The ritual",
+      "of_three": "{{ count }} of 3.",
+      "continue": "Continue the ritual",
+      "complete": "The ritual is complete."
+    }
+  },
+  "newsletter": {
+    "title": "Stay in touch.",
+    "description": "News from NEXO. Rarely, and only when it's worth it.",
+    "email": "Email address",
+    "submit": "Subscribe",
+    "success": "Thank you. Talk soon.",
+    "error": "Something went wrong. Try again."
+  },
+  "footer": {
+    "tagline": "Made in Sweden. Ingredient by ingredient.",
+    "org": "[ORG]",
+    "org_number": "[ORG.NR]",
+    "vat": "[VAT NR]",
+    "address": "[ADDRESS]",
+    "email": "[EMAIL]",
+    "shipping": "Free shipping over 500 kr · 2–4 working days",
+    "returns": "30-day right of return",
+    "legal": {
+      "terms": "Terms of purchase",
+      "privacy": "Privacy policy",
+      "shipping": "Shipping & delivery",
+      "returns": "Returns"
+    }
+  },
+  "products": {
+    "lather-me-up": {
+      "name": "Lather Me Up"
+    },
+    "mist-me-crazy": {
+      "name": "Mist Me Crazy"
+    },
+    "whip-me-good": {
+      "name": "Whip Me Good"
+    },
+    "the-ritual": {
+      "name": "The Ritual +1 +2 +3"
+    }
+  }
+}
