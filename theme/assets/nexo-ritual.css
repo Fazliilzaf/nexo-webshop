@@ -268,6 +268,13 @@
   .ritual__begin { top: 64%; }
 }
 
+/* Short viewports (landscape phones): cap the name so the dock
+   — the commerce — stays inside the fold */
+@media (max-height: 520px) {
+  .ritual__name { font-size: clamp(2.8rem, 15vh, 6.5rem); }
+  .ritual__body { grid-template-rows: 1fr auto; }
+}
+
 /* ---------- Static mode: everything stands still, still designed ---------- */
 
 .ritual--static .ritual__track { height: auto; }

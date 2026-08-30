@@ -36,6 +36,7 @@
     }
   },
   "ritual": {
+    "page_title": "NEXO — Swedish haircare in three steps",
     "step_label": "Step {{ step }} of 3",
     "begin": "Drag to begin the ritual",
     "steps": {

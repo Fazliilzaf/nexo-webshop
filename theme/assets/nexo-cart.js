@@ -51,7 +51,25 @@
   }
 
   function onKey(e) {
-    if (e.key === "Escape") close();
+    if (e.key === "Escape") {
+      close();
+      return;
+    }
+    /* focus trap: keep Tab inside the dialog while it is open */
+    if (e.key !== "Tab") return;
+    var focusables = panel.querySelectorAll(
+      'a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])'
+    );
+    if (!focusables.length) return;
+    var first = focusables[0];
+    var last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   }
 
   document.addEventListener("click", function (e) {
@@ -67,6 +85,7 @@
   /* ---------------- ritual state ---------------- */
 
   function renderRitual(cart) {
+    var ritualBlock = root.querySelector("[data-cart-ritual]");
     var handles = {};
     cart.items.forEach(function (item) {
       if (item.handle) handles[item.handle] = true;
@@ -81,6 +100,10 @@
         }
       }
     });
+    /* accessory-only carts (e.g. just the brush) must not trigger
+       ritual copy — the block only speaks when the ritual is in play
+       or the cart is empty */
+    ritualBlock.hidden = count === 0 && cart.item_count > 0;
     if (count === 3) {
       statusEl.textContent = locale.complete;
     } else {

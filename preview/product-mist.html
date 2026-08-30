@@ -32,7 +32,7 @@
   <div class="site-header__bar glass" data-header-bar>
     <span class="glass__caustic" aria-hidden="true"></span>
 
-    <a class="site-header__brand" href="/" aria-label="NEXO — NEXO">
+    <a class="site-header__brand" href="/" aria-label="NEXO">
       <img
         src="../theme/assets/nexo-logo-white.svg"
         alt="NEXO"
@@ -44,8 +44,9 @@
 
     <nav class="site-header__nav" aria-label="Ritualen">
       <a href="/#ritual" class="site-header__link">Ritualen</a>
-      <a href="/#ingredients" class="site-header__link">Ingredienser</a>
-      <a href="/#bundle" class="site-header__link">Om NEXO</a>
+      <a href="/pages/ingredienser" class="site-header__link">Ingredienser</a>
+      <a href="/blogs/journal" class="site-header__link">Journal</a>
+      <a href="/pages/om-nexo" class="site-header__link">Om NEXO</a>
     </nav>
 
     <div class="site-header__actions"><div class="site-header__locale t-mono"><span aria-current="true">SV</span><span aria-hidden="true">/</span><a href="http://localhost:8000/en/">EN</a></div><button
@@ -63,12 +64,9 @@
 
 
 <main id="main" role="main">
-      <article class="pdp" data-pdp>
-  <nav class="pdp__steps t-mono" aria-label="I ritualen"><span class="t-ghost">← +1 Rengör</span><span class="pdp__steps-current t-griege">
-      +2 Vårdar
-    </span><span class="t-ghost">+3 Skyddar →</span></nav>
-
-  <div class="pdp__hero">
+      <article class="pdp" data-pdp><nav class="pdp__steps t-mono" aria-label="I ritualen"><span class="t-ghost">← +1 Rengör</span><span class="pdp__steps-current t-griege">
+        +2 Vårdar
+      </span><span class="t-ghost">+3 Skyddar →</span></nav><div class="pdp__hero">
     <figure class="pdp__object"><img
           src="../theme/assets/pdp-mist-1.dev.jpg"
           alt="Mist Me Crazy"
@@ -77,27 +75,19 @@
           fetchpriority="high"
         ></figure>
 
-    <div class="pdp__commerce">
-      <p class="t-mono t-griege">
-        02 / Vårdar
-        <span class="t-ghost">· Spray</span>
-      </p>
-
-      <h1 class="pdp__name t-display">Mist Me Crazy</h1>
-
-      <p class="pdp__tagline">Mjukhet och glans, utan tyngd.</p>
-
-      <div class="pdp__row t-mono">
+    <div class="pdp__commerce"><p class="t-mono t-griege">
+          02 / Vårdar
+          <span class="t-ghost">· Spray</span>
+        </p><h1 class="pdp__name t-display">Mist Me Crazy</h1><p class="pdp__tagline">Mjukhet och glans, utan tyngd.</p><div class="pdp__row t-mono">
         <span>100 ml</span>
         <span class="pdp__price"><span aria-hidden="true">0,00 kr</span>
             <span class="dev-badge">Pris TBD</span></span>
       </div><button type="button" class="btn pdp__add" data-add disabled>
           Lägg i varukorg
         </button><a class="pdp__inci-link t-mono" href="#inside">
-        16 ingredienser ·
-        Varje en förklarad →
-      </a>
-    </div>
+          16 ingredienser ·
+          Varje en förklarad →
+        </a></div>
   </div><section class="pdp__block" aria-labelledby="pdp-what">
       <h2 id="pdp-what" class="pdp__kicker t-mono t-griege">Vad det är</h2>
       <p class="pdp__text">En lätt och fräsch leave-in-spray som ger mjukhet, glans och en uppfriskande känsla. Perfekt att använda i både fuktigt och torrt hår för att minska friss och göra håret enklare att hantera utan att tynga ner.</p>
@@ -118,11 +108,9 @@
           </li></ul>
     </section><section class="pdp__block" aria-labelledby="pdp-use">
     <h2 id="pdp-use" class="pdp__kicker t-mono t-griege">Så använder du det</h2>
-    <p class="pdp__text">Spraya jämnt från cirka 10–15 cm avstånd. Låt torka eller massera försiktigt in. Använd i fuktigt eller torrt hår, när som helst på dagen.</p>
-    <p class="pdp__follow t-mono t-ghost">
-      Följ upp med
-      +3 Whip Me Good</p>
-  </section><figure class="pdp__object pdp__object--wide">
+    <p class="pdp__text">Spraya jämnt från cirka 10–15 cm avstånd. Låt torka eller massera försiktigt in. Använd i fuktigt eller torrt hår, när som helst på dagen.</p><p class="pdp__follow t-mono t-ghost">
+        Följ upp med
+        +3 Whip Me Good</p></section><figure class="pdp__object pdp__object--wide">
       <img
         src="../theme/assets/pdp-mist-2.dev.jpg"
         alt="Mist Me Crazy"
@@ -187,20 +175,19 @@
             </li></ol>
       </details>
     </section><section class="pdp__ritual" aria-labelledby="pdp-ritual">
-    <h2 id="pdp-ritual" class="pdp__kicker t-mono t-griege">I ritualen</h2>
-    <ol class="pdp__ritual-steps t-mono"><li class="">
-          +1
-          Rengör
-        </li><li class="is-current">
-          +2
-          Vårdar
-        </li><li class="">
-          +3
-          Skyddar
-        </li></ol>
-    <a class="btn btn--ghost" href="/#bundle">Gör ritualen komplett →</a>
-  </section>
-</article><script type="application/ld+json">
+      <h2 id="pdp-ritual" class="pdp__kicker t-mono t-griege">I ritualen</h2>
+      <ol class="pdp__ritual-steps t-mono"><li class="">
+            +1
+            Rengör
+          </li><li class="is-current">
+            +2
+            Vårdar
+          </li><li class="">
+            +3
+            Skyddar
+          </li></ol>
+      <a class="btn btn--ghost" href="/#bundle">Gör ritualen komplett →</a>
+    </section></article><script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Product",

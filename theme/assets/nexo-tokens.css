@@ -15,8 +15,8 @@
   --nexo-griege: #a8a09d;         /* the one official colour */
   --nexo-griege-deep: #7d7673;    /* griege, sunk into black */
   --nexo-bone: #e9e5e1;           /* primary text (label off-white) */
-  --nexo-smoke: rgba(233, 229, 225, 0.62); /* secondary text */
-  --nexo-ghost: rgba(233, 229, 225, 0.5);  /* tertiary / meta — floor for AA */
+  --nexo-smoke: rgba(233, 229, 225, 0.68); /* secondary text */
+  --nexo-ghost: rgba(233, 229, 225, 0.56); /* tertiary / meta — AA floor */
 
   /* --- Glass (the optical layer above) --- */
   --glass-fill: rgba(19, 19, 20, 0.42);

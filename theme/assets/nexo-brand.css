@@ -7,7 +7,7 @@
   position: relative;
   z-index: var(--z-content);
   background: var(--nexo-black);
-  padding: calc(7rem + env(safe-area-inset-top)) var(--pad-page) 6rem;
+  padding: calc(6.5rem + env(safe-area-inset-top)) var(--pad-page) 6rem;
   display: grid;
   gap: clamp(5rem, 14vw, 10rem);
 }
