@@ -69,8 +69,8 @@ def product_payload(handle, title, body, ptype, sku, barcode, price, metafields,
                 "sku": sku,
                 "barcode": barcode,
                 "price": price,
-                "inventory_policy": "deny",
-                "inventory_management": "shopify",
+                "inventory_policy": "continue",     # sell without stock check (decided 2026-08-31)
+                "inventory_management": None,       # untracked
                 "requires_shipping": True,
                 "taxable": True,
             }],

@@ -76,9 +76,9 @@ def product_row(handle, title, body, ptype, sku, barcode, price, tagline, volume
         "Option1 Value": "Default Title",
         "Variant SKU": sku,
         "Variant Grams": "",                      # BLOCKED: unverified
-        "Variant Inventory Tracker": "shopify",
-        "Variant Inventory Qty": "",              # BLOCKED: unverified
-        "Variant Inventory Policy": "deny",
+        "Variant Inventory Tracker": "",          # untracked — sell without stock check (decided 2026-08-31)
+        "Variant Inventory Qty": "",
+        "Variant Inventory Policy": "continue",   # keep selling when out of stock
         "Variant Fulfillment Service": "manual",
         "Variant Price": price,                   # decided 2026-08-30; empty = still blocked
         "Variant Barcode": barcode,

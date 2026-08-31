@@ -168,8 +168,8 @@ def main():
             blocked(f"Variant Price empty: {r['Handle']} (hard blocker)")
         if not r["Variant Grams"]:
             blocked(f"Variant Grams empty: {r['Handle']}")
-        if not r["Variant Inventory Qty"]:
-            blocked(f"Variant Inventory Qty empty: {r['Handle']}")
+        if r["Variant Inventory Tracker"] == "shopify" and not r["Variant Inventory Qty"]:
+            blocked(f"Variant Inventory Qty empty (tracked): {r['Handle']}")
 
     return report()
 
