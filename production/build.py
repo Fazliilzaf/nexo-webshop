@@ -45,6 +45,14 @@ PRICES = {
     "the-ritual": "72900",
     "borste": "29900",
 }
+# Shipping weights (grams) DECIDED by owner 2026-08-31: volume-as-grams.
+# Bundle = 250+100+30. Brush weight still BLOCKED (no volume exists).
+GRAMS = {
+    "lather-me-up": "250",
+    "mist-me-crazy": "100",
+    "whip-me-good": "30",
+    "the-ritual": "380",
+}
 
 PRODUCT_COLUMNS = [
     "Handle", "Title", "Body (HTML)", "Vendor", "Type", "Tags", "Published",
@@ -75,7 +83,7 @@ def product_row(handle, title, body, ptype, sku, barcode, price, tagline, volume
         "Option1 Name": "Title",
         "Option1 Value": "Default Title",
         "Variant SKU": sku,
-        "Variant Grams": "",                      # BLOCKED: unverified
+        "Variant Grams": GRAMS.get(handle, ""),   # decided 2026-08-31; empty = still blocked
         "Variant Inventory Tracker": "",          # untracked — sell without stock check (decided 2026-08-31)
         "Variant Inventory Qty": "",
         "Variant Inventory Policy": "continue",   # keep selling when out of stock

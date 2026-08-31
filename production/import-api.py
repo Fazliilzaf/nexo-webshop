@@ -22,7 +22,7 @@ API = f"https://{SHOP}/admin/api/2026-07"
 DRY = "--dry-run" in sys.argv
 
 sys.path.insert(0, os.path.join(ROOT, "production"))
-from build import VOLUMES, USAGES, BARCODES, PRICES  # noqa: E402
+from build import VOLUMES, USAGES, BARCODES, PRICES, GRAMS  # noqa: E402
 
 with open(os.path.join(ROOT, "content", "products.json"), encoding="utf-8") as f:
     CATALOG = json.load(f)
@@ -69,6 +69,7 @@ def product_payload(handle, title, body, ptype, sku, barcode, price, metafields,
                 "sku": sku,
                 "barcode": barcode,
                 "price": price,
+                "grams": int(GRAMS[handle]) if GRAMS.get(handle) else 0,
                 "inventory_policy": "continue",     # sell without stock check (decided 2026-08-31)
                 "inventory_management": None,       # untracked
                 "requires_shipping": True,
