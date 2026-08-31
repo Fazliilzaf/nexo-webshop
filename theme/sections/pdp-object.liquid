@@ -134,6 +134,9 @@
       {%- if tagline != blank -%}
         <p class="pdp__tagline">{{ tagline }}</p>
       {%- endif -%}
+      {%- unless is_accessory -%}
+        <p class="pdp__aftercare t-mono t-griege">{{ 'pdp.aftercare' | t }}</p>
+      {%- endunless -%}
 
       <div class="pdp__row t-mono">
         <span>{{ volume }}</span>

@@ -165,6 +165,9 @@
     "hero_2": "scalps.",
     "intro": "NEXO was born from working with hair transplant patients — people with sensitive scalps who needed gentler haircare. Today it is used by anyone who wants the same thing: mild, moisturising formulas that leave hair soft. Developed in collaboration with Hair TP Clinic.",
     "principles_kicker": "Principles",
+    "aftercare_kicker": "Aftercare",
+    "aftercare_title": "Created for aftercare following hair transplantation.",
+    "aftercare_body": "The ritual is built as a daily aftercare routine: +1 gently cleanses a sensitive scalp, +2 moisturises, +3 protects. The brush is used for lymphatic massage during the swelling period. Developed in collaboration with Hair TP Clinic.",
     "p1_title": "One system, not three products.",
     "p1_body": "+1 cleanses. +2 conditions. +3 protects. The order is the idea.",
     "p2_title": "Playful names. Serious formulas.",
@@ -185,6 +188,7 @@
   },
   "pdp": {
     "accessory_kicker": "Accessory / Tool",
+    "aftercare": "Created for aftercare following hair transplantation.",
     "what_it_is": "What it is",
     "key_ingredients": "Key ingredients",
     "how_to_use": "How to use it",

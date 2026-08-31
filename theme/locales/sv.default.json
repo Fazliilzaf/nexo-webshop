@@ -165,6 +165,9 @@
     "hero_2": "hårbotten.",
     "intro": "NEXO föddes i arbetet med kunder som genomgått hårtransplantation — människor med känslig hårbotten som behövde skonsammare hårvård. Idag används den av alla som vill ha samma sak: milda, återfuktande formler som gör håret mjukt. Utvecklad i samarbete med Hair TP Clinic.",
     "principles_kicker": "Principer",
+    "aftercare_kicker": "Eftervård",
+    "aftercare_title": "Skapad för eftervård efter hårtransplantation.",
+    "aftercare_body": "Ritualen är byggd som daglig eftervårdsrutin: +1 rengör skonsamt en känslig hårbotten, +2 återfuktar, +3 skyddar. Borsten används för lymfmassage under svullnadsperioden. Utvecklad i samarbete med Hair TP Clinic.",
     "p1_title": "Ett system, inte tre produkter.",
     "p1_body": "+1 rengör. +2 vårdar. +3 skyddar. Ordningen är själva idén.",
     "p2_title": "Lekfulla namn. Allvarliga formler.",
@@ -185,6 +188,7 @@
   },
   "pdp": {
     "accessory_kicker": "Tillbehör / Verktyg",
+    "aftercare": "Skapad för eftervård efter hårtransplantation.",
     "what_it_is": "Vad det är",
     "key_ingredients": "Nyckelingredienser",
     "how_to_use": "Så använder du det",

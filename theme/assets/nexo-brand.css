@@ -96,3 +96,9 @@
 @media (min-width: 1024px) {
   .brand__principle { max-width: 620px; }
 }
+
+.brand__aftercare {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+  border-top: 1px solid rgba(23, 20, 18, 0.15);
+  max-width: 720px;
+}
