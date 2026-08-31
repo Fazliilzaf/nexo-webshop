@@ -23,6 +23,8 @@ valideras mot dessa, aldrig tvärtom.
   rinse-off, GMP-intyg.
 - `lather-me-up-formulering.txt` — +1 schampo: full formulering med
   handelsnamn, faser och exakta procent. EXTRA KÄNSLIG — receptet.
+- `lather-me-up-ingredienslista.txt` — +1 schampo: officiell etikett-INCI.
+  Verifierad mot sajten 2026-08-31: 20 rader, identiska namn och ordning.
 
 ## Saknas fortfarande
 
