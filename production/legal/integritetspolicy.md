@@ -22,7 +22,7 @@ E-post: contact@hairtpclinic.com
 Vi säljer aldrig personuppgifter. Vi delar endast med de tjänsteleverantörer som krävs för att driva butiken:
 
 - **Shopify** (butiksplattform och hosting)
-- **Betalningspartners**: de betalningsalternativ som erbjuds i kassan — de behandlar uppgifter som krävs för betalning enligt sina egna villkor
+- **Betalningspartners**: Shopify Payments (kort, Shop Pay, Apple Pay, Google Pay) och Klarna — de behandlar uppgifter som krävs för betalning enligt sina egna villkor
 - **Fraktpartner** för leverans
 - **E-postleverantör** för nyhetsbrev
 
