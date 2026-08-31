@@ -176,6 +176,10 @@
     "cta_ritual": "Upplev ritualen",
     "cta_library": "Läs varje ingrediens"
   },
+  "accessory": {
+    "name": "NEXO Borste",
+    "view": "Se produkten"
+  },
   "pdp": {
     "accessory_kicker": "Tillbehör / Verktyg",
     "what_it_is": "Vad det är",

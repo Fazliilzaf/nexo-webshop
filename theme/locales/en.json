@@ -176,6 +176,10 @@
     "cta_ritual": "Experience the ritual",
     "cta_library": "Read every ingredient"
   },
+  "accessory": {
+    "name": "NEXO Brush",
+    "view": "View product"
+  },
   "pdp": {
     "accessory_kicker": "Accessory / Tool",
     "what_it_is": "What it is",

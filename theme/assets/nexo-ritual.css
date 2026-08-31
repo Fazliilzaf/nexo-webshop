@@ -558,3 +558,57 @@
 @media (prefers-reduced-motion: reduce) {
   .ingredients__flow { flex-wrap: wrap; width: auto; }
 }
+
+/* ---------------------------------------------- home accessory */
+/* The brush, outside the ritual core: flat griege surface, no glass */
+.home-acc {
+  background: var(--nexo-griege);
+  color: #171412;
+}
+.home-acc__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) var(--pad-page);
+}
+.home-acc__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.home-acc__kicker { color: rgba(23, 20, 18, 0.62); }
+.home-acc__name {
+  margin: 0.4em 0 0.6em;
+  color: #171412;
+}
+.home-acc__row {
+  display: flex;
+  gap: 1.5em;
+  margin-bottom: 1.75rem;
+}
+.home-acc__price { font-weight: 600; }
+.home-acc__actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.home-acc__add {
+  background: #171412;
+  color: var(--nexo-bone);
+}
+.home-acc__link {
+  color: #171412;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(23, 20, 18, 0.4);
+  padding-bottom: 2px;
+}
+@media (max-width: 1023px) {
+  .home-acc__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
