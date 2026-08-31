@@ -32,6 +32,7 @@ valideras mot dessa, aldrig tvärtom.
 - `whip-me-good-ingredienslista.txt` — +3 kräm: officiell etikett-INCI.
   Verifierad 2026-08-31: 21 rader efter uppdelning av tre sammanslagna
   rader. Dokumenterar även vegan-svaret (lanolin/lanolin alcohol/bivax).
+  Listan bekräftades av ägaren som aktuell version 2026-08-31.
 - `whip-me-good-produktsammanfattning.txt` — +3 kräm: formulering med
   handelsnamn och exakta procent. EXTRA KÄNSLIG.
 
@@ -39,9 +40,9 @@ valideras mot dessa, aldrig tvärtom.
 
 - +1:s Ingredienslista från **2025-03-07** är föråldrad (innehöll
   lavendelparfym-komponenter) — den aktuella versionen är 2025-03-25.
-  Samma risk finns teoretiskt för +2/+3 vars Ingredienslistor är från
-  2025-03-07: **bekräfta med Johanna att inga formulaändringar gjorts
-  efter 2025-03-07 för spray och kräm.**
+- +3:s lista (2025-03-07) är **bekräftad som aktuell** av ägaren
+  2026-08-31. +2:s lista (samma exportbatch 2025-03-07) inväntar
+  samma bekräftelse men anses aktuell tills motsatsen visas.
 - +2/+3:s specifikationer saknar pH — därför visar bara +1 PDP pH-rad.
 
 ## Saknas fortfarande
