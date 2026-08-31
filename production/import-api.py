@@ -103,7 +103,7 @@ def main():
         f'{b["sv"]["name"]} | NEXO', b["sv"]["description"],
     ))
     jobs.append(product_payload(
-        "borste", "NEXO Borste", "", "Tillbehör", "", "", "", [],
+        "borste", "NEXO Borste", "", "Tillbehör", "", "", money(PRICES["borste"]), [],
         "NEXO Borste | NEXO", "",
     ))
 

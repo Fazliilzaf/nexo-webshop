@@ -37,11 +37,13 @@ BARCODES = {
 }
 # Prices DECIDED 2026-08-30 (SEK incl. VAT, in öre):
 # +1 329 kr · +2 269 kr · +3 249 kr · Ritual bundle 729 kr
+# Brush 299 kr DECIDED 2026-08-31
 PRICES = {
     "lather-me-up": "32900",
     "mist-me-crazy": "26900",
     "whip-me-good": "24900",
     "the-ritual": "72900",
+    "borste": "29900",
 }
 
 PRODUCT_COLUMNS = [
@@ -125,7 +127,7 @@ def main():
     write_csv(os.path.join(OUT, "products.csv"), PRODUCT_COLUMNS, ritual_rows)
 
     accessory_rows = [product_row(
-        "borste", "NEXO Borste", "", "Tillbehör", "", "", "",
+        "borste", "NEXO Borste", "", "Tillbehör", "", "", PRICES["borste"],
         "", "", "", None, None, "NEXO Borste | NEXO", "",
     )]
     write_csv(os.path.join(OUT, "products-accessory.csv"), PRODUCT_COLUMNS, accessory_rows)
