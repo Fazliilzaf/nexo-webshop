@@ -582,15 +582,16 @@
   position: relative;
   z-index: 1;
   display: grid;
-  align-items: center;
+  align-items: end;
   min-height: min(88vh, 900px);
   max-width: 1500px;
   margin: 0 auto;
-  padding: clamp(3rem, 8vw, 6rem) var(--pad-page);
+  padding: clamp(3rem, 8vw, 6rem) var(--pad-page) clamp(2.5rem, 6vw, 4.5rem);
 }
 .home-acc__body {
   display: grid;
   justify-items: end;
+  align-self: end;
 }
 .home-acc__card {
   position: relative;
