@@ -43,13 +43,38 @@
   object-position: 50% 40%;
 }
 
-/* Desktop posters (landscape): per-step framing so the baked lockup
-   keeps its composition under cover-crop — framed upward so the
-   bottom tagline strip is cropped away */
+/* Desktop posters: pre-cropped assets (lockup + product name, no baked
+   tagline/claim strip) — contain keeps the whole composition visible;
+   the letterbox edges melt into the black hero */
 @media (min-width: 1024px) {
-  .ritual__step[data-step="1"] .ritual__material img { object-position: 50% 0%; }
-  .ritual__step[data-step="2"] .ritual__material img { object-position: 50% 20%; }
-  .ritual__step[data-step="3"] .ritual__material img { object-position: 50% 0%; }
+  .ritual__material img {
+    object-fit: contain;
+    object-position: 50% 50%;
+  }
+}
+
+/* The actual product render beside each step's material — the bottle
+   sits above the material+veil but below the glass commerce card.
+   Edge mask lets the render's own scene melt into the poster */
+.ritual__bottle {
+  position: absolute;
+  z-index: 1;
+  left: 4%;
+  bottom: 8%;
+  height: min(50vh, 520px);
+  width: auto;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 78% 78% at 50% 55%, #000 42%, transparent 72%);
+  mask-image: radial-gradient(ellipse 78% 78% at 50% 55%, #000 42%, transparent 72%);
+}
+@media (max-width: 1023px) {
+  .ritual__bottle {
+    left: auto;
+    right: 2%;
+    bottom: auto;
+    top: 14%;
+    height: 30vh;
+  }
 }
 
 /* The three materials breathe with different bodies:

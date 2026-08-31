@@ -15,10 +15,6 @@
   if product.handle == 'mist-me-crazy'
     assign step_key = 'two'
     assign asset_prefix = 'pdp-mist'
-    comment
-      DEV-ONLY: spray renders contain the "ECRAZY" typo — replace before launch
-    endcomment
-    assign asset_ext = '.dev.jpg'
     assign prev_key = 'one'
     assign next_key = 'three'
   elsif product.handle == 'whip-me-good'

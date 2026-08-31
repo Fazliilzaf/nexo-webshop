@@ -1,6 +1,6 @@
 {%- comment -%}
   One step of the ritual. Rendered three times by ritual-experience.
-  Params: key (one|two|three), handle, material, n (1|2|3), preload
+  Params: key (one|two|three), handle, material, bottle, n (1|2|3), preload
 {%- endcomment -%}
 {%- assign product = all_products[handle] -%}
 {%- assign base = 'ritual.steps.' | append: key -%}
@@ -24,6 +24,18 @@
     </picture>
   </div>
   <div class="ritual__veil" aria-hidden="true"></div>
+
+  {%- if bottle -%}
+    <img
+      class="ritual__bottle"
+      src="{{ bottle | asset_url }}"
+      alt=""
+      width="1400"
+      height="933"
+      aria-hidden="true"
+      {%- if preload %} fetchpriority="high"{% else %} loading="lazy"{% endif -%}
+    >
+  {%- endif -%}
 
   <div class="ritual__body">
     <h2 class="ritual__name t-display">
