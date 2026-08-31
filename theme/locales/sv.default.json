@@ -161,9 +161,9 @@
   },
   "brand": {
     "kicker": "Om NEXO",
-    "hero_1": "Tre produkter.",
-    "hero_2": "En ritual.",
-    "intro": "NEXO är svensk hårvård byggd som ett system. Tre steg, i rätt ordning, med namn som leker — och formler som inte gör det.",
+    "hero_1": "Byggd för känslig",
+    "hero_2": "hårbotten.",
+    "intro": "NEXO föddes i arbetet med kunder som genomgått hårtransplantation — människor med känslig hårbotten som behövde skonsammare hårvård. Idag används den av alla som vill ha samma sak: milda, återfuktande formler som gör håret mjukt. Utvecklad i samarbete med Hair TP Clinic.",
     "principles_kicker": "Principer",
     "p1_title": "Ett system, inte tre produkter.",
     "p1_body": "+1 rengör. +2 vårdar. +3 skyddar. Ordningen är själva idén.",
@@ -171,6 +171,8 @@
     "p2_body": "Etiketten är matt svart och talar lågt. Innehållet tål att granskas.",
     "p3_title": "Transparens är inte en fotnot.",
     "p3_body": "Varje ingrediens är publicerad, med en förklaring på vanlig svenska. Det är så vi förtjänar förtroende.",
+    "p4_title": "Verktyg, inte dekoration.",
+    "p4_body": "Borsten är en lymfmassageborste — utformad för massage av hårbotten och ansiktet, med samma skonsamhet som formuleringarna. Många använder den morgonen efter en lång natt eller en lång flygning.",
     "chip_kicker": "Officiell färg",
     "origin": "Tillverkat i Sverige.",
     "cta_ritual": "Upplev ritualen",
@@ -178,6 +180,7 @@
   },
   "accessory": {
     "name": "NEXO Borste",
+    "line": "Lymfmassageborste för hårbotten och ansikte.",
     "view": "Se produkten"
   },
   "pdp": {
@@ -194,7 +197,7 @@
       "one": "Massera försiktigt in i fuktigt hår och hårbotten tills det bildas ett mjukt lödder. Skölj noggrant. Upprepa vid behov.",
       "two": "Spraya jämnt från cirka 10–15 cm avstånd. Låt torka eller massera försiktigt in. Använd i fuktigt eller torrt hår, när som helst på dagen.",
       "three": "Använd dagligen vid behov. Arbeta in en liten mängd i hårbotten eller på torr hud.",
-      "accessory": "Se förpackningens bruksanvisning."
+      "accessory": "Använd som lymfmassageborste. Massera med lätta, mjuka drag från ansiktets mitt ut mot öronen och nedåt mot halsen — i riktning mot körtlarna bakom öronen. Kan användas i hela ansiktet och på hårbotten, morgon eller kväll."
     }
   },
   "products": {

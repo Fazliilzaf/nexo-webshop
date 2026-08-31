@@ -29,6 +29,7 @@ USAGES = {
     "lather-me-up": "Massera försiktigt in i fuktigt hår och hårbotten tills det bildas ett mjukt lödder. Skölj noggrant. Upprepa vid behov.",
     "mist-me-crazy": "Spraya jämnt från cirka 10–15 cm avstånd. Låt torka eller massera försiktigt in. Använd i fuktigt eller torrt hår, när som helst på dagen.",
     "whip-me-good": "Använd dagligen vid behov. Arbeta in en liten mängd i hårbotten eller på torr hud.",
+    "borste": "Använd som lymfmassageborste. Massera med lätta, mjuka drag från ansiktets mitt ut mot öronen och nedåt mot halsen — i riktning mot körtlarna bakom öronen. Kan användas i hela ansiktet och på hårbotten, morgon eller kväll.",
 }
 BARCODES = {
     "lather-me-up": "7394359290407",
@@ -140,7 +141,7 @@ def main():
 
     accessory_rows = [product_row(
         "borste", "NEXO Borste", "", "Tillbehör", "", "", PRICES["borste"],
-        "", "", "", None, None, "NEXO Borste | NEXO", "",
+        "", "", USAGES["borste"], None, None, "NEXO Borste | NEXO", "",
     )]
     write_csv(os.path.join(OUT, "products-accessory.csv"), PRODUCT_COLUMNS, accessory_rows)
 

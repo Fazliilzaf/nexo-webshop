@@ -161,9 +161,9 @@
   },
   "brand": {
     "kicker": "About NEXO",
-    "hero_1": "Three products.",
-    "hero_2": "One ritual.",
-    "intro": "NEXO is Swedish haircare built as a system. Three steps, in the right order, with names that play — and formulas that don't.",
+    "hero_1": "Built for sensitive",
+    "hero_2": "scalps.",
+    "intro": "NEXO was born from working with hair transplant patients — people with sensitive scalps who needed gentler haircare. Today it is used by anyone who wants the same thing: mild, moisturising formulas that leave hair soft. Developed in collaboration with Hair TP Clinic.",
     "principles_kicker": "Principles",
     "p1_title": "One system, not three products.",
     "p1_body": "+1 cleanses. +2 conditions. +3 protects. The order is the idea.",
@@ -171,6 +171,8 @@
     "p2_body": "The label is matte black and speaks quietly. The contents hold up to scrutiny.",
     "p3_title": "Transparency is not a footnote.",
     "p3_body": "Every ingredient is published, with an explanation in plain language. That is how we earn trust.",
+    "p4_title": "A tool, not a decoration.",
+    "p4_body": "The brush is a lymphatic massage brush — designed for massaging the scalp and face, with the same gentleness as the formulas. Many reach for it the morning after a long night or a long flight.",
     "chip_kicker": "Official colour",
     "origin": "Made in Sweden.",
     "cta_ritual": "Experience the ritual",
@@ -178,6 +180,7 @@
   },
   "accessory": {
     "name": "NEXO Brush",
+    "line": "A lymphatic massage brush for scalp and face.",
     "view": "View product"
   },
   "pdp": {
@@ -194,7 +197,7 @@
       "one": "Massage gently into damp hair and scalp until a soft lather forms. Rinse thoroughly. Repeat if needed.",
       "two": "Spray evenly from about 10–15 cm. Leave to dry or massage in gently. Use on damp or dry hair, any time of day.",
       "three": "Use daily as needed. Work a small amount into the scalp or onto dry skin.",
-      "accessory": "See the packaging for usage instructions."
+      "accessory": "Use as a lymphatic massage brush. Sweep gently from the centre of the face out toward the ears and down the neck — toward the glands behind the ears. Can be used across the face and scalp, morning or evening."
     }
   },
   "products": {
