@@ -1,13 +1,11 @@
 # Integritetspolicy — NEXO
 
-**DRAFT — LEGAL REVIEW REQUIRED.** Publiceras inte förrän (a) jurist granskat, (b) alla [ORG]-token är ersatta, (c) mottagare/biträden matchar den faktiska production-stacken.
-
-Den här integritetspolicyn beskriver hur [ORG.NAMN] ("NEXO", "vi"), org.nr [ORG.NR], [ADRESS], behandlar personuppgifter när du besöker ne8xo.com, handlar hos oss eller kontaktar oss.
+Den här integritetspolicyn beskriver hur Hair TP Clinic Gbg AB ("NEXO", "vi"), org.nr 559034-2688, Vasaplasten 2, 411 34 Göteborg, behandlar personuppgifter när du besöker ne8xo.com, handlar hos oss eller kontaktar oss.
 
 ## Personuppgiftsansvarig
 
-[ORG.NAMN], org.nr [ORG.NR], [ADRESS]
-E-post: contact@ne8xo.com · Telefon: [TELEFON]
+Hair TP Clinic Gbg AB, org.nr 559034-2688, Vasaplasten 2, 411 34 Göteborg
+E-post: contact@hairtpclinic.com
 
 ## Vilka uppgifter vi samlar in och varför
 
@@ -24,9 +22,9 @@ E-post: contact@ne8xo.com · Telefon: [TELEFON]
 Vi säljer aldrig personuppgifter. Vi delar endast med de tjänsteleverantörer som krävs för att driva butiken:
 
 - **Shopify** (butiksplattform och hosting)
-- **Betalningspartners**: [BETALNINGSPARTNERS — fylls i först när de är aktiverade i butiken] — de behandlar uppgifter som krävs för betalning enligt sina egna villkor
-- **Fraktpartners**: [FRAKTBOLAG] för leverans
-- **E-postleverantör** för nyhetsbrev: [E-POSTPLATTFORM]
+- **Betalningspartners**: de betalningsalternativ som erbjuds i kassan — de behandlar uppgifter som krävs för betalning enligt sina egna villkor
+- **Fraktpartner** för leverans
+- **E-postleverantör** för nyhetsbrev
 
 Behandling utanför EU/EES sker i så fall med stöd av EU-kommissionens standardavtalsklausuler.
 
@@ -36,7 +34,7 @@ Vi använder endast cookies som krävs för att butiken ska fungera (varukorg, s
 
 ## Dina rättigheter
 
-Du har rätt att få tillgång till, rätta eller radera dina uppgifter, begränsa eller invända mot behandling, få ut dina uppgifter (dataportabilitet) och återkalla samtycken. Kontakta contact@ne8xo.com. Du kan också klaga till Integritetsskyddsmyndigheten (IMY), imy.se.
+Du har rätt att få tillgång till, rätta eller radera dina uppgifter, begränsa eller invända mot behandling, få ut dina uppgifter (dataportabilitet) och återkalla samtycken. Kontakta contact@hairtpclinic.com. Du kan också klaga till Integritetsskyddsmyndigheten (IMY), imy.se.
 
 ## Ändringar
 

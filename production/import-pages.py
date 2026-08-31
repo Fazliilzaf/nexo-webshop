@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Create NEXO pages + journal blog via Shopify Admin REST API.
+"""Create/update NEXO pages + journal blog via Shopify Admin REST API.
 
 - ingredienser (template page.ingredients)
 - om-nexo (template page.brand)
-- legal pages (default template) from production/legal/*.md — created
-  UNPUBLISHED until [ORG] tokens are replaced (DRAFT — LEGAL REVIEW).
+- legal pages (default template) from production/legal/*.md — published
+  since 2026-08-31 (company data filled; legal review still recommended)
 - blog 'journal' (no articles — empty state by design)
 
-Idempotent by handle. Stdlib only. Usage: python3 production/import-pages.py
+Idempotent by handle; existing pages get body/publish-state updated.
+Stdlib only. Usage: python3 production/import-pages.py
 """
 import json
 import os
@@ -57,8 +58,8 @@ def md_to_html(md):
             if in_list:
                 html.append("</ul>")
                 in_list = False
-        elif line.startswith("*Utkast") or line.startswith("**DRAFT"):
-            continue  # review banners live in the repo, not on the page
+        elif line.startswith("*Utkast") or line.startswith("**DRAFT") or line.startswith("# "):
+            continue  # review banners and the md h1 live in the repo, not on the page
         else:
             if in_list:
                 html.append("</ul>")
@@ -73,23 +74,31 @@ def md_to_html(md):
 PAGES = [
     ("Ingredienser", "ingredienser", "ingredients", None, True),
     ("Om NEXO", "om-nexo", "brand", None, True),
-    ("Integritetspolicy", "integritetspolicy", None, "integritetspolicy.md", False),
-    ("Köpvillkor", "kopvillkor", None, "kopvillkor.md", False),
-    ("Frakt & leverans", "frakt-och-leverans", None, "frakt-och-leverans.md", False),
-    ("Returer & ångerrätt", "returer-och-angerratt", None, "returer-och-angerratt.md", False),
+    ("Integritetspolicy", "integritetspolicy", None, "integritetspolicy.md", True),
+    ("Köpvillkor", "kopvillkor", None, "kopvillkor.md", True),
+    ("Frakt & leverans", "frakt-och-leverans", None, "frakt-och-leverans.md", True),
+    ("Returer & ångerrätt", "returer-och-angerratt", None, "returer-och-angerratt.md", True),
 ]
 
 
 def main():
     for title, handle, suffix, mdfile, publish in PAGES:
-        status, existing = call("GET", f"/pages.json?handle={handle}&fields=id")
-        if status == 200 and existing.get("pages"):
-            print(f"  skip (exists): {handle}")
-            continue
         body = ""
         if mdfile:
             with open(os.path.join(ROOT, "production", "legal", mdfile), encoding="utf-8") as f:
                 body = md_to_html(f.read())
+        status, existing = call("GET", f"/pages.json?handle={handle}&fields=id")
+        if status == 200 and existing.get("pages"):
+            pid = existing["pages"][0]["id"]
+            payload = {"page": {"id": pid, "published": publish}}
+            if mdfile:
+                payload["page"]["body_html"] = body
+            status, resp = call("PUT", f"/pages/{pid}.json", payload)
+            if status == 200:
+                print(f"  updated: {handle} [{'published' if publish else 'unpublished'}]")
+            else:
+                print(f"  FAIL update {status}: {handle} → {resp.get('error')}")
+            continue
         payload = {"page": {
             "title": title,
             "handle": handle,

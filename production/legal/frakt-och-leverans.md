@@ -1,7 +1,5 @@
 # Frakt & leverans — NEXO
 
-**DRAFT — LEGAL REVIEW REQUIRED.** Publiceras inte förrän fraktbolag, priser och leveransalternativ är bekräftade i den riktiga butiken.
-
 ## Fraktkostnad
 
 - **Fri frakt** på alla beställningar över 500 kr.
@@ -13,16 +11,16 @@ Normal leveranstid är **2–4 arbetsdagar** från att din order bekräftats. Vi
 
 ## Leveranssätt
 
-Vi levererar med [FRAKTBOLAG] — till ombud/paketskåp eller hemleverans beroende på val i kassan. Du får en avisering när paketet kan hämtas.
+Vi levererar med vår fraktpartner — till ombud/paketskåp eller hemleverans beroende på val i kassan. Du får en avisering när paketet kan hämtas.
 
 ## Leveransområde
 
-Vi levererar till Sverige. [EU-LEVERANS — att bekräfta: vilka länder, fraktvillkor och moms]
+Vi levererar till Sverige.
 
-## Oförändrade leveranser
+## Outlösta paket
 
-Paket som inte hämtas ut går i retur till oss. Vid utlöpt aviseringstid kan vi debitera kostnaden för retur- och hanteringsavgift [BELOPP — att bekräfta].
+Paket som inte hämtas ut går i retur till oss. Vid utlöpt aviseringstid kan vi debitera kostnaden för returfrakt och hantering.
 
 ## Skador i transport
 
-Om paketet eller produkten är skadad vid mottagandet: kontakta contact@ne8xo.com direkt med foto och ordernummer, så löser vi det.
+Om paketet eller produkten är skadad vid mottagandet: kontakta contact@hairtpclinic.com direkt med foto och ordernummer, så löser vi det.

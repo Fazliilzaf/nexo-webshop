@@ -1,7 +1,5 @@
 # Returer & ångerrätt — NEXO
 
-**DRAFT — LEGAL REVIEW REQUIRED.** Publiceras inte förrän (a) jurist granskat (särskilt hygienundantaget och 30 dagars frivilligt öppet köp kontra lagstadgad ångerrätt), (b) alla [ORG]-token är ersatta.
-
 ## 30 dagars öppet köp
 
 Vi erbjuder 30 dagars öppet köp räknat från den dag du mottog varan. För att återbetalning ska ske fullt ut ska produkten vara:
@@ -16,7 +14,7 @@ Enligt distansavtalslagen har du alltid minst 14 dagars ångerrätt vid distansk
 
 ## Så returnerar du
 
-1. Kontakta contact@ne8xo.com med ordernummer och vilken produkt returen gäller.
+1. Kontakta contact@hairtpclinic.com med ordernummer och vilken produkt returen gäller.
 2. Du får instruktioner och returadress per e-post.
 3. Skicka tillbaka produkten väl emballerad. Du ansvarar för returfrakten vid öppet köp/ångerrätt (vid godkänd reklamation står vi för frakten).
 4. När vi mottagit och kontrollerat returen återbetalar vi produktpriset samt den ursprungliga standardfrakten (vid ångerrätt) inom 14 dagar, via samma betalningsmetod som vid köpet.

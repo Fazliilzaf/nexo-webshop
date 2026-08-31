@@ -50,17 +50,16 @@ no glass, no JS, only type, space and principles.
 
 ## Known placeholders (do not ship as-is)
 
-- Prices render as `0,00 kr` + `PRICE TBD` badge until products exist in the
-  store with real prices (handles: `lather-me-up`, `mist-me-crazy`,
-  `whip-me-good`, `the-ritual`).
-- ADD buttons are `disabled` until those products exist.
-- Footer company details are `[ORG]` tokens (see OPEN-QUESTIONS.md).
-- Legal footer links are `#` placeholders.
 - `pdp-mist-1.dev.jpg` / `pdp-mist-2.dev.jpg` — DEV-ONLY: the spray renders
   contain the "ECRAZY" typo. Replace with re-rendered images (same filenames
   minus `.dev`) before launch. Never use "ECRAZY" in copy or alt text.
 - +3 cream imagery uses the JAR only. The pump bottle in combo material is an
   unconfirmed variant — do not use (blocker in OPEN-QUESTIONS.md).
+
+Resolved 2026-08-31: product prices live in the store (329/269/249/729 kr,
+brush 299 kr), footer company details filled (Hair TP Clinic Gbg AB,
+559034-2688, SE559034268801, Vasaplasten 2, 411 34 Göteborg,
+contact@hairtpclinic.com), legal pages published with real content.
 
 ## Pages to create in Shopify admin
 
@@ -68,7 +67,8 @@ no glass, no JS, only type, space and principles.
 - Page handle `om-nexo` → theme template `page.brand`
 - Legal pages (default template `page`, content from `production/legal/`):
   `integritetspolicy` · `kopvillkor` · `frakt-och-leverans` ·
-  `returer-och-angerratt` — publish only when all [ORG] tokens are replaced
+  `returer-och-angerratt` — published 2026-08-31; legal review still
+  recommended before launch
 - Blog handle `journal` (templates `blog` + `article` apply automatically)
 - Products with handles above + `borste` (brush — renders via the accessory
   branch of the PDP template: no step nav, no ritual strip, no +n) and

@@ -60,15 +60,19 @@ verkliga Shopify/payment/shipping-stack vi slutligen väljer:
 **configuration first → legal text reflects reality second.** Betal- och
 fraktmetoder listas aldrig i publicerad text förrän de är aktiverade.
 
-Fyra utkast i denna mapp, svenska (legal språk för svensk e-handel).
+Fyra sidor i denna mapp, svenska (legal språk för svensk e-handel).
 EN-versioner översätts i connect-fasen från samma struktur.
-`[ORG]`-token kvar tills företagsdata finns — **sidorna publiceras inte
-förrän alla token är ersatta.**
+Företagsdata ifyllda 2026-08-31 (Hair TP Clinic Gbg AB, 559034-2688,
+SE559034268801, Vasaplasten 2, 411 34 Göteborg, contact@hairtpclinic.com)
+och sidorna publicerade i butiken. Juristgranskning rekommenderas
+fortfarande innan lansering. Betal- och fraktmetoder anges generiskt
+("de alternativ som visas i kassan") tills de är aktiverade — specificera
+när stacken är låst.
 
 - `integritetspolicy.md` — GDPR: register, ändamål, lagringstider,
-  mottagare (token-baserade tills stacken är låst), rättigheter, cookies.
-- `kopvillkor.md` — avtal, priser inkl. 25 % moms, betalning
-  ([BETALNINGSMETODER]-token tills aktiverat), leverans, tvist via ARN.
+  mottagare (generiska tills stacken är låst), rättigheter, cookies.
+- `kopvillkor.md` — avtal, priser inkl. 25 % moms, betalning (generisk
+  formulering tills metoder är aktiverade), leverans, tvist via ARN.
   (ODR-referensen borttagen — plattformen nedlagd 2025-07-20.)
 - `frakt-och-leverans.md` — beslutad baseline: fri frakt ≥500 kr,
   2–4 arbetsdagar, kostnad under tröskeln anges i kassan.

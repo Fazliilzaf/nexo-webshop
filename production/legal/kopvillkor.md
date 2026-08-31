@@ -1,8 +1,6 @@
 # Köpvillkor — NEXO
 
-**DRAFT — LEGAL REVIEW REQUIRED.** Publiceras inte förrän (a) jurist granskat, (b) alla [ORG]-token är ersatta, (c) innehållet matchar den faktiska production-stacken (betalning, frakt, plattform).
-
-Dessa villkor gäller för köp hos [ORG.NAMN], org.nr [ORG.NR], [ADRESS] ("NEXO", "vi") via ne8xo.com. Kontakt: contact@ne8xo.com · [TELEFON]
+Dessa villkor gäller för köp hos Hair TP Clinic Gbg AB, org.nr 559034-2688, Vasaplasten 2, 411 34 Göteborg ("NEXO", "vi") via ne8xo.com. Kontakt: contact@hairtpclinic.com
 
 ## Avtal
 
@@ -14,11 +12,11 @@ Alla priser anges i svenska kronor (SEK) inklusive 25 % moms. Fraktkostnad tillk
 
 ## Betalning
 
-[BETALNINGSMETODER — fylls i först när de är aktiverade och bekräftade i den riktiga butiken. Lista aldrig en betalmetod i publicerad text innan den faktiskt är live.] Betalningen hanteras av våra betalningspartners enligt deras villkor.
+Vi erbjuder de betalningsalternativ som visas i kassan. Betalningen hanteras av våra betalningspartners enligt deras villkor.
 
 ## Leverans
 
-Leverans sker med [FRAKTBOLAG]. Normal leveranstid är 2–4 arbetsdagar. Se sidan Frakt & leverans för detaljer. Risken för varan övergår till dig när du eller ombud mottagit den.
+Leverans sker med vår fraktpartner. Normal leveranstid är 2–4 arbetsdagar. Se sidan Frakt & leverans för detaljer. Risken för varan övergår till dig när du eller ombud mottagit den.
 
 ## Ångerrätt och öppet köp
 
@@ -26,7 +24,7 @@ Du har 14 dagars ångerrätt enligt distansavtalslagen. Utöver det erbjuder vi 
 
 ## Reklamation
 
-Har du fått en felaktig eller skadad vara? Kontakta contact@ne8xo.com så snart som möjligt, gärna med ordernummer och foto. Du har enligt konsumentköplagen tre års reklamationsrätt på fel i varan. Vid godkänd reklamation står vi för returfrakten.
+Har du fått en felaktig eller skadad vara? Kontakta contact@hairtpclinic.com så snart som möjligt, gärna med ordernummer och foto. Du har enligt konsumentköplagen tre års reklamationsrätt på fel i varan. Vid godkänd reklamation står vi för returfrakten.
 
 ## Tvist
 
