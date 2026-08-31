@@ -421,12 +421,12 @@
   display: flex;
   align-items: center;
   gap: 1.2em;
-  width: min(92vw, 900px);
-  padding: 2rem 2.5rem;
-  --glass-radius: 18px;
+  width: min(90vw, 800px);
+  padding: 1.75rem 2.25rem;
+  --glass-radius: 16px;
   color: var(--nexo-bone);
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  letter-spacing: 0.12em;
+  font-size: clamp(1.6rem, 2.9vw, 2.6rem);
+  letter-spacing: 0.1em;
   box-shadow:
     0 1.5rem 3.5rem rgba(0, 0, 0, 0.55),
     inset 0 0 0 1px rgba(232, 228, 224, 0.14);

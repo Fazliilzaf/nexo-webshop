@@ -222,7 +222,7 @@
 
         for (var i = 0; i < bChips.length; i++) {
           var o = origins[i];
-          var stackY = (i - 1) * 0.17 * vh;
+          var stackY = (i - 1) * 0.14 * vh;
           var x = NEXO.lerp(o.x * vw, 0, converge);
           var y = NEXO.lerp(o.y * vh, stackY, converge);
           var rot = NEXO.lerp(o.r, 0, converge);
