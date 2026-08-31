@@ -255,6 +255,62 @@
     });
   }
 
+  /* ------------------------------------------- accessory: the massage stroke
+     The brush demonstrates its own technique — one slow sweep from the
+     centre out toward the ear, the lymphatic massage direction */
+
+  var acc = document.querySelector("[data-acc]");
+  if (acc && !reduce) {
+    var aMedia = acc.querySelector("[data-acc-media]");
+    var aBody = acc.querySelector("[data-acc-body]");
+    var aGeo = { top: 0, total: 1 };
+
+    scrubbers.push({
+      measure: function () {
+        var rect = acc.getBoundingClientRect();
+        aGeo.top = rect.top + window.scrollY;
+        aGeo.total = Math.max(rect.height, 1);
+      },
+      active: function () {
+        var vh = window.innerHeight;
+        return (
+          window.scrollY > aGeo.top - vh &&
+          window.scrollY < aGeo.top + aGeo.total + vh
+        );
+      },
+      value: function () {
+        var vh = window.innerHeight;
+        return NEXO.clamp(
+          (window.scrollY + vh - aGeo.top) / (vh + aGeo.total * 0.4),
+          0,
+          1
+        );
+      },
+      render: function (p) {
+        /* text block lands first */
+        var inBody = ss(0.05, 0.35, p);
+        if (aBody) {
+          aBody.style.opacity = inBody.toFixed(3);
+          aBody.style.transform =
+            "translate3d(0," + ((1 - inBody) * 2.4).toFixed(2) + "vh,0)";
+        }
+        /* then the brush draws its massage stroke: centre → outward,
+           a soft arc dipping mid-sweep */
+        var stroke = ss(0.15, 0.85, p);
+        if (aMedia) {
+          var x = NEXO.lerp(-6, 6, stroke);
+          var dip = Math.sin(stroke * Math.PI) * 2.2;
+          var rot = NEXO.lerp(-4, 4, stroke);
+          var sc = NEXO.lerp(1.05, 1.0, stroke);
+          aMedia.style.opacity = ss(0, 0.2, p).toFixed(3);
+          aMedia.style.transform =
+            "translate3d(" + x.toFixed(2) + "vw," + dip.toFixed(2) + "vh,0)" +
+            " rotate(" + rot.toFixed(2) + "deg) scale(" + sc.toFixed(3) + ")";
+        }
+      }
+    });
+  }
+
   /* ------------------------------------------- scroll loop */
 
   var kick = function () {};
