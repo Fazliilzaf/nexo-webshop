@@ -12,7 +12,7 @@ Alla priser anges i svenska kronor (SEK) inklusive 25 % moms. Fraktkostnad tillk
 
 ## Betalning
 
-Vi erbjuder betalning med kort (Visa, Mastercard, American Express, Maestro, UnionPay), Klarna, Shop Pay, Apple Pay och Google Pay. Betalningen hanteras av Shopify Payments och Klarna enligt deras respektive villkor.
+Vi erbjuder betalning med kort (Visa, Mastercard, American Express, Maestro, UnionPay). Betalningen hanteras av Shopify Payments enligt deras villkor.
 
 ## Leverans
 
