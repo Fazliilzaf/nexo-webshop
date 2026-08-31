@@ -25,9 +25,26 @@ valideras mot dessa, aldrig tvärtom.
   handelsnamn, faser och exakta procent. EXTRA KÄNSLIG — receptet.
 - `lather-me-up-ingredienslista.txt` — +1 schampo: officiell etikett-INCI.
   Verifierad mot sajten 2026-08-31: 20 rader, identiska namn och ordning.
+- `mist-me-crazy-ingredienslista.txt` — +2 spray: officiell etikett-INCI.
+  Verifierad 2026-08-31: 17 rader efter uppdelning av sammanslagen rad.
+- `mist-me-crazy-produktsammanfattning.txt` — +2 spray: formulering med
+  handelsnamn och exakta procent. EXTRA KÄNSLIG.
+- `whip-me-good-ingredienslista.txt` — +3 kräm: officiell etikett-INCI.
+  Verifierad 2026-08-31: 21 rader efter uppdelning av tre sammanslagna
+  rader. Dokumenterar även vegan-svaret (lanolin/lanolin alcohol/bivax).
+- `whip-me-good-produktsammanfattning.txt` — +3 kräm: formulering med
+  handelsnamn och exakta procent. EXTRA KÄNSLIG.
+
+## Versioner och öppna frågor
+
+- +1:s Ingredienslista från **2025-03-07** är föråldrad (innehöll
+  lavendelparfym-komponenter) — den aktuella versionen är 2025-03-25.
+  Samma risk finns teoretiskt för +2/+3 vars Ingredienslistor är från
+  2025-03-07: **bekräfta med Johanna att inga formulaändringar gjorts
+  efter 2025-03-07 för spray och kräm.**
+- +2/+3:s specifikationer saknar pH — därför visar bara +1 PDP pH-rad.
 
 ## Saknas fortfarande
 
-- Produktsammanfattning för **+2 Mist Me Crazy** (spray)
-- Produktsammanfattning för **+3 Whip Me Good** (kräm) — behövs bl.a.
-  för lanolin/bivax/vegan-frågan och pH-värden för PDP
+Inget dokumentmässigt — alla tre formlor är arkiverade. Öppet:
+bekräftelsen ovan att 2025-03-07-versionerna av +2/+3 gäller.

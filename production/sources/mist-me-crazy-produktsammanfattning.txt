@@ -1,0 +1,53 @@
+Produktsammanfattning + Formulering (+2) — EXTRA KÄNSLIG: fullständigt recept med handelsnamn och exakta procent. Delas aldrig externt, visas aldrig på sajten.
+Exporterad av: Johanna Malm, 2024-08-30 12:46
+Produktnamn: Fazli Vårdande Hårbottenspray Rosmarin
+Formulanummer: Fazli Vårdande Hårbottenspray Rosmarin
+Godkänd för produktion? Ja
+
+Specifikation
+Exponeringstyp: Leave-on
+
+Formulering
+Handelsnamn | Artikelnr | Procent | Fas
+Aqua | 20068 | 86.69999
+  Aqua (100.000%)
+Dexpanthenol 75% | 20031 | 5.000
+  Panthenol (75.000%), Aqua (25.000%)
+Emogreen L19 | 20132 | 3.000
+  C15-19 Alkane (100.000%)
+Fucogel 1,5P | 20300 | 2.000
+  Aqua (97.400%), Phenoxyethanol (1.500%), Biosaccharide Gum-1 (1.100%)
+Montanov L | - | 2.000
+  C14-22 Alcohols (80.000%), C12-20 Alkyl Glucoside (20.000%)
+Optiphen 200 | 20045 | 0.800
+  Phenoxyethanol (74.000%), Caprylyl Glycol (26.000%)
+Sepimax Zen | 20057 | 0.300
+  Polyacrylate Crosspolymer-6 (95.000%), Aqua (3.000%), T-Butyl Alcohol (2.000%)
+Aloe vera gel spray dried powder (200X) enhaced | 20248 | 0.100
+  Aloe Barbadensis Leaf Juice (100.000%)
+Gutö Rosmarin eterisk olja | 60068 | 0.100
+  Parfum (100.000%), Rosmarinus Officinalis Leaf Oil (100.000%)
+Mjölksyra | 20063 | 0.00001
+  Lactic Acid (95.000%), Aqua (5.000%)
+Totalt: 100.000
+
+Ingrediensdata (exakta procent)
+INCI | CAS # | EC # | Procent | Funktion
+Aqua | 7732-18-5 | 231-791-2 | 89.9069905 | Solvent
+Panthenol | 81-13-0, 16485-10-2 | 201-327-3 / 240-540-6 | 3.750 | Antistatic, Hair conditioning, Skin conditioning
+C15-19 Alkane | 64742-46-7 | 934-956-3 | 3.000 | Solvent | II/875
+C14-22 Alcohols | - | - | 1.600 | Emulsion stabilising
+Phenoxyethanol | 122-99-6 | 204-589-7 | 0.622 | Antimicrobial, Preservative | V/29
+C12-20 Alkyl Glucoside | - | - | 0.400 | Surfactant - emulsifying, Surfactant - cleansing
+Polyacrylate Crosspolymer-6 | - | - | 0.285 | Emulsion stabilising, Viscosity controlling
+Caprylyl Glycol | 1117-86-8 | 214-254-7 | 0.208 | Deodorant, Skin conditioning - emollient, Hair conditioning, Skin conditioning
+Aloe Barbadensis Leaf Juice | 85507-69-3, 94349-62-9 | 287-390-8 / 305-181-2 | 0.100 | Skin conditioning
+Parfum | - | - | 0.100 | Fragrance, Perfuming
+Rosmarinus Officinalis Leaf Oil | 84604-14-8, 8000-25-7 | 283-291-9 | 0.100 | Fragrance, Skin conditioning
+Biosaccharide Gum-1 | 194237-89-3 | - | 0.022 | Skin conditioning
+T-Butyl Alcohol | 75-65-0 | 200-889-7 | 0.006 | Denaturant, Solvent, Perfuming
+Lactic Acid | 50-21-5 | 200-018-0 | 0.0000095 | Buffering, Humectant, Skin conditioning
+Totalt: 100.100
+
+Anteckningar för formulering
+Detta är den senaste versionen prover skickade 2024-08-15

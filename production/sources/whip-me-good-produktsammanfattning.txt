@@ -1,0 +1,68 @@
+Produktsammanfattning + Formulering (+3) — EXTRA KÄNSLIG: fullständigt recept med handelsnamn och exakta procent. Delas aldrig externt, visas aldrig på sajten.
+Exporterad av: Johanna Malm, 2024-08-30 12:43
+Produktnamn: Fazli Hårbottenkräm Rosmarin
+Formulanummer: Fazli Hårbottenkräm Rosmarin
+Godkänd för produktion? Ja
+
+Specifikation
+Exponeringstyp: Leave-on
+
+Formulering
+Handelsnamn | Artikelnr | Procent | Fas
+Anhydrous Lanolin EP8 | 20025 | 21.850
+  Lanolin (100.000%)
+Vaselin | 20019 | 19.960
+  Petrolatum (100.000%)
+Aqua | 20068 | 17.000
+  Aqua (100.000%)
+Winog 20 | 20064 | 11.970
+  Paraffinum Liquidum (100.000%)
+Dexpanthenol 75% | 20031 | 7.100
+  Panthenol (75.000%), Aqua (25.000%)
+Sweet Almond Oil Refined / Mandelolja | 20018 | 5.100
+  Prunus Amygdalus Dulcis Oil (100.000%)
+Beeswax 8104 White pure | 20016 | 3.990
+  Cera Alba (100.000%)
+Nafol 1618 H | 20044 | 3.990
+  Cetearyl Alcohol (100.000%)
+Fucogel 1,5P | 20300 | 2.500
+  Aqua (97.400%), Phenoxyethanol (1.500%), Biosaccharide Gum-1 (1.100%)
+Lanowax EP pastilles | 20036 | 2.000
+  Lanolin Alcohol (100.000%)
+Ozokerite | 20048 | 2.000
+  Ozokerite (100.000%)
+Softisan 100 | 20088 | 2.000
+  Hydrogenated Coco-Glycerides (100.000%)
+Rokonsal MEP | 20054 | 0.440
+  Phenoxyethanol (72.800%), Methylparaben (15.500%), Ethylparaben (7.700%), Propylparaben (4.000%)
+Gutö Rosmarin eterisk olja | 60068 | 0.100
+  Parfum (100.000%), Rosmarinus Officinalis Leaf Oil (100.000%)
+Totalt: 100.000
+
+Ingrediensdata (exakta procent)
+INCI | CAS # | EC # | Procent | Funktion
+Lanolin | 8006-54-0 | 232-348-6 | 21.850 | Antistatic, Skin conditioning - emollient, Surfactant - emulsifying, Hair conditioning, Skin conditioning, Surfactant - cleansing
+Aqua | 7732-18-5 | 231-791-2 | 21.210 | Solvent
+Petrolatum | 8009-03-8 | 232-373-2 | 19.960 | Antistatic, Skin conditioning - emollient | II/904
+Paraffinum Liquidum | 8012-95-1, 8042-47-5 | 232-384-2 / 232-455-8 | 11.970 | Antistatic, Skin conditioning - emollient, Skin protecting, Solvent
+Panthenol | 81-13-0, 16485-10-2 | 201-327-3 / 240-540-6 | 5.325 | Antistatic, Hair conditioning, Skin conditioning
+Prunus Amygdalus Dulcis Oil | 90320-37-9 | 291-063-5 | 5.100 | Skin conditioning
+Cera Alba | 8012-89-3 | 232-383-7 | 3.990 | Skin conditioning - emollient, Surfactant - emulsifying, Film forming, Perfuming
+Cetearyl Alcohol | 67762-27-0, 8005-44-5 | 267-008-6 | 3.990 | Skin conditioning - emollient, Surfactant - emulsifying, Emulsion stabilising, Surfactant - foam boosting, Opacifying, Surfactant - cleansing, Viscosity controlling
+Hydrogenated Coco-Glycerides | 91744-42-2 | 294-604-3 | 2.000 | Skin conditioning - emollient, Skin conditioning
+Lanolin Alcohol | 8027-33-6 | 232-430-1 | 2.000 | Antistatic, Binding, Skin conditioning - emollient, Surfactant - emulsifying, Hair conditioning, Viscosity controlling
+Ozokerite | 64742-33-2 | 265-134-6 | 2.000 | Binding, Emulsion stabilising, Opacifying, Viscosity controlling
+Phenoxyethanol | 122-99-6 | 204-589-7 | 0.35782 | Antimicrobial, Preservative | V/29
+Parfum | - | - | 0.100 | Fragrance, Perfuming
+Rosmarinus Officinalis Leaf Oil | 84604-14-8, 8000-25-7 | 283-291-9 | 0.100 | Fragrance, Skin conditioning
+Methylparaben | 99-76-3 | 202-785-7 | 0.0682 | Fragrance, Preservative | V/12
+Ethylparaben | 120-47-8 | 204-399-4 | 0.03388 | Fragrance, Preservative | V/12
+Biosaccharide Gum-1 | 194237-89-3 | - | 0.0275 | Skin conditioning
+Propylparaben | 94-13-3 | 202-307-7 | 0.0176 | Preservative, Perfuming | V/12a
+Totalt: 100.100
+
+Anteckningar för formulering
+Detta är den sista versionen Prover skickades 2024-08-15
+
+VEGAN-SVARET: Lanolin 21,85 % + Lanolin Alcohol 2,0 % + Cera Alba 3,99 %.
+Ej vegansk formula. Ingen vegan-claim förrän skriftlig formulaändring.

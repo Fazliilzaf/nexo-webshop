@@ -101,7 +101,8 @@
           ["Lactic Acid", "Justerar pH för att matcha hår och hud."],
           ["Parfum (Doft)", "Ger en behaglig arom."],
           ["Camphor", "Ger en lätt svalkande känsla."],
-          ["Beta-Pinenes & Limonene", "Naturliga växtbaserade doftkomponenter."]
+          ["Beta-Pinenes", "Naturlig växtbaserad doftkomponent."],
+          ["Limonene", "Naturlig växtbaserad doftkomponent."]
         ]
       },
       "en": {
@@ -140,7 +141,8 @@
         "inci": [
           ["Lanolin", "Mjukgör, skyddar och bevarar fukt i huden."],
           ["Aqua (Vatten)", "Bas i formulan."],
-          ["Petrolatum & Paraffinum Liquidum", "Skyddande mjukgörande ingredienser som håller huden smidig."],
+          ["Petrolatum", "Mjukgör och lägger en skyddande hinna som håller kvar fukt."],
+          ["Paraffinum Liquidum", "Mjukgörande mineralolja som håller huden smidig."],
           ["Panthenol (Provitamin B5)", "Lugnar och hjälper huden att kännas återfuktad."],
           ["Prunus Amygdalus Dulcis (Sötmandel) Oil", "Närande och mjukgör huden."],
           ["Cera Alba (Bivax)", "Hjälper till att hålla kvar fukt och skydda huden."],
@@ -149,9 +151,15 @@
           ["Lanolin Alcohol", "Stärker hudens mjukhet och skydd."],
           ["Ozokerite", "Ger stabil konsistens."],
           ["Rosmarinus Officinalis Leaf Oil", "Ger en fräsch och örtig doft."],
-          ["Phenoxyethanol & Parabener", "Konserverar och håller produkten säker och fräsch."],
+          ["Phenoxyethanol", "Konserveringsmedel som skyddar mot bakterier."],
+          ["Methylparaben", "Konserveringsmedel som skyddar formulan."],
+          ["Ethylparaben", "Konserveringsmedel som skyddar formulan."],
           ["Biosaccharide Gum-1", "Binder fukt och gör huden mjuk."],
-          ["Parfum, Camphor, Beta-Pinenes, Limonene", "Doft och uppfriskande känsla."]
+          ["Propylparaben", "Konserveringsmedel som skyddar formulan."],
+          ["Parfum (Doft)", "Ger en behaglig arom."],
+          ["Camphor", "Ger en lätt svalkande känsla."],
+          ["Beta-Pinenes", "Naturlig växtbaserad doftkomponent."],
+          ["Limonene", "Naturlig växtbaserad doftkomponent."]
         ]
       },
       "en": {
