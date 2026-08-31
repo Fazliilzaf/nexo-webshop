@@ -43,6 +43,15 @@
   object-position: 50% 40%;
 }
 
+/* Desktop posters (landscape): per-step framing so the baked lockup
+   keeps its composition under cover-crop — framed upward so the
+   bottom tagline strip is cropped away */
+@media (min-width: 1024px) {
+  .ritual__step[data-step="1"] .ritual__material img { object-position: 50% 0%; }
+  .ritual__step[data-step="2"] .ritual__material img { object-position: 50% 20%; }
+  .ritual__step[data-step="3"] .ritual__material img { object-position: 50% 0%; }
+}
+
 /* The three materials breathe with different bodies:
    lather floats, mist drifts sideways, whip stays heavy */
 @media (prefers-reduced-motion: no-preference) {
@@ -139,7 +148,9 @@
   will-change: transform, opacity;
 }
 
-/* The name — allowed to dominate */
+/* The name — allowed to dominate on mobile (clean crop carries no text).
+   On desktop the full poster carries the name itself, so the overlay
+   stays in the DOM for screen readers but is visually hidden. */
 .ritual__name {
   font-size: var(--t-mega);
   color: var(--nexo-bone);
@@ -147,6 +158,21 @@
 }
 .ritual__name-line { display: block; }
 .ritual__name .step-mark { margin-left: 0.15em; }
+
+@media (min-width: 1024px) {
+  .ritual__name {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+}
 
 /* ---------- The glass info dock ---------- */
 

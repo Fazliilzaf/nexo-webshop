@@ -11,13 +11,17 @@
   aria-label="{{ 'ritual.step_label' | t: step: n }}"
 >
   <div class="ritual__material" aria-hidden="true">
-    <img
-      src="{{ material | asset_url }}"
-      alt=""
-      width="1440"
-      height="2122"
-      {%- if preload %} fetchpriority="high"{% else %} loading="lazy"{% endif -%}
-    >
+    {%- assign mat_base = material | remove: '.jpg' -%}
+    <picture>
+      <source media="(min-width: 1024px)" srcset="{{ mat_base | append: '-desktop.jpg' | asset_url }}">
+      <img
+        src="{{ mat_base | append: '-mobile.jpg' | asset_url }}"
+        alt=""
+        width="1440"
+        height="2122"
+        {%- if preload %} fetchpriority="high"{% else %} loading="lazy"{% endif -%}
+      >
+    </picture>
   </div>
   <div class="ritual__veil" aria-hidden="true"></div>
 
