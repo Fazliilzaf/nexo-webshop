@@ -61,7 +61,7 @@
   z-index: 1;
   left: 4%;
   bottom: 8%;
-  height: min(50vh, 520px);
+  height: min(64vh, 660px);
   width: auto;
   pointer-events: none;
   -webkit-mask-image: radial-gradient(ellipse 78% 78% at 50% 55%, #000 42%, transparent 72%);
@@ -73,7 +73,7 @@
     right: 2%;
     bottom: auto;
     top: 14%;
-    height: 30vh;
+    height: 36vh;
   }
 }
 
@@ -421,13 +421,19 @@
   display: flex;
   align-items: center;
   gap: 1.1em;
-  width: min(78vw, 340px);
-  padding: 1.05rem 1.3rem;
+  width: min(82vw, 400px);
+  padding: 1.25rem 1.6rem;
   --glass-radius: 14px;
   color: var(--nexo-bone);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  letter-spacing: 0.08em;
+  box-shadow:
+    0 1.5rem 3.5rem rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(232, 228, 224, 0.14);
   will-change: transform, opacity;
 }
-.bundle__chip-name { color: var(--nexo-smoke); }
+.bundle__chip .t-griege { color: var(--nexo-bone); }
+.bundle__chip-name { color: var(--nexo-bone); }
 
 .bundle__core {
   position: relative;
