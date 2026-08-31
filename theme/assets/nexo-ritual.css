@@ -560,17 +560,17 @@
 }
 
 /* ---------------------------------------------- home accessory */
-/* The brush, outside the ritual core: flat griege surface, no glass */
+/* The brush in the ritual step's language: dark scene, glass card */
 .home-acc {
-  background: var(--nexo-griege);
-  color: #171412;
+  background: #0b0b0c;
+  color: var(--nexo-bone);
 }
 .home-acc__inner {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: clamp(2rem, 6vw, 6rem);
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: clamp(3rem, 8vw, 6rem) var(--pad-page);
 }
@@ -578,41 +578,59 @@
   width: 100%;
   height: auto;
   display: block;
+  -webkit-mask-image: radial-gradient(ellipse 78% 78% at 50% 55%, #000 42%, transparent 72%);
+  mask-image: radial-gradient(ellipse 78% 78% at 50% 55%, #000 42%, transparent 72%);
 }
-.home-acc__kicker { color: rgba(23, 20, 18, 0.62); }
-.home-acc__name {
-  margin: 0.4em 0 0.6em;
-  color: #171412;
+.home-acc__card {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  justify-items: stretch;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
 }
+.home-acc__top { display: flex; justify-content: space-between; }
+.home-acc__name { margin: 0; }
+.home-acc__line { margin: 0 0 0.5rem; }
 .home-acc__row {
   display: flex;
   gap: 1.5em;
-  margin-bottom: 1.75rem;
 }
-.home-acc__price { font-weight: 600; }
-.home-acc__actions {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.home-acc__add {
-  background: #171412;
-  color: var(--nexo-bone);
-}
+.home-acc__add { width: 100%; }
 .home-acc__link {
-  color: #171412;
+  color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid rgba(23, 20, 18, 0.4);
+  justify-self: start;
+  border-bottom: 1px solid rgba(233, 229, 225, 0.35);
   padding-bottom: 2px;
 }
 @media (max-width: 1023px) {
   .home-acc__inner {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 }
 
 /* accessory scroll moment — JS scrubber drives transforms */
 .home-acc__media,
 .home-acc__body { will-change: transform, opacity; }
+
+/* accessory drag hint — samma affordance-språk som hero:ns DRA-rad */
+.home-acc__media { position: relative; }
+.home-acc__hint {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  color: rgba(233, 229, 225, 0.75);
+  letter-spacing: var(--tracking-mono);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .home-acc__hint { animation: nexo-hint-pulse 2.6s ease-in-out infinite; }
+}
+@keyframes nexo-hint-pulse {
+  0%, 100% { transform: translateX(-50%) translateX(0); }
+  50% { transform: translateX(-50%) translateX(0.6rem); }
+}

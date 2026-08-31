@@ -255,16 +255,18 @@
     });
   }
 
-  /* ------------------------------------------- accessory: the massage stroke
-     The brush demonstrates its own technique — one slow sweep from the
-     centre out toward the ear, the lymphatic massage direction */
+  /* ------------------------------------------- accessory: drag the massage
+     The user pulls the brush through the lymphatic stroke themselves —
+     same affordance as "DRA FÖR ATT PÅBÖRJA RITUALEN" */
 
   var acc = document.querySelector("[data-acc]");
   if (acc && !reduce) {
     var aMedia = acc.querySelector("[data-acc-media]");
     var aBody = acc.querySelector("[data-acc-body]");
+    var aHint = acc.querySelector("[data-acc-hint]");
     var aGeo = { top: 0, total: 1 };
 
+    /* entrance via the shared scrubber loop (text + hint only) */
     scrubbers.push({
       measure: function () {
         var rect = acc.getBoundingClientRect();
@@ -287,28 +289,68 @@
         );
       },
       render: function (p) {
-        /* text block lands first */
         var inBody = ss(0.05, 0.35, p);
         if (aBody) {
           aBody.style.opacity = inBody.toFixed(3);
           aBody.style.transform =
             "translate3d(0," + ((1 - inBody) * 2.4).toFixed(2) + "vh,0)";
         }
-        /* then the brush draws its massage stroke: centre → outward,
-           a soft arc dipping mid-sweep */
-        var stroke = ss(0.15, 0.85, p);
-        if (aMedia) {
-          var x = NEXO.lerp(-6, 6, stroke);
-          var dip = Math.sin(stroke * Math.PI) * 2.2;
-          var rot = NEXO.lerp(-4, 4, stroke);
-          var sc = NEXO.lerp(1.05, 1.0, stroke);
-          aMedia.style.opacity = ss(0, 0.2, p).toFixed(3);
-          aMedia.style.transform =
-            "translate3d(" + x.toFixed(2) + "vw," + dip.toFixed(2) + "vh,0)" +
-            " rotate(" + rot.toFixed(2) + "deg) scale(" + sc.toFixed(3) + ")";
-        }
+        if (aHint) aHint.style.opacity = ss(0.2, 0.45, p).toFixed(3);
       }
     });
+
+    /* the drag itself */
+    if (aMedia) {
+      var stroke = 0;          /* 0..1 längs massagerörelsen */
+      var targetStroke = 0;
+      var dragging = false;
+      var dragStartX = 0;
+      var strokeStart = 0;
+      var strokeRaf = null;
+
+      function strokeFrame() {
+        strokeRaf = null;
+        stroke = NEXO.lerp(stroke, targetStroke, dragging ? 0.35 : 0.08);
+        if (Math.abs(stroke - targetStroke) < 0.001) stroke = targetStroke;
+        var x = NEXO.lerp(-6, 6, stroke);
+        var dip = Math.sin(stroke * Math.PI) * 2.2;
+        var rot = NEXO.lerp(-4, 4, stroke);
+        var sc = 1 + Math.sin(stroke * Math.PI) * 0.04;
+        aMedia.style.transform =
+          "translate3d(" + x.toFixed(2) + "vw," + dip.toFixed(2) + "vh,0)" +
+          " rotate(" + rot.toFixed(2) + "deg) scale(" + sc.toFixed(3) + ")";
+        if (stroke !== targetStroke) strokeRaf = requestAnimationFrame(strokeFrame);
+      }
+      function strokeKick() {
+        if (!strokeRaf) strokeRaf = requestAnimationFrame(strokeFrame);
+      }
+
+      aMedia.style.cursor = "grab";
+      aMedia.style.touchAction = "pan-y";
+
+      aMedia.addEventListener("pointerdown", function (e) {
+        dragging = true;
+        dragStartX = e.clientX;
+        strokeStart = targetStroke;
+        aMedia.style.cursor = "grabbing";
+        aMedia.setPointerCapture(e.pointerId);
+        if (aHint) aHint.style.opacity = "0";
+      });
+      aMedia.addEventListener("pointermove", function (e) {
+        if (!dragging) return;
+        var delta = (e.clientX - dragStartX) / Math.max(aMedia.offsetWidth, 1);
+        targetStroke = NEXO.clamp(strokeStart + delta * 1.4, 0, 1);
+        strokeKick();
+      });
+      ["pointerup", "pointercancel"].forEach(function (ev) {
+        aMedia.addEventListener(ev, function () {
+          dragging = false;
+          aMedia.style.cursor = "grab";
+          targetStroke = 0; /* glid tillbaka till vila */
+          strokeKick();
+        });
+      });
+    }
   }
 
   /* ------------------------------------------- scroll loop */

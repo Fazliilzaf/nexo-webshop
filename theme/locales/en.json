@@ -184,6 +184,7 @@
   "accessory": {
     "name": "NEXO Brush",
     "line": "A lymphatic massage brush for scalp and face.",
+    "drag_hint": "Drag me slowly",
     "view": "View product"
   },
   "pdp": {

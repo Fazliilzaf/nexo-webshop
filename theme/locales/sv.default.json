@@ -184,6 +184,7 @@
   "accessory": {
     "name": "NEXO Borste",
     "line": "Lymfmassageborste för hårbotten och ansikte.",
+    "drag_hint": "Dra mig långsamt",
     "view": "Se produkten"
   },
   "pdp": {
