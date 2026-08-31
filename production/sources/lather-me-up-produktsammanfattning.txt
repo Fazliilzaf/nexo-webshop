@@ -1,0 +1,45 @@
+Produktsammanfattning
+Exporterad av: Johanna Malm, 2025-03-25 10:02
+Produktnamn: Fazli Vårdande Schampo Rosmarin
+Formulanummer: Fazli Vårdande Shampo Rosmarin arin
+Godkänd för produktion? Ja
+
+Specifikation
+Exponeringstyp: Rinse-off
+Volym: 250 ml
+pH: 5 - 5,5
+
+Ingredients are listed using their European INCI names and [US INCI name], if any, appended in brackets.
+Interval means Conc. Interval (% w/w). CLP means Classification acc. To CLP 1272/2008.
+Regulated means Annex No/Ref.No of the Cosmetic Regulation 1223/2009.
+
+Ingrediensdata
+INCI | CAS # | EC # | Intervall | Funktion | CLP | Reglerad
+Aqua | 7732-18-5 | 231-791-2 | ]75% - 100%] | Solvent | -
+Disodium Cocoamphodiacetate | - | 931-291-0 | ]1% - 5%] | Cleansing, Surfactant - foam boosting, Hair conditioning, Surfactant - hydrotrope, Skin conditioning, Surfactant - cleansing | -
+Shea Butter Glycereth-8 Esters | 681270-23-5 | - | ]1% - 5%] | Cleansing, Surfactant - emulsifying, Surfactant - cleansing | -
+Cocamidopropyl Betaine | 61789-40-0 | 263-058-8 / 274-923-4 | ]1% - 5%] | Antistatic, Cleansing, Surfactant - foam boosting, Hair conditioning, Surfactant - cleansing, Viscosity controlling, Skin conditioning - miscellaneous | -
+Glycerin | 56-81-5 | 200-289-5 | ]1% - 5%] | Denaturant, Hair conditioning, Humectant, Oral care, Skin protecting, Solvent, Viscosity controlling, Perfuming, Fragrance, Skin conditioning - humectant | -
+Sodium Chloride | 7647-14-5 | 231-598-3 | ]1% - 5%] | Bulking, Fragrance, Oral care, Viscosity controlling | -
+Hydroxypropyl Guar Hydroxypropyltrimonium Chloride | 71329-50-5 | - | ]0.1% - 1%] | Antistatic, Hair conditioning | -
+Sodium Levulinate | 19856-23-6 | 243-378-4 | ]0.1% - 1%] | Skin conditioning - miscellaneous | -
+Sodium Glycolate | 2836-32-0 | 220-624-9 | ]0.1% - 1%] | Buffering | -
+Caprylyl/Capryl Glucoside | 68515-73-1 | 500-220-1 | ]0.1% - 1%] | Cleansing, Foaming, Surfactant - cleansing | -
+Panthenol | 81-13-0, 16485-10-2 | 201-327-3 / 240-540-6 | ]0.1% - 1%] | Antistatic, Hair conditioning, Skin conditioning | -
+Sodium Anisate | 536-45-8 | 208-634-1 | ]0.1% - 1%] | Antimicrobial, Fragrance, Flavouring, pH adjusters | -
+Acacia Senegal Gum | 9000-01-5 | 232-519-5 | ]0.1% - 1%] | Film forming, Fragrance | -
+Xanthan Gum | 11138-66-2 | 234-394-2 | ]0.1% - 1%] | Binding, Surfactant - emulsifying, Emulsion stabilising, Gel forming, Skin conditioning, Surfactant - cleansing, Viscosity controlling | -
+Parfum | - | - | [0% - 0.1%] | Fragrance, Perfuming | -
+Rosmarinus Officinalis Leaf Oil | 84604-14-8, 8000-25-7 | 283-291-9 | [0% - 0.1%] | Fragrance, Skin conditioning | -
+Alcohol | 64-17-5 | 200-578-6 | [0% - 0.1%] | Antifoaming, Antimicrobial, Astringent, Fragrance, Solvent, Viscosity controlling | -
+Beta-Pinenes | 127-91-3 | 204-872-5 | [0% - 0.1%] | Perfuming | III/130
+Lactic Acid | 50-21-5 | 200-018-0 | [0% - 0.1%] | Buffering, Humectant, Skin conditioning | -
+
+Ingrediensdata för parfymallergener
+INCI | CAS # | EC # | Intervall | Funktion | CLP | Reglerad | Deklarerad
+Camphor | 76-22-2 | 200-945-0 / 244-350-4 / 207-355-2 / 207-354-7 | [0% - 0.1%] | Denaturant, Fragrance, Plasticiser | III/331 | Ja
+Limonene | 5989-27-5 | 205-341-0 / 931-893-3 | [0% - 0.1%] | Perfuming, Deodorant, Solvent | III/88 | Nej
+Linalool | 78-70-6 | 201-134-4 | [0% - 0.1%] | Deodorant, Perfuming | III/84 | Nej
+Terpineol | 98-55-5 | 232-268-1 / 202-680-6 / 205-342-6 / 209-584-3 | [0% - 0.1%] | Fragrance, Perfuming | III/343 | Nej
+
+The manufacturer complies with the current standards for manufacturing of cosmetic products (GMP) (EN ISO 22716:2007).

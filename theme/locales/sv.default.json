@@ -49,8 +49,9 @@
         "category": "Schampo",
         "tagline": "Rengör utan att torka ut.",
         "volume": "250 ml",
-        "ingredients_count": "21 ingredienser",
-        "ingredients_cta": "Varje en förklarad"
+        "ingredients_count": "20 ingredienser",
+        "ingredients_cta": "Varje en förklarad",
+        "ph": "pH 5–5,5"
       },
       "two": {
         "step": "+2",
@@ -99,6 +100,7 @@
     "lens_hint": "Dra linsen över namnen",
     "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin",
     "unique_count": "{{ count }} unika ingredienser",
+    "gmp": "Tillverkat enligt GMP (ISO 22716)",
     "per_product": "Vad respektive steg innehåller, och varför.",
     "found_in": "Finns i",
     "search_label": "Sök ingrediens",

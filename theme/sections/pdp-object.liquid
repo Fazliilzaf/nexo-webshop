@@ -141,6 +141,13 @@
 
       <div class="pdp__row t-mono">
         <span>{{ volume }}</span>
+        {%- assign ph = base | append: '.ph' | t -%}
+        {%- if is_accessory or ph contains 'translation missing' -%}
+          {%- assign ph = '' -%}
+        {%- endif -%}
+        {%- if ph != blank -%}
+          <span class="t-griege">{{ ph }}</span>
+        {%- endif -%}
         <span class="pdp__price">
           {%- assign price_number = product.price | plus: 0 -%}
           {%- if price_number > 0 -%}

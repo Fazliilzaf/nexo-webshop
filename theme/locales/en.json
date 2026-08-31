@@ -49,8 +49,9 @@
         "category": "Shampoo",
         "tagline": "Cleanses without stripping.",
         "volume": "250 ml",
-        "ingredients_count": "21 ingredients",
-        "ingredients_cta": "Every one explained"
+        "ingredients_count": "20 ingredients",
+        "ingredients_cta": "Every one explained",
+        "ph": "pH 5–5.5"
       },
       "two": {
         "step": "+2",
@@ -99,6 +100,7 @@
     "lens_hint": "Drag the lens across the names",
     "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin",
     "unique_count": "{{ count }} unique ingredients",
+    "gmp": "Manufactured under GMP (ISO 22716)",
     "per_product": "What each step contains, and why.",
     "found_in": "Found in",
     "search_label": "Search ingredients",
