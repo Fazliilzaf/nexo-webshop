@@ -562,30 +562,42 @@
 /* ---------------------------------------------- home accessory */
 /* The brush in the ritual step's language: dark scene, glass card */
 .home-acc {
+  position: relative;
   background: #0b0b0c;
   color: var(--nexo-bone);
+  overflow: clip;
+}
+.home-acc__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.home-acc__backdrop img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 20% 50%;
 }
 .home-acc__inner {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: clamp(2rem, 6vw, 6rem);
+  min-height: min(88vh, 900px);
   max-width: 1500px;
   margin: 0 auto;
   padding: clamp(3rem, 8vw, 6rem) var(--pad-page);
 }
-.home-acc__media img {
-  width: 100%;
-  height: auto;
-  display: block;
-  -webkit-mask-image: radial-gradient(ellipse 78% 78% at 50% 55%, #000 42%, transparent 72%);
-  mask-image: radial-gradient(ellipse 78% 78% at 50% 55%, #000 42%, transparent 72%);
+.home-acc__body {
+  display: grid;
+  justify-items: end;
 }
 .home-acc__card {
   position: relative;
   display: grid;
   gap: 1rem;
   justify-items: stretch;
+  width: min(92vw, 520px);
   padding: clamp(1.5rem, 3.5vw, 2.5rem);
 }
 .home-acc__top { display: flex; justify-content: space-between; }
@@ -605,9 +617,12 @@
 }
 @media (max-width: 1023px) {
   .home-acc__inner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    min-height: 0;
+    padding-top: clamp(2.5rem, 8vw, 4rem);
+    padding-bottom: clamp(2.5rem, 8vw, 4rem);
   }
+  .home-acc__body { justify-items: stretch; }
+  .home-acc__card { width: 100%; }
 }
 
 /* accessory scroll moment — JS scrubber drives transforms */

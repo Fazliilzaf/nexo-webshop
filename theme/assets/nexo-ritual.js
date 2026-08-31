@@ -295,62 +295,15 @@
           aBody.style.transform =
             "translate3d(0," + ((1 - inBody) * 2.4).toFixed(2) + "vh,0)";
         }
-        if (aHint) aHint.style.opacity = ss(0.2, 0.45, p).toFixed(3);
+        /* scenen andas med en lätt drift */
+        var drift = ss(0, 1, p);
+        if (aMedia) {
+          aMedia.style.transform =
+            "translate3d(" + NEXO.lerp(-1.2, 1.2, drift).toFixed(2) + "vw,0,0)" +
+            " scale(" + NEXO.lerp(1.03, 1.0, drift).toFixed(3) + ")";
+        }
       }
     });
-
-    /* the drag itself */
-    if (aMedia) {
-      var stroke = 0;          /* 0..1 längs massagerörelsen */
-      var targetStroke = 0;
-      var dragging = false;
-      var dragStartX = 0;
-      var strokeStart = 0;
-      var strokeRaf = null;
-
-      function strokeFrame() {
-        strokeRaf = null;
-        stroke = NEXO.lerp(stroke, targetStroke, dragging ? 0.35 : 0.08);
-        if (Math.abs(stroke - targetStroke) < 0.001) stroke = targetStroke;
-        var x = NEXO.lerp(-6, 6, stroke);
-        var dip = Math.sin(stroke * Math.PI) * 2.2;
-        var rot = NEXO.lerp(-4, 4, stroke);
-        var sc = 1 + Math.sin(stroke * Math.PI) * 0.04;
-        aMedia.style.transform =
-          "translate3d(" + x.toFixed(2) + "vw," + dip.toFixed(2) + "vh,0)" +
-          " rotate(" + rot.toFixed(2) + "deg) scale(" + sc.toFixed(3) + ")";
-        if (stroke !== targetStroke) strokeRaf = requestAnimationFrame(strokeFrame);
-      }
-      function strokeKick() {
-        if (!strokeRaf) strokeRaf = requestAnimationFrame(strokeFrame);
-      }
-
-      aMedia.style.cursor = "grab";
-      aMedia.style.touchAction = "pan-y";
-
-      aMedia.addEventListener("pointerdown", function (e) {
-        dragging = true;
-        dragStartX = e.clientX;
-        strokeStart = targetStroke;
-        aMedia.style.cursor = "grabbing";
-        aMedia.setPointerCapture(e.pointerId);
-        if (aHint) aHint.style.opacity = "0";
-      });
-      aMedia.addEventListener("pointermove", function (e) {
-        if (!dragging) return;
-        var delta = (e.clientX - dragStartX) / Math.max(aMedia.offsetWidth, 1);
-        targetStroke = NEXO.clamp(strokeStart + delta * 1.4, 0, 1);
-        strokeKick();
-      });
-      ["pointerup", "pointercancel"].forEach(function (ev) {
-        aMedia.addEventListener(ev, function () {
-          dragging = false;
-          aMedia.style.cursor = "grab";
-          targetStroke = 0; /* glid tillbaka till vila */
-          strokeKick();
-        });
-      });
-    }
   }
 
   /* ------------------------------------------- scroll loop */
