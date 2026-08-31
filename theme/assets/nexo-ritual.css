@@ -425,13 +425,14 @@
   padding: 2rem 2.5rem;
   --glass-radius: 18px;
   color: var(--nexo-bone);
-  font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   letter-spacing: 0.12em;
   box-shadow:
     0 1.5rem 3.5rem rgba(0, 0, 0, 0.55),
     inset 0 0 0 1px rgba(232, 228, 224, 0.14);
   will-change: transform, opacity;
 }
+.bundle__chip .t-mono { font-size: inherit; }
 .bundle__chip .t-griege { color: var(--nexo-bone); }
 .bundle__chip-name { color: var(--nexo-bone); }
 
