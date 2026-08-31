@@ -30,6 +30,9 @@ BANNED_CLAIMS = re.compile(
 REQUIRED_HANDLES = ["lather-me-up", "mist-me-crazy", "whip-me-good", "the-ritual"]
 RITUAL_HANDLES = REQUIRED_HANDLES[:3]
 VOLUMES = {"lather-me-up": "250 ml", "mist-me-crazy": "100 ml", "whip-me-good": "30 ml"}
+# Handles whose empty grams are an accepted owner decision (2026-08-31),
+# not a blocker — keep in sync with GRAMS_EMPTY_OK in build.py.
+GRAMS_EMPTY_OK = {"borste"}
 
 
 def fail(msg):
@@ -167,7 +170,10 @@ def main():
         if not r["Variant Price"]:
             blocked(f"Variant Price empty: {r['Handle']} (hard blocker)")
         if not r["Variant Grams"]:
-            blocked(f"Variant Grams empty: {r['Handle']}")
+            if r["Handle"] in GRAMS_EMPTY_OK:
+                note(f"Variant Grams intentionally empty: {r['Handle']} (owner decision 2026-08-31)")
+            else:
+                blocked(f"Variant Grams empty: {r['Handle']}")
         if r["Variant Inventory Tracker"] == "shopify" and not r["Variant Inventory Qty"]:
             blocked(f"Variant Inventory Qty empty (tracked): {r['Handle']}")
 

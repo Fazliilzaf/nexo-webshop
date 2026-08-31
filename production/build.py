@@ -46,13 +46,17 @@ PRICES = {
     "borste": "29900",
 }
 # Shipping weights (grams) DECIDED by owner 2026-08-31: volume-as-grams.
-# Bundle = 250+100+30. Brush weight still BLOCKED (no volume exists).
+# Bundle = 250+100+30. Brush intentionally left EMPTY (owner decision
+# 2026-08-31): flat-rate shipping means weight is unused at checkout.
+# Add a value if weight-based rates or carrier label apps are introduced.
 GRAMS = {
     "lather-me-up": "250",
     "mist-me-crazy": "100",
     "whip-me-good": "30",
     "the-ritual": "380",
 }
+# Handles whose empty grams are an accepted decision, not a blocker.
+GRAMS_EMPTY_OK = {"borste"}
 
 PRODUCT_COLUMNS = [
     "Handle", "Title", "Body (HTML)", "Vendor", "Type", "Tags", "Published",
