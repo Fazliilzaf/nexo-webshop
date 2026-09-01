@@ -41,8 +41,8 @@ Verkligt läge: Fazli äger båda bolagen. Varje patient på Hair TP Clinic får
 - [x] Appval: Appstle (gratisplan) — production/prenumeration/appval.md
 - [x] Appstle installerad i admin
 - [x] Plan skapad: "Ritualen var 8:e vecka, 15 %" kopplad till Ritualen +1 +2 +3
-- [ ] ⏳ Tema-widget: kräver manuell integration i vår custom-PDP (pdp-object.liquid) så den inte kolliderar med köpknappen + designmatchning
-- [ ] ⏳ Testprenumeration (efter widgeten är live)
+- [x] Prenumerationsval i egen design (ingen widget): toggle på bundle + Ritualen-PDP, selling plan via egen add-to-cart, testat live (619,65 kr i varukorgen)
+- [ ] ⏳ Testprenumeration med riktigt kort genom kassan (Fazli, återbetalas efteråt) — verifierar renewal-flödet
 - [ ] ⏳ Fazli bekräftar 15 % / 8 veckor / fraktvillkor
 
 ## 4. Patientberättelser — inte modeller

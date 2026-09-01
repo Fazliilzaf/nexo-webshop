@@ -143,6 +143,9 @@
         '<li class="cart__item" data-key="' + item.key + '">' +
         '<div class="cart__item-info">' +
         '<p class="cart__item-title">' + item.product_title + "</p>" +
+        (item.selling_plan_allocation
+          ? '<p class="cart__item-plan t-mono t-griege">' + locale.subscription + "</p>"
+          : "") +
         '<div class="cart__item-qty t-mono">' +
         '<button type="button" data-qty="-1" aria-label="−">−</button>' +
         "<span>" + item.quantity + "</span>" +
@@ -167,6 +170,27 @@
   /* ---------------- add / update ---------------- */
 
   document.addEventListener("click", function (e) {
+    var planOpt = e.target.closest("[data-plan-opt]");
+    if (planOpt) {
+      var scope = planOpt.closest("[data-plan-scope]");
+      if (!scope) return;
+      scope.querySelectorAll("[data-plan-opt]").forEach(function (opt) {
+        var active = opt === planOpt;
+        opt.classList.toggle("is-active", active);
+        opt.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      var addButton = scope.querySelector("[data-add]");
+      if (addButton) {
+        addButton.setAttribute(
+          "data-selling-plan",
+          planOpt.getAttribute("data-selling-plan") || ""
+        );
+      }
+      var priceEl = scope.querySelector("[data-plan-price]");
+      if (priceEl) priceEl.textContent = planOpt.getAttribute("data-price");
+      return;
+    }
+
     var addBtn = e.target.closest("[data-add]");
     if (addBtn && !addBtn.disabled) {
       var variantId = addBtn.getAttribute("data-variant-id");
@@ -175,10 +199,13 @@
       var label = addBtn.textContent;
       addBtn.disabled = true;
       addBtn.textContent = "…";
+      var payload = { id: Number(variantId), quantity: 1 };
+      var sellingPlan = addBtn.getAttribute("data-selling-plan");
+      if (sellingPlan) payload.selling_plan = Number(sellingPlan);
       fetch("/cart/add.js", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ id: Number(variantId), quantity: 1 })
+        body: JSON.stringify(payload)
       })
         .then(function (r) {
           if (!r.ok) throw new Error("add failed");

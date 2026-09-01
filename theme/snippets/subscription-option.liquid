@@ -1,0 +1,49 @@
+{%- comment -%}
+  Subscription option for the ritual product.
+  Renders a one-time vs subscribe toggle inside a [data-plan-scope].
+  The toggle (handled in nexo-cart.js) sets the sibling [data-add]
+  button's data-selling-plan and updates [data-plan-price].
+  No third-party widget: the selling plan id goes straight into our
+  own AJAX add-to-cart, the UI stays NEXO.
+  Params: product
+{%- endcomment -%}
+
+{%- assign sp_group = product.selling_plan_groups.first -%}
+{%- if sp_group -%}
+  {%- assign sp = sp_group.selling_plans.first -%}
+  {%- assign adjustment = sp.price_adjustments.first -%}
+  {%- assign discount_pct = 0 -%}
+  {%- if adjustment and adjustment.value_type == 'percentage' -%}
+    {%- assign discount_pct = adjustment.value -%}
+  {%- endif -%}
+  {%- assign full_price = product.price -%}
+  {%- assign keep_pct = 100 | minus: discount_pct -%}
+  {%- assign sub_price = full_price | times: keep_pct | divided_by: 100 -%}
+
+  <div class="plan-toggle" data-plan-toggle role="group" aria-label="{{ 'plan.label' | t }}">
+    <button
+      type="button"
+      class="plan-toggle__opt is-active"
+      data-plan-opt
+      data-selling-plan=""
+      data-price="{{ full_price | money }}"
+      aria-pressed="true"
+    >
+      <span class="plan-toggle__name t-mono">{{ 'plan.once' | t }}</span>
+      <span class="plan-toggle__price t-mono">{{ full_price | money }}</span>
+    </button>
+    <button
+      type="button"
+      class="plan-toggle__opt"
+      data-plan-opt
+      data-selling-plan="{{ sp.id }}"
+      data-price="{{ sub_price | money }}"
+      aria-pressed="false"
+    >
+      <span class="plan-toggle__name t-mono">{{ 'plan.subscribe' | t }}</span>
+      <span class="plan-toggle__price t-mono">
+        {{ sub_price | money }} · {{ 'plan.save' | t }} {{ discount_pct }} %
+      </span>
+    </button>
+  </div>
+{%- endif -%}

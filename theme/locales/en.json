@@ -218,5 +218,12 @@
     "the-ritual": {
       "name": "The Ritual +1 +2 +3"
     }
+  },
+  "plan": {
+    "label": "Purchase options",
+    "once": "One-time purchase",
+    "subscribe": "Subscribe · every 8 weeks",
+    "save": "save",
+    "subscription_label": "Subscription · every 8 weeks"
   }
 }

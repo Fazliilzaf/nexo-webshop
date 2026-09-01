@@ -42,9 +42,12 @@ Appstle väljs: gratis tills prenumerationerna passerar ca 5 000 kr/mån, lätt 
 
 - [x] Appstle Subscriptions installerad i admin (gratisplan, kvot $0/$500 per månad)
 - [x] Prenumerationsplan skapad: "Ritualen var 8:e vecka, 15%" kopplad till produkten Ritualen +1 +2 +3 (pay as you go, auto-renew, 15 % från första ordern)
-- [ ] KVAR: tema-embed i live-temat. Skippad medvetet. Vår PDP är helt custom (pdp-object.liquid med egen add-to-cart), så Appstles widget måste placeras och designmatchas manuellt, annars riskerar den att kollidera med köpknappen. Kräver arbete i tema-editorn + test.
-- [ ] KVAR: testprenumeration för att verifiera renewal-flödet (görs efter widgeten är live)
+- [x] Prenumerationsval i egen design, INGEN Appstle-widget: toggle Engångsköp/Prenumerera i snippets/subscription-option.liquid, integrerad i ritual-bundle.liquid och pdp-object.liquid. Selling plan skickas via vår egen AJAX add-to-cart (nexo-cart.js)
+- [x] Varukorgsdrawern visar "Prenumeration · var 8:e vecka" på prenumerationsrader
+- [x] Planens kundsynliga namn i kassan: "Prenumeration · var 8:e vecka"
+- [x] Testat på live: selling plan landar i varukorgen, pris exakt 619,65 kr (729 × 0,85), testvarukorg rensad
+- [ ] KVAR: testprenumeration med riktigt kort genom hela kassan (görs av Fazli, återbetalas efteråt) för att verifiera renewal-flödet
 
 ## Flagga
 
-Appinstallation och eventuell betalplan kräver Fazlis godkännande i admin om Shopify ber om det.
+Inget kvar att flagga förutom testprenumerationen ovan.

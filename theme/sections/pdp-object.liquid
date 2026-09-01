@@ -119,7 +119,7 @@
       {%- endif -%}
     </figure>
 
-    <div class="pdp__commerce">
+    <div class="pdp__commerce"{% if product.handle == 'the-ritual' %} data-plan-scope{% endif %}>
       {%- if is_accessory -%}
         <p class="t-mono t-griege">{{ 'pdp.accessory_kicker' | t }}</p>
       {%- else -%}
@@ -148,7 +148,7 @@
         {%- if ph != blank -%}
           <span class="t-griege">{{ ph }}</span>
         {%- endif -%}
-        <span class="pdp__price">
+        <span class="pdp__price"{% if product.handle == 'the-ritual' %} data-plan-price{% endif %}>
           {%- assign price_number = product.price | plus: 0 -%}
           {%- if price_number > 0 -%}
             {{ product.price | money }}
@@ -158,6 +158,10 @@
           {%- endif -%}
         </span>
       </div>
+
+      {%- if product.handle == 'the-ritual' -%}
+        {%- render 'subscription-option', product: product -%}
+      {%- endif -%}
 
       {%- if product.selected_or_first_available_variant -%}
         <button

@@ -218,5 +218,12 @@
     "the-ritual": {
       "name": "Ritualen +1 +2 +3"
     }
+  },
+  "plan": {
+    "label": "Köpalternativ",
+    "once": "Engångsköp",
+    "subscribe": "Prenumerera · var 8:e vecka",
+    "save": "spara",
+    "subscription_label": "Prenumeration · var 8:e vecka"
   }
 }

@@ -34,7 +34,7 @@
         {%- endfor -%}
       </div>
 
-      <div class="bundle__core glass glass--strong" data-bundle-core>
+      <div class="bundle__core glass glass--strong" data-bundle-core data-plan-scope>
         <span class="glass__caustic" aria-hidden="true"></span>
 
         <p class="t-mono t-griege">{{ 'bundle.kicker' | t }}</p>
@@ -45,17 +45,23 @@
         <p class="bundle__desc t-smoke">{{ 'bundle.description' | t }}</p>
 
         <div class="bundle__price t-mono">
-          {%- if ritual_product -%}
-            {%- assign price_number = ritual_product.price | plus: 0 -%}
-            {%- if price_number > 0 -%}
-              {{ ritual_product.price | money }}
+          <span data-plan-price>
+            {%- if ritual_product -%}
+              {%- assign price_number = ritual_product.price | plus: 0 -%}
+              {%- if price_number > 0 -%}
+                {{ ritual_product.price | money }}
+              {%- else -%}
+                <span aria-hidden="true">0,00 kr</span>
+                <span class="dev-badge">{{ 'general.price.tbd' | t }}</span>
+              {%- endif -%}
             {%- else -%}
               <span aria-hidden="true">0,00 kr</span>
               <span class="dev-badge">{{ 'general.price.tbd' | t }}</span>
             {%- endif -%}
-          {%- else -%}
-            <span aria-hidden="true">0,00 kr</span>
-            <span class="dev-badge">{{ 'general.price.tbd' | t }}</span>
+          </span>
+
+          {%- if ritual_product -%}
+            {%- render 'subscription-option', product: ritual_product -%}
           {%- endif -%}
         </div>
 

@@ -169,3 +169,30 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Subscription option toggle (own UI, selling plan via AJAX add) */
+.plan-toggle {
+  display: grid;
+  gap: 0.5rem;
+  margin-block: 0.9rem 0.4rem;
+}
+.plan-toggle__opt {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: transparent;
+  border: 1px solid rgba(168, 160, 157, 0.28);
+  color: var(--nexo-smoke);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+.plan-toggle__opt:hover { border-color: rgba(168, 160, 157, 0.6); }
+.plan-toggle__opt.is-active {
+  border-color: var(--nexo-griege);
+  color: #e9e5e1;
+}
+.plan-toggle__price { white-space: nowrap; }
