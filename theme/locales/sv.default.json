@@ -36,7 +36,7 @@
     }
   },
   "ritual": {
-    "page_title": "NEXO — svensk hårvård i tre steg",
+    "page_title": "NEXO · svensk hårvård i tre steg",
     "step_label": "Steg {{ step }} av 3",
     "begin": "Dra för att påbörja ritualen",
     "steps": {
@@ -163,7 +163,7 @@
     "kicker": "Om NEXO",
     "hero_1": "Byggd för känslig",
     "hero_2": "hårbotten.",
-    "intro": "NEXO föddes i arbetet med kunder som genomgått hårtransplantation — människor med känslig hårbotten som behövde skonsammare hårvård. Idag används den av alla som vill ha samma sak: milda, återfuktande formler som gör håret mjukt. Utvecklad i samarbete med Hair TP Clinic.",
+    "intro": "NEXO föddes i arbetet med kunder som genomgått hårtransplantation, människor med känslig hårbotten som behövde skonsammare hårvård. Idag används den av alla som vill ha samma sak: milda, återfuktande formler som gör håret mjukt. Utvecklad i samarbete med Hair TP Clinic.",
     "principles_kicker": "Principer",
     "aftercare_kicker": "Eftervård",
     "aftercare_title": "Skapad för eftervård efter hårtransplantation.",
@@ -175,7 +175,7 @@
     "p3_title": "Transparens är inte en fotnot.",
     "p3_body": "Varje ingrediens är publicerad, med en förklaring på vanlig svenska. Det är så vi förtjänar förtroende.",
     "p4_title": "Verktyg, inte dekoration.",
-    "p4_body": "Borsten är en lymfmassageborste — utformad för massage av hårbotten och ansiktet, med samma skonsamhet som formuleringarna. Många använder den morgonen efter en lång natt eller en lång flygning.",
+    "p4_body": "Borsten är en lymfmassageborste, utformad för massage av hårbotten och ansiktet, med samma skonsamhet som formuleringarna. Många använder den morgonen efter en lång natt eller en lång flygning.",
     "chip_kicker": "Officiell färg",
     "origin": "Tillverkat i Sverige.",
     "cta_ritual": "Upplev ritualen",
@@ -202,7 +202,7 @@
       "one": "Massera försiktigt in i fuktigt hår och hårbotten tills det bildas ett mjukt lödder. Skölj noggrant. Upprepa vid behov.",
       "two": "Spraya jämnt från cirka 10–15 cm avstånd. Låt torka eller massera försiktigt in. Använd i fuktigt eller torrt hår, när som helst på dagen.",
       "three": "Använd dagligen vid behov. Arbeta in en liten mängd i hårbotten eller på torr hud.",
-      "accessory": "Använd som lymfmassageborste. Massera med lätta, mjuka drag från ansiktets mitt ut mot öronen och nedåt mot halsen — i riktning mot körtlarna bakom öronen. Kan användas i hela ansiktet och på hårbotten, morgon eller kväll."
+      "accessory": "Massera med lätta, mjuka drag från ansiktets mitt ut mot öronen och nedåt mot halsen, i riktning mot körtlarna bakom öronen. Under svullnadsperioden efter ett ingrepp, eller i vardagen: i hela ansiktet på morgonen, efter en lång flygning eller när huden känns puffig. Ungefär en minut, morgon eller kväll."
     }
   },
   "products": {

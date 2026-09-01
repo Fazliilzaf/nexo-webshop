@@ -59,7 +59,7 @@
 .ritual__bottle {
   position: absolute;
   z-index: 1;
-  left: 4%;
+  left: -4%;
   bottom: 8%;
   height: min(64vh, 660px);
   width: auto;

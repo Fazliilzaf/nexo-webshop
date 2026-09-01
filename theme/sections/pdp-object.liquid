@@ -141,7 +141,8 @@
       <div class="pdp__row t-mono">
         <span>{{ volume }}</span>
         {%- assign ph = base | append: '.ph' | t -%}
-        {%- if is_accessory or ph contains 'translation missing' -%}
+        {%- assign ph_check = ph | downcase -%}
+        {%- if is_accessory or ph_check contains 'translation missing' -%}
           {%- assign ph = '' -%}
         {%- endif -%}
         {%- if ph != blank -%}
