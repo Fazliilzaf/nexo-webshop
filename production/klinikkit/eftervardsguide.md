@@ -40,5 +40,7 @@ Rutinen, varje dag:
 
 Ungefärliga tider, din klinik bestämmer: träning efter 14 dagar, keps efter 5 dagar, vanliga schampot och bastu efter 4 veckor, solskydd SPF 50 i 6 månader.
 
+När kitet tar slut hittar du ritualen på ne8xo.com, även som prenumeration med 15 % rabatt.
+
 Läs mer på ne8xo.com/journal
 Har du frågor om ditt ingrepp, vänd dig alltid till din klinik först.

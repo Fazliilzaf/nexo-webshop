@@ -24,15 +24,17 @@ Mål: NEXO ska vara det självklara svaret på "eftervård hårtransplantation".
 - [x] Article-schema (fanns redan i journal-article.liquid)
 - [ ] ⏳ EN-versioner (kräver locales/translation-scope i API-token eller Translate & Adapt manuellt)
 
-## 2. Klinikkanalen — clinic kit-programmet ⭐ (högsta prioritet)
+## 2. Klinikkanalen ⭐ (högsta prioritet)
 
-- [x] Clinic kit-förslag med prismodell: production/klinikkit/clinic-kit-forslag.md
-- [x] Eftervårdsguiden (tryckt folder-text): production/klinikkit/eftervardsguide.md
-- [x] Pitchmail + kliniklista (9 SE + Norden): production/klinikkit/pitchmail.md
-- [ ] ⏳ Fazli pratar med Hair TP Clinic om kit i eftervårdspåsen
-- [ ] ⏳ Fazli beslutar grossistpriser (förslag: 50 % till Hair TP, 40 % till nya kliniker)
-- [ ] ⏳ Skicka pitchmailet till kliniklistan
-- [ ] ⏳ Tryck eftervårdsguiden
+Verkligt läge: Fazli äger båda bolagen. Varje patient på Hair TP Clinic får redan ett kit med alla fyra produkter som gåva. Piloten är igång.
+
+- [x] Clinic kit-förslag omstrukturerat (intern modell + externt program): production/klinikkit/clinic-kit-forslag.md
+- [x] Eftervårdsguiden med refill-spår mot ne8xo.com: production/klinikkit/eftervardsguide.md
+- [x] Pitchmail uppdaterad (Hair TP som bevis, inte prospekt): production/klinikkit/pitchmail.md
+- [ ] ⏳ Tryck eftervårdsguiden och lägg i gåvokiten
+- [ ] ⏳ NEXO-mening i klinikens egen patientguide (utkast ligger i clinic-kit-forslag.md, punkt A.2)
+- [ ] ⏳ Skicka pitchmailet till externa kliniker på listan
+- [ ] ⏳ Besluta externa grossistpriser (förslag: 40–50 %)
 
 ## 3. Prenumeration
 
