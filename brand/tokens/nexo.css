@@ -1,0 +1,173 @@
+/* ============================================================
+   NEXO — design tokens (CSS custom properties)
+   Drop this in assets/nexo-tokens.css and load it first.
+   Dark is the default. Add class="mode-light" to a <section>
+   to flip that section to paper mode.
+   ============================================================ */
+
+@font-face {
+  font-family: "Buda Light";
+  src: url("{{ 'Buda-Light.woff2' | asset_url }}") format("woff2"),
+       url("{{ 'Buda-Light.ttf'  | asset_url }}") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- brand ------------------------------------------------ */
+  --nexo-griege:       #A8A09D;
+  --nexo-griege-light: #C9C3C0;
+  --nexo-griege-dark:  #6E6764;
+  --nexo-black:        #0A0908;
+  --nexo-ink:          #151312;
+  --nexo-bone:         #F5F2F0;
+  --nexo-bone-deep:    #E8E3DF;
+  --nexo-white:        #FFFFFF;
+
+  /* --- semantic (dark = default) ---------------------------- */
+  --bg:         var(--nexo-black);
+  --surface:    var(--nexo-ink);
+  --text:       #EDEAE8;
+  --text-muted: var(--nexo-griege);
+  --border:     rgba(168, 160, 157, 0.22);
+  --accent:     var(--nexo-griege);
+  --accent-contrast: var(--nexo-black);
+
+  --success: #5C6B5E;
+  --error:   #8C4A3F;
+
+  /* --- type ------------------------------------------------- */
+  --font-display: "Buda Light", "Buda", Georgia, serif;
+  --font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono:    "SF Mono", ui-monospace, Menlo, monospace;
+
+  --fs-display-1: clamp(3.5rem, 11vw, 9rem);
+  --fs-display-2: clamp(2.75rem, 7vw, 5.5rem);
+  --fs-h1:        clamp(2rem, 4.5vw, 3.25rem);
+  --fs-h2:        clamp(1.5rem, 3vw, 2.25rem);
+  --fs-h3:        clamp(1.125rem, 2vw, 1.5rem);
+  --fs-body:      1rem;
+  --fs-body-lg:   1.125rem;
+  --fs-small:     0.8125rem;
+  --fs-eyebrow:   0.6875rem;
+
+  --tracking-display: 0.02em;
+  --tracking-eyebrow: 0.18em;
+  --tracking-button:  0.12em;
+
+  --leading-tight:   1.05;
+  --leading-snug:    1.2;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  /* --- space ------------------------------------------------ */
+  --s-1: 4px;  --s-2: 8px;   --s-3: 12px;  --s-4: 16px;
+  --s-5: 24px; --s-6: 32px;  --s-7: 48px;  --s-8: 64px;
+  --s-9: 96px; --s-10: 128px; --s-11: 160px; --s-12: 200px;
+
+  /* --- layout ----------------------------------------------- */
+  --max-width:      1440px;
+  --read-width:     68ch;
+  --gutter:         20px;
+  --header-height:  64px;
+
+  /* --- shape & motion --------------------------------------- */
+  --radius:      0px;
+  --radius-sm:   2px;
+  --hairline:    1px;
+  --dur-fast:    160ms;
+  --dur-base:    320ms;
+  --dur-slow:    560ms;
+  --dur-reveal:  800ms;
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --z-sticky: 100; --z-header: 200; --z-drawer: 300; --z-modal: 400; --z-toast: 500;
+}
+
+@media (min-width: 1024px) { :root { --gutter: 40px; --header-height: 80px; } }
+
+/* paper mode — for ingredient guide, journal, long-form reading */
+.mode-light {
+  --bg:         var(--nexo-bone);
+  --surface:    var(--nexo-white);
+  --text:       var(--nexo-black);
+  --text-muted: var(--nexo-griege-dark);
+  --border:     rgba(10, 9, 8, 0.14);
+  --accent:     var(--nexo-griege-dark);
+  --accent-contrast: var(--nexo-white);
+}
+
+/* ============================================================
+   Primitives
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 300;
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.nexo-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.nexo-display { font-family: var(--font-display); font-weight: 300;
+  letter-spacing: var(--tracking-display); line-height: var(--leading-tight); }
+
+.nexo-eyebrow {
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* The one button. Square, hairline, no fills that shout. */
+.nexo-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--s-2);
+  min-height: 52px; padding: 0 var(--s-6);
+  border: var(--hairline) solid var(--accent);
+  border-radius: var(--radius);
+  background: transparent; color: var(--text);
+  font: inherit; font-size: var(--fs-small);
+  text-transform: uppercase; letter-spacing: var(--tracking-button);
+  cursor: pointer;
+  transition: background var(--dur-base) var(--ease-out),
+              color var(--dur-base) var(--ease-out);
+}
+.nexo-btn:hover { background: var(--accent); color: var(--accent-contrast); }
+.nexo-btn--solid { background: var(--accent); color: var(--accent-contrast); }
+.nexo-btn--solid:hover { background: transparent; color: var(--text); }
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Scroll reveal — the only "animation" on the site */
+.nexo-reveal { opacity: 0; transform: translateY(12px);
+  transition: opacity var(--dur-reveal) var(--ease-out),
+              transform var(--dur-reveal) var(--ease-out); }
+.nexo-reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .nexo-reveal { opacity: 1; transform: none; }
+}
