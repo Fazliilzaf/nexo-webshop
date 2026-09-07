@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "pdp-object" }
+  },
+  "order": ["main"]
+}

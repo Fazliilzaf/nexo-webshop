@@ -1,0 +1,65 @@
+{
+  "_comment": "Shopify metafield definitions required by the NEXO theme (Liquid reads these exact paths). Create definitions BEFORE importing values. Types use Shopify Admin API type names. Do not change the data model to simplify import.",
+  "product": [
+    {
+      "namespace": "nexo",
+      "key": "tagline",
+      "type": "single_line_text_field",
+      "description": "Product tagline (e.g. 'Rengör utan att torka ut.').",
+      "source": "content/products.json → <locale>.tagline",
+      "readBy": ["sections/pdp-object.liquid", "snippets/ritual-step.liquid (via locale fallback only)"]
+    },
+    {
+      "namespace": "nexo",
+      "key": "volume",
+      "type": "single_line_text_field",
+      "description": "Volume as printed on label: '250 ml' / '100 ml' / '30 ml'.",
+      "source": "content/products.json → <locale>.volume (verified against print labels)",
+      "readBy": ["sections/pdp-object.liquid"]
+    },
+    {
+      "namespace": "nexo",
+      "key": "usage",
+      "type": "multi_line_text_field",
+      "description": "How-to-use text. Originates from print labels ('Användning'). NO medical/transplant language.",
+      "source": "theme/locales → pdp.usage.* (fallback); metafield wins in production",
+      "readBy": ["sections/pdp-object.liquid"]
+    },
+    {
+      "namespace": "nexo",
+      "key": "key_ingredients",
+      "type": "json",
+      "description": "Array of {name, benefit} — the 4 highlighted ingredients.",
+      "source": "content/products.json → <locale>.keyIngredients",
+      "readBy": ["sections/pdp-object.liquid"]
+    },
+    {
+      "namespace": "nexo",
+      "key": "inci",
+      "type": "json",
+      "description": "Array of [inciName, plainLanguageExplanation] pairs. The full INCI table. Never edited to fit claims.",
+      "source": "content/products.json → <locale>.inci",
+      "readBy": ["sections/pdp-object.liquid", "sections/ingredients-library.liquid"]
+    }
+  ],
+  "shop": [
+    {
+      "namespace": "nexo",
+      "key": "ingredient_functions",
+      "type": "json",
+      "description": "Map of inciName → {sv, en} function classification (e.g. 'Fuktbindare' / 'Humectant'). Classifications only — never claim text.",
+      "source": "content/ingredient-functions.json → functions",
+      "readBy": ["sections/ingredients-library.liquid"]
+    }
+  ],
+  "article": [
+    {
+      "namespace": "nexo",
+      "key": "product",
+      "type": "product_reference",
+      "description": "Optional. When set, the article shows the quiet product footnote.",
+      "source": "manual per article in Shopify admin",
+      "readBy": ["sections/journal-article.liquid"]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+/* ============================================================
+   NEXO — Liquid Ritual · Cart drawer
+   A glass layer entering the environment — never a white drawer.
+   ============================================================ */
+
+.cart {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-cart);
+}
+.cart[hidden] { display: none; }
+
+.cart__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity var(--dur-glass) var(--ease-glass);
+}
+.cart.is-open .cart__backdrop { opacity: 1; }
+
+.cart__panel {
+  position: absolute;
+  inset: auto 0 0 0;
+  max-height: min(88svh, 720px);
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 0;
+  padding: 1.25rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom));
+  --glass-radius: 22px 22px 0 0;
+  border-radius: 22px 22px 0 0;
+  transform: translateY(103%);
+  transition: transform var(--dur-glass) var(--ease-snap);
+  will-change: transform;
+}
+.cart.is-open .cart__panel { transform: translateY(0); }
+
+@media (min-width: 900px) {
+  .cart__panel {
+    inset: 0.75rem 0.75rem 0.75rem auto;
+    width: min(430px, 92vw);
+    max-height: none;
+    --glass-radius: 22px;
+    border-radius: 22px;
+    transform: translateX(106%);
+  }
+  .cart.is-open .cart__panel { transform: translateX(0); }
+}
+
+.cart__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.9rem;
+}
+.cart__close { color: var(--nexo-smoke); }
+.cart__close:hover { color: var(--nexo-bone); }
+
+/* Ritual progress — the cart knows the system */
+.cart__ritual {
+  display: grid;
+  gap: 0.55rem;
+  padding: 0.9rem 0;
+  border-top: var(--hairline) solid var(--glass-edge-soft);
+  border-bottom: var(--hairline) solid var(--glass-edge-soft);
+}
+.cart__ritual-steps {
+  display: flex;
+  gap: 1.4rem;
+}
+.cart__ritual-steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--nexo-ghost);
+  transition: color 240ms var(--ease-glass);
+}
+.cart__ritual-steps i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+}
+.cart__ritual-steps li.is-in {
+  color: var(--nexo-bone);
+}
+.cart__ritual-steps li.is-in i {
+  background: var(--nexo-griege);
+  border-color: var(--nexo-griege);
+}
+/* the newly-added step pops — the cart feels the ritual build */
+@media (prefers-reduced-motion: no-preference) {
+  .cart__ritual-steps li.is-in i {
+    animation: nexo-dot-pop 560ms var(--ease-snap);
+  }
+}
+@keyframes nexo-dot-pop {
+  0% { transform: scale(0.4); box-shadow: 0 0 0 0 rgba(168, 160, 157, 0.55); }
+  55% { transform: scale(1.5); box-shadow: 0 0 0 9px rgba(168, 160, 157, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(168, 160, 157, 0); }
+}
+
+.cart__body {
+  overflow-y: auto;
+  min-height: 0;
+  padding: 0.75rem 0;
+}
+
+.cart__empty {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  padding: 1rem 0;
+}
+
+.cart__items { display: grid; }
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: var(--hairline) solid var(--glass-edge-soft);
+}
+.cart__item-title { font-weight: 500; }
+.cart__item-qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-top: 0.35rem;
+}
+.cart__item-qty button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: var(--hairline) solid var(--nexo-seam);
+  color: var(--nexo-smoke);
+}
+.cart__item-qty button:hover { color: var(--nexo-bone); border-color: var(--nexo-bone); }
+.cart__item-remove {
+  color: var(--nexo-ghost);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+.cart__item-remove:hover { color: var(--nexo-bone); }
+
+.cart__foot {
+  display: grid;
+  gap: 0.9rem;
+  padding-top: 1rem;
+  border-top: var(--hairline) solid var(--glass-edge-soft);
+}
+.cart__subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+.cart__checkout { width: 100%; }
+
+/* ---------------------------------------------- cart page */
+.cart-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(6rem, 12vw, 9rem) var(--pad-page) clamp(4rem, 8vw, 6rem);
+  display: grid;
+  gap: 2.5rem;
+}
+.cart-page__steps {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+.cart-page__steps li { opacity: 0.35; }
+.cart-page__steps li.is-in { opacity: 1; }
+.cart-page__continue { color: inherit; }
+.cart-page__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+.cart-page__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(233, 229, 225, 0.12);
+}
+.cart-page__item-title { font-weight: 500; }
+.cart-page__remove { color: inherit; opacity: 0.7; }
+.cart-page__foot {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: stretch;
+}
+.cart-page__subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.cart-page__checkout { text-align: center; }
+.cart-page__empty {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: start;
+}

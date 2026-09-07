@@ -1,0 +1,192 @@
+/* ============================================================
+   NEXO — Liquid Ritual · PDP (product as object)
+   Raw and flat. The product is the object; commerce is obvious;
+   no glass here — interface lives in nav + cart.
+   Fast first: image, name, price, buy path render immediately.
+   ============================================================ */
+
+.pdp {
+  position: relative;
+  z-index: var(--z-content);
+  background: var(--nexo-black);
+  padding: calc(6.5rem + env(safe-area-inset-top)) var(--pad-page) 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  gap: 4rem;
+}
+
+/* ---------- Ritual step nav: where it sits, always visible ---------- */
+
+.pdp__steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: var(--hairline) solid var(--nexo-seam);
+}
+.pdp__step-link { color: var(--nexo-smoke); }
+.pdp__step-link:hover { color: var(--nexo-bone); }
+.pdp__steps-current { white-space: nowrap; }
+
+/* ---------- The object + commerce ---------- */
+
+.pdp__hero {
+  display: grid;
+  gap: 2rem;
+}
+
+.pdp__object {
+  background: var(--nexo-ink);
+}
+.pdp__object img {
+  width: 100%;
+  height: auto;
+}
+
+.pdp__commerce {
+  display: grid;
+  gap: 1.1rem;
+  align-content: start;
+}
+
+.pdp__name {
+  font-size: var(--t-huge);
+  color: var(--nexo-bone);
+}
+
+.pdp__tagline {
+  font-size: var(--t-lead);
+  color: var(--nexo-smoke);
+  max-width: 30ch;
+}
+
+.pdp__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-top: var(--hairline) solid var(--nexo-seam);
+  border-bottom: var(--hairline) solid var(--nexo-seam);
+}
+.pdp__price {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.pdp__add { width: 100%; }
+
+.pdp__inci-link { color: var(--nexo-griege); }
+.pdp__inci-link:hover { color: var(--nexo-bone); }
+
+/* ---------- Content blocks ---------- */
+
+.pdp__block {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 720px;
+}
+
+.pdp__kicker {
+  padding-bottom: 0.8rem;
+  border-bottom: var(--hairline) solid var(--nexo-seam);
+}
+
+.pdp__text {
+  font-size: var(--t-lead);
+  line-height: 1.6;
+  color: var(--nexo-smoke);
+}
+
+.pdp__ingredients {
+  display: grid;
+}
+.pdp__ingredient {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.9rem 0;
+  border-bottom: var(--hairline) solid var(--nexo-seam);
+}
+.pdp__ingredient:last-child { border-bottom: 0; }
+
+.pdp__follow a {
+  color: var(--nexo-griege);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+/* ---------- Full INCI: native <details> — readable without JS ---------- */
+
+.pdp__inci summary {
+  cursor: pointer;
+  padding: 1rem 0;
+  color: var(--nexo-bone);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pdp__inci summary::after {
+  content: "+";
+  color: var(--nexo-griege);
+}
+.pdp__inci[open] summary::after { content: "−"; }
+.pdp__inci summary:hover { color: var(--nexo-griege); }
+
+.pdp__inci-list {
+  display: grid;
+  counter-reset: inci;
+  padding-bottom: 1rem;
+}
+.pdp__inci-row {
+  counter-increment: inci;
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.75rem 0;
+  border-bottom: var(--hairline) solid var(--nexo-seam);
+}
+.pdp__inci-row::before {
+  content: counter(inci, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: var(--tracking-mono);
+  color: var(--nexo-ghost);
+}
+
+/* ---------- Ritual strip ---------- */
+
+.pdp__ritual {
+  display: grid;
+  gap: 1.2rem;
+  justify-items: start;
+  padding-top: 2rem;
+  border-top: var(--hairline) solid var(--nexo-seam);
+}
+.pdp__ritual-steps {
+  display: flex;
+  gap: 1.6rem;
+  color: var(--nexo-ghost);
+}
+.pdp__ritual-steps li.is-current { color: var(--nexo-bone); }
+
+/* ---------- Desktop: object left, commerce right (sticky) ---------- */
+
+@media (min-width: 1024px) {
+  .pdp__hero {
+    grid-template-columns: 7fr 5fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .pdp__commerce {
+    position: sticky;
+    top: 7rem;
+  }
+  .pdp__object--wide {
+    max-width: 720px;
+  }
+}
+
+.pdp__aftercare { margin-top: 0.75rem; }

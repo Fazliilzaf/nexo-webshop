@@ -1,0 +1,54 @@
+<header class="site-header" data-header>
+  <div class="site-header__bar glass" data-header-bar>
+    <span class="glass__caustic" aria-hidden="true"></span>
+
+    <a class="site-header__brand" href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+      <img
+        src="{{ 'nexo-logo-white.svg' | asset_url }}"
+        alt="NEXO"
+        width="226"
+        height="341"
+        class="site-header__logo"
+      >
+    </a>
+
+    <nav class="site-header__nav" aria-label="{{ 'header.nav.ritual' | t }}">
+      <a href="{{ routes.root_url }}#ritual" class="site-header__link">{{ 'header.nav.ritual' | t }}</a>
+      <a href="{{ routes.root_url }}pages/ingredienser" class="site-header__link">{{ 'header.nav.ingredients' | t }}</a>
+      <a href="{{ routes.root_url }}blogs/journal" class="site-header__link">{{ 'header.nav.journal' | t }}</a>
+      <a href="{{ routes.root_url }}pages/om-nexo" class="site-header__link">{{ 'header.nav.about' | t }}</a>
+    </nav>
+
+    <div class="site-header__actions">
+      {%- if shop.published_locales.size > 1 -%}
+        <div class="site-header__locale t-mono">
+          {%- for locale in shop.published_locales -%}
+            {%- if locale.primary -%}
+              <span aria-current="true">{{ locale.iso_code | upcase }}</span>
+            {%- else -%}
+              <a href="{{ request.origin }}{{ locale.root_url }}{{ request.path }}">{{ locale.iso_code | upcase }}</a>
+            {%- endif -%}
+            {%- unless forloop.last %}<span aria-hidden="true">/</span>{% endunless -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      <button
+        type="button"
+        class="site-header__cart t-mono"
+        data-cart-toggle
+        aria-label="{{ 'general.cart.count' | t: count: cart.item_count }}"
+      >
+        {{ 'general.cart.title' | t }}
+        <span class="site-header__cart-count" data-cart-count>{{ cart.item_count }}</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "NEXO header",
+  "settings": []
+}
+{% endschema %}

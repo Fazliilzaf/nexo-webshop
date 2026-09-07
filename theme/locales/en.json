@@ -1,0 +1,229 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content",
+      "close": "Close",
+      "loading": "Loading…"
+    },
+    "cart": {
+      "title": "Cart",
+      "count": "Cart, {{ count }} items"
+    },
+    "search": {
+      "title": "Search"
+    },
+    "account": {
+      "title": "Account"
+    },
+    "language": {
+      "label": "Language"
+    },
+    "price": {
+      "tbd": "PRICE TBD",
+      "tbd_note": "Price not decided yet"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "header": {
+    "nav": {
+      "ritual": "The Ritual",
+      "ingredients": "Ingredients",
+      "journal": "Journal",
+      "about": "About NEXO"
+    }
+  },
+  "ritual": {
+    "page_title": "NEXO · Swedish haircare in three steps",
+    "step_label": "Step {{ step }} of 3",
+    "begin": "Drag to begin the ritual",
+    "steps": {
+      "one": {
+        "step": "+1",
+        "index": "01",
+        "verb": "Cleanse",
+        "name_line_1": "Lather",
+        "name_line_2": "Me Up",
+        "category": "Shampoo",
+        "tagline": "Cleanses without stripping.",
+        "volume": "250 ml",
+        "ingredients_count": "20 ingredients",
+        "ingredients_cta": "Every one explained",
+        "ph": "pH 5–5.5"
+      },
+      "two": {
+        "step": "+2",
+        "index": "02",
+        "verb": "Condition",
+        "name_line_1": "Mist",
+        "name_line_2": "Me Crazy",
+        "category": "Leave-in spray",
+        "tagline": "Softness and shine, no weight.",
+        "volume": "100 ml",
+        "ingredients_count": "17 ingredients",
+        "ingredients_cta": "Every one explained"
+      },
+      "three": {
+        "step": "+3",
+        "index": "03",
+        "verb": "Protect",
+        "name_line_1": "Whip",
+        "name_line_2": "Me Good",
+        "category": "Cream",
+        "tagline": "Protection and softness, day after day.",
+        "volume": "30 ml",
+        "ingredients_count": "21 ingredients",
+        "ingredients_cta": "Every one explained"
+      }
+    },
+    "add": "Add to cart",
+    "added": "Added",
+    "progress_label": "Ritual progress"
+  },
+  "bundle": {
+    "kicker": "+1 +2 +3",
+    "title_1": "The Ritual,",
+    "title_2": "complete",
+    "description": "All three steps. Cleanse, condition, protect.",
+    "cta": "Add the complete ritual",
+    "note": "One system, not three products."
+  },
+  "ingredients": {
+    "kicker": "The ingredient library",
+    "title_1": "Everything",
+    "title_2": "we put in.",
+    "title_3": "And why.",
+    "teaser": "Every ingredient, and what it does. Published, explained in plain language, defensible one by one.",
+    "cta": "Explore the ingredient library",
+    "lens_hint": "Drag the lens across the names",
+    "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin",
+    "unique_count": "{{ count }} unique ingredients",
+    "gmp": "Manufactured under GMP (ISO 22716)",
+    "per_product": "What each step contains, and why.",
+    "found_in": "Found in",
+    "search_label": "Search ingredients",
+    "search_placeholder": "E.g. panthenol",
+    "search_empty": "No ingredient matches.",
+    "tap_hint": "Tap a name to understand it",
+    "view_product": "View product"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty.",
+    "empty_cta": "Begin the ritual",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "remove": "Remove {{ title }}",
+    "quantity": "Quantity",
+    "decrease": "Decrease quantity of {{ title }}",
+    "increase": "Increase quantity of {{ title }}",
+    "ritual": {
+      "label": "The ritual",
+      "of_three": "{{ count }} of 3.",
+      "continue": "Continue the ritual",
+      "complete": "The ritual is complete."
+    }
+  },
+  "newsletter": {
+    "title": "Stay in touch.",
+    "description": "News from NEXO. Rarely, and only when it's worth it.",
+    "email": "Email address",
+    "submit": "Subscribe",
+    "success": "Thank you. Talk soon.",
+    "error": "Something went wrong. Try again."
+  },
+  "footer": {
+    "tagline": "Made in Sweden. Ingredient by ingredient.",
+    "org": "Hair TP Clinic Gbg AB",
+    "org_number": "559034-2688",
+    "vat": "SE559034268801",
+    "address": "Vasaplasten 2, 411 34 Göteborg",
+    "email": "contact@hairtpclinic.com",
+    "shipping": "Free shipping over 500 kr · 2–4 working days",
+    "returns": "30-day right of return",
+    "legal": {
+      "terms": "Terms of purchase",
+      "privacy": "Privacy policy",
+      "shipping": "Shipping & delivery",
+      "returns": "Returns"
+    }
+  },
+  "journal": {
+    "kicker": "Journal",
+    "read_min": "{{ count }} min",
+    "empty_title": "The Journal is on its way.",
+    "empty_body": "This is where we collect ritual, ingredient knowledge and the NEXO product philosophy. Publishing starts soon.",
+    "back": "Back to Journal",
+    "related": "In this article",
+    "topics": "Ritual · Ingredients · Product philosophy · Hair knowledge · NEXO"
+  },
+  "brand": {
+    "kicker": "About NEXO",
+    "hero_1": "Built for sensitive",
+    "hero_2": "scalps.",
+    "intro": "NEXO was born from working with hair transplant patients, people with sensitive scalps who needed gentler haircare. Today it is used by anyone who wants the same thing: mild, moisturising formulas that leave hair soft. Developed in collaboration with Hair TP Clinic.",
+    "principles_kicker": "Principles",
+    "aftercare_kicker": "Aftercare",
+    "aftercare_title": "Created for aftercare following hair transplantation.",
+    "aftercare_body": "The ritual is built as a daily aftercare routine: +1 gently cleanses a sensitive scalp, +2 moisturises, +3 protects. The brush is used for lymphatic massage during the swelling period. Developed in collaboration with Hair TP Clinic.",
+    "p1_title": "One system, not three products.",
+    "p1_body": "+1 cleanses. +2 conditions. +3 protects. The order is the idea.",
+    "p2_title": "Playful names. Serious formulas.",
+    "p2_body": "The label is matte black and speaks quietly. The contents hold up to scrutiny.",
+    "p3_title": "Transparency is not a footnote.",
+    "p3_body": "Every ingredient is published, with an explanation in plain language. That is how we earn trust.",
+    "p4_title": "A tool, not a decoration.",
+    "p4_body": "The brush is a lymphatic massage brush, designed for massaging the scalp and face, with the same gentleness as the formulas. Many reach for it the morning after a long night or a long flight.",
+    "chip_kicker": "Official colour",
+    "origin": "Made in Sweden.",
+    "cta_ritual": "Experience the ritual",
+    "cta_library": "Read every ingredient"
+  },
+  "accessory": {
+    "name": "NEXO Brush",
+    "line": "A lymphatic massage brush for scalp and face.",
+    "drag_hint": "Drag me slowly",
+    "view": "View product"
+  },
+  "pdp": {
+    "accessory_kicker": "Accessory / Tool",
+    "aftercare": "Created for aftercare following hair transplantation.",
+    "what_it_is": "What it is",
+    "key_ingredients": "Key ingredients",
+    "how_to_use": "How to use it",
+    "whats_inside": "What's inside",
+    "full_inci": "Full INCI, every ingredient explained",
+    "in_ritual": "In the ritual",
+    "follow_up": "Follow up with",
+    "complete_ritual": "Complete the ritual",
+    "usage": {
+      "one": "Massage gently into damp hair and scalp until a soft lather forms. Rinse thoroughly. Repeat if needed.",
+      "two": "Spray evenly from about 10–15 cm. Leave to dry or massage in gently. Use on damp or dry hair, any time of day.",
+      "three": "Use daily as needed. Work a small amount into the scalp or onto dry skin.",
+      "accessory": "Sweep gently from the centre of the face out toward the ears and down along the neck, toward the glands behind the ears. During the swollen days after a procedure, or in everyday life: across the whole face in the morning, after a long flight or when skin feels puffy. About a minute, morning or night."
+    }
+  },
+  "products": {
+    "lather-me-up": {
+      "name": "Lather Me Up"
+    },
+    "mist-me-crazy": {
+      "name": "Mist Me Crazy"
+    },
+    "whip-me-good": {
+      "name": "Whip Me Good"
+    },
+    "the-ritual": {
+      "name": "The Ritual +1 +2 +3"
+    }
+  },
+  "plan": {
+    "label": "Purchase options",
+    "once": "One-time purchase",
+    "subscribe": "Subscribe · every 8 weeks",
+    "save": "save",
+    "subscription_label": "Subscription · every 8 weeks"
+  }
+}

@@ -1,0 +1,71 @@
+Produkt (Formulering) — EXTRA KÄNSLIG: fullständigt recept med handelsnamn och exakta procent. Delas aldrig externt, visas aldrig på sajten.
+Exporterad av: Johanna Malm, 2025-03-25 10:02
+Produktnamn: Fazli Vårdande Schampo Rosmarin
+Formulanummer: Fazli Vårdande Shampo Rosmarin arin
+Godkänd för produktion? Ja
+
+Specifikation
+Exponeringstyp: Rinse-off
+Volym: 250 ml
+pH: 5 - 5,5
+
+Formulering
+Handelsnamn | Artikelnr | Procent | Fas
+Aqua | 20068 | 75.599999
+  Aqua (100.000%)
+Miranol C2M Conc NP | 20178 | 10.000
+  Aqua (50.000%), Disodium Cocoamphodiacetate (32.000%), Sodium Chloride (11.500%), Sodium Glycolate (6.500%)
+Mackam Cab 818 | 20267 | 5.000
+  Aqua (68.000%), Cocamidopropyl Betaine (32.000%)
+Dermorganics 1388 | 20144 | 3.500
+  Glycerin (40.000%), Aqua (25.000%), Sodium Levulinate (25.000%), Sodium Anisate (10.000%)
+Resplanta Shea MB | 20256 | 3.000
+  Shea Butter Glycereth-8 Esters (100.000%)
+Guar Safe soft 6 /Jaguar | 20171 | 1.000
+  Hydroxypropyl Guar Hydroxypropyltrimonium Chloride (95.000%), Sodium Chloride (3.000%), Alcohol (1.000%), Aqua (1.000%)
+Oramix CG 110 | 20046 | 1.000
+  Caprylyl/Capryl Glucoside (60.000%), Aqua (40.000%)
+Dexpanthenol 75% | 20031 | 0.500
+  Panthenol (75.000%), Aqua (25.000%)
+Solagum AX | 20059 | 0.300
+  Acacia Senegal Gum (55.000%), Xanthan Gum (45.000%)
+Gutö Rosmarin eterisk olja | 60068 | 0.100
+  Parfum (100.000%), Rosmarinus Officinalis Leaf Oil (100.000%), Camphor (15.000%), Beta-Pinenes (5.300%), Limonene (2.300%), Linalool (1.000%), Terpineol (0.250%)
+Mjölksyra | 20063 | 0.000001
+  Lactic Acid (95.000%), Aqua (5.000%)
+Totalt: 100.000
+
+Ingrediensdata (exakta procent)
+INCI | CAS # | EC # | Procent | Funktion
+Aqua | 7732-18-5 | 231-791-2 | 85.4099991 | Solvent
+Disodium Cocoamphodiacetate | - | 931-291-0 | 3.200 | Cleansing, Surfactant - foam boosting, Hair conditioning, Surfactant - hydrotrope, Skin conditioning, Surfactant - cleansing
+Shea Butter Glycereth-8 Esters | 681270-23-5 | - | 3.000 | Cleansing, Surfactant - emulsifying, Surfactant - cleansing
+Cocamidopropyl Betaine | 61789-40-0 | 263-058-8 / 274-923-4 | 1.600 | Antistatic, Cleansing, Surfactant - foam boosting, Hair conditioning, Surfactant - cleansing, Viscosity controlling, Skin conditioning - miscellaneous
+Glycerin | 56-81-5 | 200-289-5 | 1.400 | Denaturant, Hair conditioning, Humectant, Oral care, Skin protecting, Solvent, Viscosity controlling, Perfuming, Fragrance, Skin conditioning - humectant
+Sodium Chloride | 7647-14-5 | 231-598-3 | 1.180 | Bulking, Fragrance, Oral care, Viscosity controlling
+Hydroxypropyl Guar Hydroxypropyltrimonium Chloride | 71329-50-5 | - | 0.950 | Antistatic, Hair conditioning
+Sodium Levulinate | 19856-23-6 | 243-378-4 | 0.875 | Skin conditioning - miscellaneous
+Sodium Glycolate | 2836-32-0 | 220-624-9 | 0.650 | Buffering
+Caprylyl/Capryl Glucoside | 68515-73-1 | 500-220-1 | 0.600 | Cleansing, Foaming, Surfactant - cleansing
+Panthenol | 81-13-0, 16485-10-2 | 201-327-3 / 240-540-6 | 0.375 | Antistatic, Hair conditioning, Skin conditioning
+Sodium Anisate | 536-45-8 | 208-634-1 | 0.350 | Antimicrobial, Fragrance, Flavouring, pH adjusters
+Acacia Senegal Gum | 9000-01-5 | 232-519-5 | 0.165 | Film forming, Fragrance
+Xanthan Gum | 11138-66-2 | 234-394-2 | 0.135 | Binding, Surfactant - emulsifying, Emulsion stabilising, Gel forming, Skin conditioning, Surfactant - cleansing, Viscosity controlling
+Parfum | - | - | 0.100 | Fragrance, Perfuming
+Rosmarinus Officinalis Leaf Oil | 84604-14-8, 8000-25-7 | 283-291-9 | 0.100 | Fragrance, Skin conditioning
+Alcohol | 64-17-5 | 200-578-6 | 0.010 | Antifoaming, Antimicrobial, Astringent, Fragrance, Solvent, Viscosity controlling
+Beta-Pinenes | 127-91-3 | 204-872-5 | 0.0053 | Perfuming
+Lactic Acid | 50-21-5 | 200-018-0 | 0.0000009 | Buffering, Humectant, Skin conditioning
+Totalt: 100.1053
+
+Ingrediensdata för parfymallergener (exakta procent)
+Camphor | 76-22-2 | 0.015 | Deklarerad: Ja
+Limonene | 5989-27-5 | 0.0023 | Deklarerad: Nej
+Linalool | 78-70-6 | 0.001 | Deklarerad: Nej
+Terpineol | 98-55-5 | 0.00025 | Deklarerad: Nej
+
+Anteckningar för formulering
+Detta är den senaste versionen prover skickade 2024-08-15
+Kunden ville ta bort Parfymen Relaxing Lavender 236056, 60080 enligt samtal 2025-03-25
+
+The manufacturer complies with the current standards for manufacturing of cosmetic products (GMP) (EN ISO 22716:2007).

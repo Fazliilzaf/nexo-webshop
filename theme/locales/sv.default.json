@@ -1,0 +1,229 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Hoppa till innehåll",
+      "close": "Stäng",
+      "loading": "Laddar…"
+    },
+    "cart": {
+      "title": "Varukorg",
+      "count": "Varukorg, {{ count }} artiklar"
+    },
+    "search": {
+      "title": "Sök"
+    },
+    "account": {
+      "title": "Konto"
+    },
+    "language": {
+      "label": "Språk"
+    },
+    "price": {
+      "tbd": "Pris TBD",
+      "tbd_note": "Priset är inte fastställt ännu"
+    },
+    "pagination": {
+      "previous": "Föregående",
+      "next": "Nästa"
+    }
+  },
+  "header": {
+    "nav": {
+      "ritual": "Ritualen",
+      "ingredients": "Ingredienser",
+      "journal": "Journal",
+      "about": "Om NEXO"
+    }
+  },
+  "ritual": {
+    "page_title": "NEXO · svensk hårvård i tre steg",
+    "step_label": "Steg {{ step }} av 3",
+    "begin": "Dra för att påbörja ritualen",
+    "steps": {
+      "one": {
+        "step": "+1",
+        "index": "01",
+        "verb": "Rengör",
+        "name_line_1": "Lather",
+        "name_line_2": "Me Up",
+        "category": "Schampo",
+        "tagline": "Rengör utan att torka ut.",
+        "volume": "250 ml",
+        "ingredients_count": "20 ingredienser",
+        "ingredients_cta": "Varje en förklarad",
+        "ph": "pH 5–5,5"
+      },
+      "two": {
+        "step": "+2",
+        "index": "02",
+        "verb": "Vårdar",
+        "name_line_1": "Mist",
+        "name_line_2": "Me Crazy",
+        "category": "Spray",
+        "tagline": "Mjukhet och glans, utan tyngd.",
+        "volume": "100 ml",
+        "ingredients_count": "17 ingredienser",
+        "ingredients_cta": "Varje en förklarad"
+      },
+      "three": {
+        "step": "+3",
+        "index": "03",
+        "verb": "Skyddar",
+        "name_line_1": "Whip",
+        "name_line_2": "Me Good",
+        "category": "Kräm",
+        "tagline": "Skydd och mjukhet, dag efter dag.",
+        "volume": "30 ml",
+        "ingredients_count": "21 ingredienser",
+        "ingredients_cta": "Varje en förklarad"
+      }
+    },
+    "add": "Lägg i varukorg",
+    "added": "Tillagd",
+    "progress_label": "Ritualens gång"
+  },
+  "bundle": {
+    "kicker": "+1 +2 +3",
+    "title_1": "Ritualen",
+    "title_2": "komplett",
+    "description": "Alla tre stegen. Tvätta, vårda, skydda.",
+    "cta": "Lägg hela ritualen i varukorgen",
+    "note": "Ett system, inte tre produkter."
+  },
+  "ingredients": {
+    "kicker": "Ingrediensbiblioteket",
+    "title_1": "Allt",
+    "title_2": "vi stoppar i.",
+    "title_3": "Och varför.",
+    "teaser": "Varje ingrediens, och vad den gör. Publicerad, översatt till vanlig svenska, försvarbar en för en.",
+    "cta": "Utforska ingrediensbiblioteket",
+    "lens_hint": "Dra linsen över namnen",
+    "demo_list": "Panthenol|Shea Butter Glycereth-8 Esters|Aloe Barbadensis Leaf Juice|Rosmarinus Officinalis Leaf Oil|Cocamidopropyl Betaine|Biosaccharide Gum-1|Prunus Amygdalus Dulcis Oil|Cera Alba|Glycerin|Lanolin",
+    "unique_count": "{{ count }} unika ingredienser",
+    "gmp": "Tillverkat enligt GMP (ISO 22716)",
+    "per_product": "Vad respektive steg innehåller, och varför.",
+    "found_in": "Finns i",
+    "search_label": "Sök ingrediens",
+    "search_placeholder": "T.ex. panthenol",
+    "search_empty": "Ingen ingrediens matchar.",
+    "tap_hint": "Tryck på ett namn för att förstå det",
+    "view_product": "Se produkten"
+  },
+  "cart": {
+    "title": "Varukorg",
+    "empty": "Varukorgen är tom.",
+    "empty_cta": "Påbörja ritualen",
+    "subtotal": "Delsumma",
+    "checkout": "Gå till kassan",
+    "remove": "Ta bort {{ title }}",
+    "quantity": "Antal",
+    "decrease": "Minska antal för {{ title }}",
+    "increase": "Öka antal för {{ title }}",
+    "ritual": {
+      "label": "Ritualen",
+      "of_three": "{{ count }} av 3.",
+      "continue": "Fortsätt ritualen",
+      "complete": "Ritualen är komplett."
+    }
+  },
+  "newsletter": {
+    "title": "Håll kontakten.",
+    "description": "Nyheter från NEXO. Sällan, och bara när det är värt det.",
+    "email": "E-postadress",
+    "submit": "Prenumerera",
+    "success": "Tack. Vi hörs.",
+    "error": "Något gick fel. Försök igen."
+  },
+  "footer": {
+    "tagline": "Tillverkat i Sverige. Ingrediens för ingrediens.",
+    "org": "Hair TP Clinic Gbg AB",
+    "org_number": "559034-2688",
+    "vat": "SE559034268801",
+    "address": "Vasaplasten 2, 411 34 Göteborg",
+    "email": "contact@hairtpclinic.com",
+    "shipping": "Fri frakt över 500 kr · 2–4 arbetsdagar",
+    "returns": "30 dagars öppet köp",
+    "legal": {
+      "terms": "Köpvillkor",
+      "privacy": "Integritetspolicy",
+      "shipping": "Frakt & leverans",
+      "returns": "Returer"
+    }
+  },
+  "journal": {
+    "kicker": "Journal",
+    "read_min": "{{ count }} min",
+    "empty_title": "Journalen är på väg.",
+    "empty_body": "Här samlar vi ritual, ingredienskunskap och NEXO:s produktfilosofi. Publicering startar inom kort.",
+    "back": "Tillbaka till Journal",
+    "related": "I artikeln",
+    "topics": "Ritual · Ingredienser · Produktfilosofi · Hårkunskap · NEXO"
+  },
+  "brand": {
+    "kicker": "Om NEXO",
+    "hero_1": "Byggd för känslig",
+    "hero_2": "hårbotten.",
+    "intro": "NEXO föddes i arbetet med kunder som genomgått hårtransplantation, människor med känslig hårbotten som behövde skonsammare hårvård. Idag används den av alla som vill ha samma sak: milda, återfuktande formler som gör håret mjukt. Utvecklad i samarbete med Hair TP Clinic.",
+    "principles_kicker": "Principer",
+    "aftercare_kicker": "Eftervård",
+    "aftercare_title": "Skapad för eftervård efter hårtransplantation.",
+    "aftercare_body": "Ritualen är byggd som daglig eftervårdsrutin: +1 rengör skonsamt en känslig hårbotten, +2 återfuktar, +3 skyddar. Borsten används för lymfmassage under svullnadsperioden. Utvecklad i samarbete med Hair TP Clinic.",
+    "p1_title": "Ett system, inte tre produkter.",
+    "p1_body": "+1 rengör. +2 vårdar. +3 skyddar. Ordningen är själva idén.",
+    "p2_title": "Lekfulla namn. Allvarliga formler.",
+    "p2_body": "Etiketten är matt svart och talar lågt. Innehållet tål att granskas.",
+    "p3_title": "Transparens är inte en fotnot.",
+    "p3_body": "Varje ingrediens är publicerad, med en förklaring på vanlig svenska. Det är så vi förtjänar förtroende.",
+    "p4_title": "Verktyg, inte dekoration.",
+    "p4_body": "Borsten är en lymfmassageborste, utformad för massage av hårbotten och ansiktet, med samma skonsamhet som formuleringarna. Många använder den morgonen efter en lång natt eller en lång flygning.",
+    "chip_kicker": "Officiell färg",
+    "origin": "Tillverkat i Sverige.",
+    "cta_ritual": "Upplev ritualen",
+    "cta_library": "Läs varje ingrediens"
+  },
+  "accessory": {
+    "name": "NEXO Borste",
+    "line": "Lymfmassageborste för hårbotten och ansikte.",
+    "drag_hint": "Drag me slowly",
+    "view": "Se produkten"
+  },
+  "pdp": {
+    "accessory_kicker": "Tillbehör / Verktyg",
+    "aftercare": "Skapad för eftervård efter hårtransplantation.",
+    "what_it_is": "Vad det är",
+    "key_ingredients": "Nyckelingredienser",
+    "how_to_use": "Så använder du det",
+    "whats_inside": "Innehåll",
+    "full_inci": "Fullständig INCI, varje ingrediens förklarad",
+    "in_ritual": "I ritualen",
+    "follow_up": "Följ upp med",
+    "complete_ritual": "Gör ritualen komplett",
+    "usage": {
+      "one": "Massera försiktigt in i fuktigt hår och hårbotten tills det bildas ett mjukt lödder. Skölj noggrant. Upprepa vid behov.",
+      "two": "Spraya jämnt från cirka 10–15 cm avstånd. Låt torka eller massera försiktigt in. Använd i fuktigt eller torrt hår, när som helst på dagen.",
+      "three": "Använd dagligen vid behov. Arbeta in en liten mängd i hårbotten eller på torr hud.",
+      "accessory": "Massera med lätta, mjuka drag från ansiktets mitt ut mot öronen och nedåt mot halsen, i riktning mot körtlarna bakom öronen. Under svullnadsperioden efter ett ingrepp, eller i vardagen: i hela ansiktet på morgonen, efter en lång flygning eller när huden känns puffig. Ungefär en minut, morgon eller kväll."
+    }
+  },
+  "products": {
+    "lather-me-up": {
+      "name": "Lather Me Up"
+    },
+    "mist-me-crazy": {
+      "name": "Mist Me Crazy"
+    },
+    "whip-me-good": {
+      "name": "Whip Me Good"
+    },
+    "the-ritual": {
+      "name": "Ritualen +1 +2 +3"
+    }
+  },
+  "plan": {
+    "label": "Köpalternativ",
+    "once": "Engångsköp",
+    "subscribe": "Prenumerera · var 8:e vecka",
+    "save": "spara",
+    "subscription_label": "Prenumeration · var 8:e vecka"
+  }
+}

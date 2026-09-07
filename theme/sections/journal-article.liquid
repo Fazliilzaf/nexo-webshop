@@ -1,0 +1,67 @@
+{%- comment -%}
+  ARTICLE — editorial readability first. Narrow column, honest
+  typography. Commerce appears only when the article names a
+  product (article.metafields.nexo.product) — quietly, never as ads.
+{%- endcomment -%}
+
+{%- liquid
+  assign words = article.content | strip_html | split: ' ' | size
+  assign minutes = words | divided_by: 200 | at_least: 1
+  assign related = article.metafields.nexo.product.value
+-%}
+
+<article class="article">
+
+  <header class="article__hero">
+    <p class="t-mono t-griege">{{ 'journal.kicker' | t }}</p>
+    <h1 class="article__title t-display">{{ article.title }}</h1>
+    <p class="article__meta t-mono t-ghost">
+      {{ 'journal.read_min' | t: count: minutes }}
+      {%- if article.tags.size > 0 %} / {{ article.tags | join: ' / ' }}{% endif %}
+      {%- if article.published_at %} / {{ article.published_at | date: '%Y-%m-%d' }}{% endif %}
+    </p>
+  </header>
+
+  <div class="article__body">
+    {{ article.content }}
+  </div>
+
+  {%- if related -%}
+    <aside class="article__related" aria-label="{{ 'journal.related' | t }}">
+      <p class="t-mono t-ghost">{{ 'journal.related' | t }}</p>
+      <a class="article__related-link" href="{{ related.url }}">
+        <span class="article__related-name t-display">{{ related.title }}</span>
+        {%- assign related_price = related.price | plus: 0 -%}
+        {%- if related_price > 0 -%}
+          <span class="t-mono">{{ related.price | money }}</span>
+        {%- endif -%}
+        <span class="t-mono t-griege">→</span>
+      </a>
+    </aside>
+  {%- endif -%}
+
+  <p class="article__back t-mono">
+    <a href="{{ blog.url | default: '/blogs/journal' }}">← {{ 'journal.back' | t }}</a>
+  </p>
+
+</article>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ article.title | json }},
+    {%- if article.published_at -%}
+    "datePublished": {{ article.published_at | date: '%Y-%m-%d' | json }},
+    {%- endif -%}
+    "author": { "@type": "Organization", "name": "NEXO" }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Journal article",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

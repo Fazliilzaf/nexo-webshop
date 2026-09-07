@@ -1,0 +1,104 @@
+/* ============================================================
+   NEXO — Liquid Ritual · Brand
+   The quiet page. Space, type, principles. No glass, no JS.
+   ============================================================ */
+
+.brand {
+  position: relative;
+  z-index: var(--z-content);
+  background: var(--nexo-black);
+  padding: calc(6.5rem + env(safe-area-inset-top)) var(--pad-page) 6rem;
+  display: grid;
+  gap: clamp(5rem, 14vw, 10rem);
+}
+
+/* ---------- Hero ---------- */
+
+.brand__hero {
+  max-width: 1400px;
+  display: grid;
+  gap: 2rem;
+}
+
+.brand__title {
+  font-size: var(--t-mega);
+  color: var(--nexo-bone);
+}
+
+.brand__intro {
+  max-width: 38ch;
+  font-size: var(--t-lead);
+  line-height: 1.65;
+  color: var(--nexo-smoke);
+}
+
+/* ---------- Principles: numbered, flat, breathing room ---------- */
+
+.brand__principles {
+  display: grid;
+  gap: clamp(4rem, 10vw, 7rem);
+  max-width: 1400px;
+}
+
+.brand__principle {
+  display: grid;
+  gap: 1.1rem;
+  padding-top: 2rem;
+  border-top: var(--hairline) solid var(--nexo-seam);
+  max-width: 760px;
+}
+.brand__principle:nth-child(2) { margin-left: auto; }
+
+.brand__statement {
+  font-size: var(--t-big);
+  color: var(--nexo-bone);
+  max-width: 16ch;
+}
+
+.brand__support {
+  font-size: var(--t-lead);
+  line-height: 1.6;
+  max-width: 42ch;
+}
+
+/* ---------- The colour chip as the only colour moment ---------- */
+
+.brand__chip {
+  background: var(--nexo-griege);
+  color: var(--nexo-ink);
+  display: grid;
+  gap: 1rem;
+  align-content: end;
+  min-height: 60svh;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.brand__chip-hex {
+  font-size: clamp(2.4rem, 8vw, 6rem);
+  letter-spacing: 0.02em;
+}
+.brand__chip figcaption { opacity: 0.75; }
+
+/* ---------- Origin + exit ---------- */
+
+.brand__origin {
+  font-size: var(--t-huge);
+  color: var(--nexo-griege);
+}
+
+.brand__out {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.brand__out a { color: var(--nexo-smoke); }
+.brand__out a:hover { color: var(--nexo-bone); }
+
+@media (min-width: 1024px) {
+  .brand__principle { max-width: 620px; }
+}
+
+.brand__aftercare {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+  border-top: 1px solid rgba(23, 20, 18, 0.15);
+  max-width: 720px;
+}

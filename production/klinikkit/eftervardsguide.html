@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<title>NEXO — Din eftervård</title>
+<style>
+  @font-face {
+    font-family: 'Buda';
+    src: url('file:///Users/fazlikrasniqi/nexo-webshop-kit/theme/assets/buda-light.woff2') format('woff2');
+    font-weight: 300;
+  }
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0b0b0c;
+    --ink: #e9e5e1;
+    --griege: #a8a09d;
+    --smoke: rgba(233,229,225,.62);
+    --line: rgba(168,160,157,.28);
+  }
+  body { background: var(--bg); color: var(--ink); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  .page {
+    width: 210mm; height: 296mm; padding: 15mm 16mm 13mm;
+    position: relative; display: flex; flex-direction: column; overflow: hidden;
+  }
+  .mono { font-family: Menlo, monospace; letter-spacing: .2em; text-transform: uppercase; }
+  .kicker { font-size: 7.5pt; color: var(--griege); }
+  .serif { font-family: 'Buda', Didot, 'Times New Roman', serif; font-weight: 300; }
+
+  header { display: flex; justify-content: space-between; align-items: center; }
+  header img { height: 11mm; display: block; }
+
+  .hero { position: relative; text-align: center; margin-top: 7mm; }
+  .hero .infinity {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-56%);
+    font-family: 'Buda', Didot, serif; font-size: 150pt; color: rgba(168,160,157,.09);
+    pointer-events: none; line-height: 1;
+  }
+  .hero h1 { position: relative; font-size: 44pt; line-height: 1.05; }
+  .hero h1 em { font-style: normal; color: var(--griege); }
+  .hero .sub { position: relative; margin-top: 5mm; font-size: 10.5pt; color: var(--smoke); line-height: 1.6; }
+  .hero .sub em { font-style: normal; color: var(--ink); }
+
+  .steps { display: flex; gap: 7mm; margin-top: 10mm; }
+  .step { flex: 1; border-top: 1px solid var(--line); padding-top: 4mm; position: relative; }
+  .step .ghost {
+    position: absolute; top: 1mm; right: 0;
+    font-family: 'Buda', Didot, serif; font-size: 34pt; color: rgba(168,160,157,.22);
+    line-height: 1;
+  }
+  .step h3 { font-size: 11pt; font-weight: 500; margin: 0 0 2.5mm; }
+  .step p { font-size: 8.5pt; line-height: 1.7; color: var(--smoke); font-weight: 300; max-width: 52mm; }
+  .step p em { font-style: normal; color: var(--ink); }
+
+  .brush {
+    display: flex; gap: 9mm; align-items: center; margin-top: 9mm;
+    border: 1px solid var(--line); padding: 6.5mm 8mm; position: relative;
+  }
+  .brush .mark { font-family: 'Buda', Didot, serif; font-size: 23pt; white-space: nowrap; }
+  .brush .arrow { flex: 0 0 auto; }
+  .brush p { font-size: 8.5pt; line-height: 1.7; color: var(--smoke); font-weight: 300; }
+  .brush p em { font-style: normal; color: var(--ink); }
+
+  .timeline { margin-top: 9mm; position: relative; padding-top: 7mm; }
+  .timeline::before {
+    content: ""; position: absolute; top: 7mm; left: 4%; right: 4%;
+    border-top: 1px solid var(--line);
+  }
+  .timeline .row { display: flex; justify-content: space-between; position: relative; }
+  .tl { flex: 1; text-align: center; }
+  .tl .dot {
+    width: 2.6mm; height: 2.6mm; border-radius: 50%; background: var(--griege);
+    margin: -1.3mm auto 3mm; transform: translateY(-4.55mm); position: relative; z-index: 1;
+  }
+  .tl .when { font-family: Menlo, monospace; font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; color: var(--griege); }
+  .tl .what { font-size: 8pt; color: var(--smoke); margin-top: 2mm; line-height: 1.55; font-weight: 300; padding: 0 2mm; }
+  .tl .what em { font-style: normal; color: var(--ink); }
+
+  footer { margin-top: auto; }
+  .refill { text-align: center; border-top: 1px solid var(--line); padding-top: 7mm; }
+  .refill .url { font-family: 'Buda', Didot, serif; font-size: 20pt; }
+  .refill p { color: var(--smoke); font-size: 8.5pt; margin-top: 2mm; font-weight: 300; }
+  .refill p em { font-style: normal; color: var(--ink); }
+  .fineprint { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 6mm; }
+  .fineprint p { font-size: 7.5pt; color: var(--smoke); max-width: 130mm; line-height: 1.6; font-weight: 300; }
+  .fineprint img { height: 8mm; display: block; opacity: .8; }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <header>
+    <p class="mono kicker">Efter din hårtransplantation</p>
+    <img src="file:///Users/fazlikrasniqi/nexo-webshop-kit/theme/assets/nexo-logo-white.svg" alt="NEXO">
+  </header>
+
+  <div class="hero">
+    <span class="infinity">∞</span>
+    <h1 class="serif">Din <em>eftervård.</em></h1>
+    <p class="sub">Tre steg, i rätt ordning, varje dag.<br>Enklare än att laga kaffe, <em>och snällare mot din hårbotten.</em></p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <span class="ghost serif">+1</span>
+      <h3>Lather Me Up</h3>
+      <p>Från dag 3 får du <em>äntligen</em> tvätta igen. Ljummet vatten, aldrig över 40 grader, löddra i händerna först. Rengör utan att torka ut. Gnugga aldrig.</p>
+    </div>
+    <div class="step">
+      <span class="ghost serif">+2</span>
+      <h3>Mist Me Crazy</h3>
+      <p>Fukt utan tyngd. Spraya i fuktigt eller torrt hår, när som helst på dagen, <em>direkt i hårbotten om du vill.</em> Vi dömer inte.</p>
+    </div>
+    <div class="step">
+      <span class="ghost serif">+3</span>
+      <h3>Whip Me Good</h3>
+      <p>Rik kräm för det som känns torrt. En ärta räcker. Hjälper huden bevara fukt. <em>Ja, den funkar i skägget också.</em></p>
+    </div>
+  </div>
+
+  <div class="brush">
+    <span class="mark serif">Drag me slowly.</span>
+    <svg class="arrow" width="120" height="26" viewBox="0 0 120 26" fill="none">
+      <path d="M2 20 C 40 4, 80 4, 112 14" stroke="#a8a09d" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M104 9 L 114 15 L 103 19" stroke="#a8a09d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <p>Det är borsten. En minut lymfmassage från 24 timmar och framåt: <em>mjuka drag från ansiktets mitt ut mot öronen</em>, vidare nedåt halsen. Svullnaden går över av sig självt, men det här är skönt under tiden.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="row">
+      <div class="tl">
+        <div class="dot"></div>
+        <div class="when">Dag 1–2</div>
+        <div class="what">Sov på rygg, lite upphöjt. <em>Rör inte området.</em></div>
+      </div>
+      <div class="tl">
+        <div class="dot"></div>
+        <div class="when">Dag 3</div>
+        <div class="what">Första tvätten. <em>Äntligen.</em></div>
+      </div>
+      <div class="tl">
+        <div class="dot"></div>
+        <div class="when">Dag 7–10</div>
+        <div class="what">Skorporna lossnar själva. <em>Pilla aldrig.</em></div>
+      </div>
+      <div class="tl">
+        <div class="dot"></div>
+        <div class="when">Dag 14</div>
+        <div class="what">Träning igen, <em>lugnt i början.</em></div>
+      </div>
+      <div class="tl">
+        <div class="dot"></div>
+        <div class="when">Vecka 4</div>
+        <div class="what">Bastu, bad och vanliga schampot. SPF 50 i 6 månader.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="refill">
+      <p class="url serif">ne8xo.com</p>
+      <p>När kitet tar slut hittar du ritualen här, <em>även som prenumeration med 15 % rabatt.</em></p>
+    </div>
+    <div class="fineprint">
+      <p>NEXO är skapat för tiden efter en hårtransplantation, i samarbete med Hair TP Clinic. Tiderna här är ungefärliga. Din kliniks egna instruktioner gäller alltid först, och vid frågor om ditt ingrepp är det dem du ska ringa.</p>
+      <img src="file:///Users/fazlikrasniqi/nexo-webshop-kit/theme/assets/nexo-logo-white.svg" alt="">
+    </div>
+  </footer>
+</section>
+
+</body>
+</html>

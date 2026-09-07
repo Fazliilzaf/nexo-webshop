@@ -1,0 +1,69 @@
+{%- comment -%}
+  Homepage accessory — the brush, in the ritual step's visual language:
+  the "Drag me slowly" poster as the scene, glass commerce card on top.
+  Outside the +1/+2/+3 core: no step numbering, no ritual strip.
+{%- endcomment -%}
+{%- assign brush = all_products['borste'] -%}
+
+<section class="home-acc" id="tillbehor" data-acc>
+  <div class="home-acc__backdrop" data-acc-media aria-hidden="true">
+    <picture>
+      <source media="(min-width: 1024px)" srcset="{{ 'material-brush-desktop.jpg' | asset_url }}">
+      <img
+        src="{{ 'material-brush-mobile.jpg' | asset_url }}"
+        alt=""
+        width="1500"
+        height="1049"
+        loading="lazy"
+      >
+    </picture>
+  </div>
+
+  <div class="home-acc__inner">
+    <div class="home-acc__body" data-acc-body>
+      <div class="home-acc__card glass glass--press">
+        <span class="glass__caustic" aria-hidden="true"></span>
+
+        <div class="home-acc__top t-mono">
+          <span class="t-griege">{{ 'pdp.accessory_kicker' | t }}</span>
+        </div>
+
+        <h2 class="home-acc__name t-display">{{ 'accessory.name' | t }}</h2>
+        <p class="home-acc__line t-smoke">{{ 'accessory.line' | t }}</p>
+
+        <div class="home-acc__row t-mono">
+          {%- if brush -%}
+            {%- assign brush_price = brush.price | plus: 0 -%}
+            {%- if brush_price > 0 -%}
+              <span>{{ brush.price | money }}</span>
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+
+        {%- if brush and brush.selected_or_first_available_variant -%}
+          <button
+            type="button"
+            class="btn home-acc__add"
+            data-add
+            data-variant-id="{{ brush.selected_or_first_available_variant.id }}"
+          >
+            {{ 'ritual.add' | t }}
+          </button>
+        {%- endif -%}
+
+        <a class="home-acc__link t-mono" href="/products/borste">
+          {{ 'accessory.view' | t }} →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home accessory",
+  "tag": "section",
+  "settings": [],
+  "presets": [{ "name": "Home accessory" }]
+}
+{% endschema %}

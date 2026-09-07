@@ -1,0 +1,86 @@
+{%- comment -%}
+  Cart page — server-rendered, no-JS friendly. The drawer is the primary
+  commerce surface; this page exists so routes.cart_url never 404s
+  (drawer CTA, emails, external links). Same language, same ritual logic.
+{%- endcomment -%}
+
+{%- assign has_1 = false -%}
+{%- assign has_2 = false -%}
+{%- assign has_3 = false -%}
+{%- assign ritual_count = 0 -%}
+{%- for item in cart.items -%}
+  {%- if item.product.handle == 'lather-me-up' -%}
+    {%- assign has_1 = true -%}
+    {%- assign ritual_count = ritual_count | plus: 1 -%}
+  {%- elsif item.product.handle == 'mist-me-crazy' -%}
+    {%- assign has_2 = true -%}
+    {%- assign ritual_count = ritual_count | plus: 1 -%}
+  {%- elsif item.product.handle == 'whip-me-good' -%}
+    {%- assign has_3 = true -%}
+    {%- assign ritual_count = ritual_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="cart-page">
+
+  <header class="cart-page__head">
+    <h1 class="t-display">{{ 'cart.title' | t }}</h1>
+  </header>
+
+  {%- if cart.item_count > 0 -%}
+    <div class="cart-page__ritual" aria-label="{{ 'cart.ritual.label' | t }}">
+      <p class="t-mono t-ghost">{{ 'cart.ritual.label' | t }}</p>
+      <ol class="cart-page__steps t-mono">
+        <li class="{% if has_1 %}is-in{% endif %}"><span>+1</span><i aria-hidden="true"></i></li>
+        <li class="{% if has_2 %}is-in{% endif %}"><span>+2</span><i aria-hidden="true"></i></li>
+        <li class="{% if has_3 %}is-in{% endif %}"><span>+3</span><i aria-hidden="true"></i></li>
+      </ol>
+      <p class="t-mono t-griege">
+        {%- if ritual_count == 3 -%}
+          {{ 'cart.ritual.complete' | t }}
+        {%- else -%}
+          {{ 'cart.ritual.of_three' | t: count: ritual_count }}
+          <a href="{{ routes.root_url }}#ritual" class="cart-page__continue">{{ 'cart.ritual.continue' | t }} →</a>
+        {%- endif -%}
+      </p>
+    </div>
+
+    <ul class="cart-page__items">
+      {%- for item in cart.items -%}
+        <li class="cart-page__item">
+          <div class="cart-page__item-info">
+            <p class="cart-page__item-title">{{ item.product.title }}</p>
+            <p class="t-mono t-ghost">
+              {{ 'cart.quantity' | t }}: {{ item.quantity }}
+              · <a href="{{ item.url_to_remove }}" class="cart-page__remove">{{ 'cart.remove' | t: title: item.product.title }}</a>
+            </p>
+          </div>
+          <p class="t-mono">{{ item.final_line_price | money }}</p>
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    <footer class="cart-page__foot">
+      <div class="cart-page__subtotal t-mono">
+        <span>{{ 'cart.subtotal' | t }}</span>
+        <span>{{ cart.total_price | money }}</span>
+      </div>
+      <a class="btn cart-page__checkout" href="/checkout">{{ 'cart.checkout' | t }}</a>
+    </footer>
+
+  {%- else -%}
+    <div class="cart-page__empty">
+      <p class="t-smoke">{{ 'cart.empty' | t }}</p>
+      <a class="btn" href="{{ routes.root_url }}#ritual">{{ 'cart.empty_cta' | t }}</a>
+    </div>
+  {%- endif -%}
+
+</div>
+
+{% schema %}
+{
+  "name": "Cart page",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

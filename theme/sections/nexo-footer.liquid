@@ -1,0 +1,60 @@
+<footer class="site-footer hairline-t">
+  <div class="site-footer__inner">
+    <img
+      src="{{ 'nexo-logo-griege.svg' | asset_url }}"
+      alt="NEXO"
+      width="226"
+      height="341"
+      class="site-footer__logo"
+      loading="lazy"
+    >
+
+    <p class="site-footer__tagline t-display">{{ 'footer.tagline' | t }}</p>
+
+    <div class="site-footer__newsletter">
+      <h2 class="t-caps">{{ 'newsletter.title' | t }}</h2>
+      <p class="t-smoke">{{ 'newsletter.description' | t }}</p>
+      {%- form 'customer', class: 'site-footer__form' -%}
+        {%- if form.posted_successfully? -%}
+          <p class="t-mono t-griege" role="status">{{ 'newsletter.success' | t }}</p>
+        {%- else -%}
+          <label class="visually-hidden" for="footer-email">{{ 'newsletter.email' | t }}</label>
+          <input
+            id="footer-email"
+            type="email"
+            name="contact[email]"
+            autocomplete="email"
+            placeholder="{{ 'newsletter.email' | t }}"
+            required
+          >
+          <button type="submit" class="btn btn--ghost">{{ 'newsletter.submit' | t }}</button>
+          {%- if form.errors -%}
+            <p class="t-mono" role="alert">{{ 'newsletter.error' | t }}</p>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+
+    <div class="site-footer__meta t-mono t-ghost">
+      <p>{{ 'footer.shipping' | t }}</p>
+      <p>{{ 'footer.returns' | t }}</p>
+      <p>
+        {{ 'footer.org' | t }} · {{ 'footer.org_number' | t }} · {{ 'footer.vat' | t }}<br>
+        {{ 'footer.address' | t }} · {{ 'footer.email' | t }}
+      </p>
+      <nav aria-label="{{ 'footer.legal.terms' | t }}">
+        <a href="{{ routes.root_url }}pages/kopvillkor">{{ 'footer.legal.terms' | t }}</a>
+        <a href="{{ routes.root_url }}pages/integritetspolicy">{{ 'footer.legal.privacy' | t }}</a>
+        <a href="{{ routes.root_url }}pages/frakt-och-leverans">{{ 'footer.legal.shipping' | t }}</a>
+        <a href="{{ routes.root_url }}pages/returer-och-angerratt">{{ 'footer.legal.returns' | t }}</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "NEXO footer",
+  "settings": []
+}
+{% endschema %}

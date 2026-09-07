@@ -2,7 +2,8 @@
   "_note": "Brand FACTS only. These are fixed because they are the brand, not because they are a design opinion. Everything about layout, composition, motion, imagery and art direction is yours to invent.",
   "name": "NEXO",
   "origin": "Made in Sweden",
-  "claims": ["Vegan", "Cruelty free"],
+  "claims": ["Cruelty free"],
+  "_claimsNote": "VEGAN pausat 2026-08-30 pending fabrikens INCI-dokumentation för +3 (lanolin/bivax). Se content/products.json + OPEN-QUESTIONS.md.",
   "color": {
     "griege": "#A8A09D",
     "_note": "The one official brand colour, from the printed colour chip. Build whatever palette you want around it — this value itself never changes."

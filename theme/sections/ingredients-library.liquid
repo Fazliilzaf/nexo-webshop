@@ -1,0 +1,174 @@
+{%- comment -%}
+  INGREDIENTS — transparency as interaction.
+  Three levels: overview / the lens index / per-product context.
+  Data: product metafields (nexo.inci) + shop metafield
+  (nexo.ingredient_functions). Fully readable without JS —
+  the lens only sharpens what is already there.
+{%- endcomment -%}
+
+{%- liquid
+  assign functions = shop.metafields.nexo.ingredient_functions.value
+  assign lang = request.locale.iso_code
+  assign handles = 'lather-me-up,mist-me-crazy,whip-me-good' | split: ','
+  assign blob_1 = '||'
+  assign blob_2 = '||'
+  assign blob_3 = '||'
+  assign unique_blob = '||'
+  assign unique_count = 0
+
+  for handle in handles
+    assign p = all_products[handle]
+    assign pi = forloop.index
+    for entry in p.metafields.nexo.inci.value
+      assign iname = entry[0]
+      if pi == 1
+        assign blob_1 = blob_1 | append: iname | append: '||'
+      elsif pi == 2
+        assign blob_2 = blob_2 | append: iname | append: '||'
+      else
+        assign blob_3 = blob_3 | append: iname | append: '||'
+      endif
+      assign key = '||' | append: iname | append: '||'
+      unless unique_blob contains key
+        assign unique_blob = unique_blob | append: iname | append: '||'
+        assign unique_count = unique_count | plus: 1
+      endunless
+    endfor
+  endfor
+-%}
+
+<div class="library" data-library>
+
+  {%- comment -%} ============ LEVEL 1 — overview ============ {%- endcomment -%}
+  <header class="library__hero">
+    <p class="t-mono t-griege">{{ 'ingredients.kicker' | t }}</p>
+    <h1 class="library__title t-display">
+      {{ 'ingredients.title_1' | t }}<br>
+      {{ 'ingredients.title_2' | t }}<br>
+      <span class="t-griege">{{ 'ingredients.title_3' | t }}</span>
+    </h1>
+    <p class="library__teaser t-smoke">{{ 'ingredients.teaser' | t }}</p>
+
+    <ol class="library__counts t-mono">
+      {%- for handle in handles -%}
+        {%- assign p = all_products[handle] -%}
+        {%- assign count = p.metafields.nexo.inci.value.size -%}
+        <li>
+          <span class="t-griege">+{{ forloop.index }}</span>
+          {{ count }}
+        </li>
+      {%- endfor -%}
+      <li class="library__counts-total">{{ 'ingredients.unique_count' | t: count: unique_count }}</li>
+    </ol>
+    <p class="library__gmp t-mono t-griege">{{ 'ingredients.gmp' | t }}</p>
+
+    <div class="library__search" data-library-search hidden>
+      <label class="visually-hidden" for="library-search-input">
+        {{ 'ingredients.search_label' | t }}
+      </label>
+      <input
+        id="library-search-input"
+        type="search"
+        data-library-input
+        placeholder="{{ 'ingredients.search_placeholder' | t }}"
+        autocomplete="off"
+      >
+      <p class="t-mono t-ghost" data-library-empty hidden>{{ 'ingredients.search_empty' | t }}</p>
+    </div>
+  </header>
+
+  {%- comment -%} ============ LEVEL 2 — the lens index ============ {%- endcomment -%}
+  <section class="library__index" data-library-index aria-label="{{ 'ingredients.kicker' | t }}">
+    <p class="t-mono t-ghost library__hint" data-library-hint>{{ 'ingredients.tap_hint' | t }}</p>
+
+    <div class="library__zone glass" data-lens-zone aria-hidden="true">
+      <span class="glass__caustic"></span>
+    </div>
+
+    <ol class="library__list">
+      {%- assign rendered = '||' -%}
+      {%- assign row_no = 0 -%}
+      {%- for handle in handles -%}
+        {%- assign p = all_products[handle] -%}
+        {%- for entry in p.metafields.nexo.inci.value -%}
+          {%- assign iname = entry[0] -%}
+          {%- assign key = '||' | append: iname | append: '||' -%}
+          {%- unless rendered contains key -%}
+            {%- assign rendered = rendered | append: iname | append: '||' -%}
+            {%- assign row_no = row_no | plus: 1 -%}
+            {%- assign fn = functions[iname] -%}
+            {%- assign fn_label = fn[lang] | default: fn.sv -%}
+            {%- assign found = '' -%}
+            {%- if blob_1 contains key -%}{%- assign found = found | append: ' +1' -%}{%- endif -%}
+            {%- if blob_2 contains key -%}{%- assign found = found | append: ' +2' -%}{%- endif -%}
+            {%- if blob_3 contains key -%}{%- assign found = found | append: ' +3' -%}{%- endif -%}
+            <li class="library__row" data-row data-search="{{ iname | downcase }}">
+              <button type="button" class="library__rowhead" data-row-toggle>
+                <span class="library__no t-mono t-ghost">{{ row_no | prepend: '0' | slice: -2, 2 }}</span>
+                <span class="library__name t-mono">{{ iname }}</span>
+                {%- if fn_label != blank -%}
+                  <span class="library__fn t-mono t-ghost">{{ fn_label }}</span>
+                {%- endif -%}
+                <span class="library__found t-mono t-griege">{{ found | strip }}</span>
+              </button>
+              <div class="library__explain" data-explain>
+                <p class="library__why">{{ entry[1] }}</p>
+                <p class="t-mono t-ghost">{{ 'ingredients.found_in' | t }}:{{ found }}</p>
+              </div>
+            </li>
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    </ol>
+  </section>
+
+  {%- comment -%} ============ LEVEL 3 — product context ============ {%- endcomment -%}
+  <section class="library__products" aria-label="{{ 'ingredients.per_product' | t }}">
+    <p class="t-mono t-griege library__products-kicker">{{ 'ingredients.per_product' | t }}</p>
+
+    {%- for handle in handles -%}
+      {%- assign p = all_products[handle] -%}
+      {%- assign step_index = forloop.index -%}
+      {%- assign k = 'one' -%}
+      {%- if step_index == 2 -%}{%- assign k = 'two' -%}{%- endif -%}
+      {%- if step_index == 3 -%}{%- assign k = 'three' -%}{%- endif -%}
+      {%- assign pbase = 'ritual.steps.' | append: k -%}
+      {%- assign pinci = p.metafields.nexo.inci.value -%}
+      <article class="library__product">
+        <header class="library__product-head">
+          <h2 class="library__product-name t-display">
+            {{ pbase | append: '.name_line_1' | t }}
+            {{ pbase | append: '.name_line_2' | t }}
+            <span class="step-mark">+{{ step_index }}</span>
+          </h2>
+          <p class="t-mono t-ghost">
+            {{ pbase | append: '.index' | t }} / {{ pbase | append: '.verb' | t }} ·
+            {{ pinci.size }}
+          </p>
+          {%- if p.url -%}
+            <a class="t-mono library__product-link" href="{{ p.url }}">
+              {{ 'ingredients.view_product' | t }} →
+            </a>
+          {%- endif -%}
+        </header>
+        <ol class="library__product-list">
+          {%- for entry in pinci -%}
+            <li class="library__product-row">
+              <span class="t-mono">{{ entry[0] }}</span>
+              <span class="t-smoke">{{ entry[1] }}</span>
+            </li>
+          {%- endfor -%}
+        </ol>
+      </article>
+    {%- endfor -%}
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "Ingredient library",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}
