@@ -76,20 +76,32 @@ Neither setting lives in this repo:
 2. Mail routing: `contact@hairtpclinic.com` forwards to
    `marknad@hairtpclinic.com` (Microsoft 365 admin).
 
-**OPEN — needs owner decision (legal text):** should the *published* address
-change too, or stay `contact@hairtpclinic.com`? It is published today in
-`theme/locales/sv.default.json` and `en.json` (`footer.email`) and in all four
-documents under `production/legal/`. Recommendation: keep
-`contact@hairtpclinic.com` published and forward it — "marknad" reads as
-marketing to a consumer, and no legal document has to be reissued. **Not
-changed pending decision.**
+**Published address CHANGED (2026-10-30, owner decision "byt allt"):** every
+customer-facing contact address in this repo is now `marknad@hairtpclinic.com`.
+Replaced in:
+- `theme/locales/sv.default.json` + `theme/locales/en.json` (`footer.email`)
+- `theme/README.md`
+- all four legal documents under `production/legal/` (kopvillkor,
+  integritetspolicy, returer-och-angerratt, frakt-och-leverans) and their README
+- `production/patientberattelser/samtycke.md` (was `info@ne8xo.com`, an address
+  used nowhere else)
+- the eight footer mock-ups under `preview/` (were `contact@ne8xo.com`)
 
-**Address inconsistencies found while checking (not changed):**
-- `production/patientberattelser/samtycke.md` names `info@ne8xo.com` — an
-  address used nowhere else in the project.
-- The eight files under `preview/` print `contact@ne8xo.com` in the footer,
-  while the live theme prints `contact@hairtpclinic.com`.
-- The physical labels carry `contact@ne8xo.com`, which the site never shows.
+**Deliberately NOT changed — say so if this should change too:**
+- `production/sources/hair-tp-eftervardsguide.md` — a source record of Hair TP
+  Clinic's own aftercare guide. Its footer is the clinic's real contact line,
+  not NEXO's. Rewriting a source document would corrupt the record.
+- `info@fazli.se` in `production/awards/submission-texts.md` and
+  `TILLVÄXTPLAN.md` — those are notes about which mailbox verifies award-site
+  account registrations, not an order or inquiry address.
+- The **printed labels** carry `contact@ne8xo.com`. Physical print cannot be
+  changed retroactively, so `contact@ne8xo.com` must keep resolving — point it
+  at `marknad@hairtpclinic.com` by forwarding, or mail sent from a bottle in a
+  customer's hand goes nowhere.
+
+**Legal note:** the four documents under `production/legal/` are published
+pages. After merge they have to be re-published in Shopify for the new address
+to take effect for customers — the repo change alone does not update a live page.
 
 ## Blocking (cannot launch without)
 
