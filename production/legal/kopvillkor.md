@@ -18,9 +18,9 @@ Vi erbjuder betalning med kort (Visa, Mastercard, American Express, Maestro, Uni
 
 Leverans sker med vår fraktpartner. Normal leveranstid är 2–4 arbetsdagar. Se sidan Frakt & leverans för detaljer. Risken för varan övergår till dig när du eller ombud mottagit den.
 
-## Ångerrätt och öppet köp
+## Ångerrätt
 
-Du har 14 dagars ångerrätt enligt distansavtalslagen. Utöver det erbjuder vi 30 dagars öppet köp. Båda förutsätter att produkten är oanvänd och att förseglingen är obruten — se sidan Returer & ångerrätt för fullständiga villkor och undantag för hygienprodukter.
+Du har 14 dagars ångerrätt enligt distansavtalslagen. Ångerrätten förutsätter att produkten är oanvänd och att förseglingen är obruten — se sidan Returer & ångerrätt för fullständiga villkor och undantag för hygienprodukter.
 
 ## Reklamation
 

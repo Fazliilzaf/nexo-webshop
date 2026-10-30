@@ -53,7 +53,7 @@ Nyhetsbrevsformuläret är Shopify-native — inga extra cookies.
 
 **Status: DRAFT — LEGAL REVIEW REQUIRED** på samtliga fyra. Granskning
 krävs särskilt kring: GDPR retention periods · hygienundantaget ·
-30 dagars frivilligt öppet köp kontra lagstadgad ångerrätt ·
+lagstadgad 14 dagars ångerrätt ·
 betalningsmetoder · shipping/returns · vilka personuppgiftsbiträden/
 mottagare som faktiskt används. Production-versionen måste matcha den
 verkliga Shopify/payment/shipping-stack vi slutligen väljer:
@@ -76,7 +76,8 @@ när stacken är låst.
   (ODR-referensen borttagen — plattformen nedlagd 2025-07-20.)
 - `frakt-och-leverans.md` — beslutad baseline: fri frakt ≥500 kr,
   2–4 arbetsdagar, kostnad under tröskeln anges i kassan.
-- `returer-och-angerratt.md` — 30 dagars öppet köp + lagens 14 dagar;
+- `returer-och-angerratt.md` — lagens 14 dagars ångerrätt (ägarbeslut
+  2026-10-30: inget frivilligt öppet köp utöver lagkravet);
   hygienundantaget för bruten försegling (2 kap. 11 § distansavtalslagen)
   — viktigt för kosmetika, skrivet in korrekt.
 

@@ -44,7 +44,8 @@ already be partially answered. Confirm before treating as final.
 - **Prices DECIDED (SEK incl. VAT):** +1 = 329 kr · +2 = 269 kr · +3 = 249 kr
   · Ritual bundle = 729 kr. Wired into `production/build.py`.
 - **Shipping/returns baseline approved:** Postnord/Instabox/Budbee · free
-  shipping ≥500 kr · 2–4 working days · 30 dagars öppet köp.
+  shipping ≥500 kr · 2–4 working days · returfrist 14 dagar
+  (see owner decision 2026-10-30 below).
 - **Shopify:** no account yet — owner creates (Basic plan suffices) and adds
   collaborator access. Then: configure → import → connect → verify → QA.
 
@@ -65,6 +66,17 @@ prints/stickers).
 sale) — optional later redirect. Domain sweep at connect-phase:
 canonical URLs, sitemap/robots, OG, JSON-LD, footer
 (contact@ne8xo.com now wired), mailto, label/site consistency.
+
+**Return window = 14 days (2026-10-30, owner decision "14"):** the voluntary
+30-day open-purchase promise is dropped. The return window is the statutory
+14-day right of withdrawal under distansavtalslagen, which matches the 14-day
+rule already configured in Shopify. The hygiene-seal exception
+(2 kap. 11 § distansavtalslagen) is unchanged. Replaced in:
+`production/legal/returer-och-angerratt.md`, `production/legal/kopvillkor.md`,
+`production/legal/README.md`, `theme/locales/sv.default.json`,
+`theme/locales/en.json`, and the footer badge of all 11 `preview/*.html`.
+Also republished in Shopify: the pages Returer & ångerrätt and Köpvillkor,
+and the Retur- och återbetalningspolicy.
 
 **Contact routing (2026-10-30, owner decision):** all order notifications and
 all customer inquiries are to be DELIVERED to `marknad@hairtpclinic.com`.
@@ -112,7 +124,7 @@ to take effect for customers — the repo change alone does not update a live pa
 | 3 | **Volume** of +2 Spray and +3 Cream (only +1 is known: 250 ml) | `— ml` |
 | 4 | **Company details**: legal name, org.nr, VAT nr, registered address, support email/phone | `[ORG]` tokens in the footer |
 | 5 | **Shipping**: carrier, rates, free-shipping threshold, delivery time, EU/international? | Free over 500 kr, 2–4 working days |
-| 6 | **Returns policy** — the brief assumes 30 days open purchase (Swedish market norm) | 30 dagars öppet köp |
+| 6 | ~~**Returns policy**~~ — DECIDED 2026-10-30: 14 dagar | 14 dagars ångerrätt |
 | 7 | **Domain** + Shopify plan | `nexo.se` assumed |
 
 ## Important (shapes the build)
