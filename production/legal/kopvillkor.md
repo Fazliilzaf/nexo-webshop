@@ -4,7 +4,7 @@ Dessa villkor gäller för köp hos Hair TP Clinic Gbg AB, org.nr 559034-2688, V
 
 ## Avtal
 
-När du slutför ett köp i kassan får du en orderbekräftelse per e-post. Köpeavtal ingås när vi skickar orderbekräftelsen. Du måste vara minst 18 år eller ha mångmans tillstånd för att handla.
+När du slutför ett köp i kassan får du en orderbekräftelse per e-post. Köpeavtal ingås när vi skickar orderbekräftelsen. Du måste vara minst 18 år eller ha målsmans tillstånd för att handla.
 
 ## Priser och moms
 
