@@ -18,7 +18,7 @@ Det här gäller:
 
 Jag förstår att:
 - Deltagandet är frivilligt och jag får ingen ersättning (om inte annat avtalats skriftligt)
-- Jag när som helst kan återkalla mitt samtycke genom att maila info@ne8xo.com, och att materialet då tas bort inom 30 dagar
+- Jag när som helst kan återkalla mitt samtycke genom att maila marknad@hairtpclinic.com, och att materialet då tas bort inom 30 dagar
 - Mina uppgifter hanteras enligt NEXO:s integritetspolicy
 
 Namn:

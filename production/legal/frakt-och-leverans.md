@@ -23,4 +23,4 @@ Paket som inte hämtas ut går i retur till oss. Vid utlöpt aviseringstid kan v
 
 ## Skador i transport
 
-Om paketet eller produkten är skadad vid mottagandet: kontakta contact@hairtpclinic.com direkt med foto och ordernummer, så löser vi det.
+Om paketet eller produkten är skadad vid mottagandet: kontakta marknad@hairtpclinic.com direkt med foto och ordernummer, så löser vi det.

@@ -14,7 +14,7 @@ Enligt distansavtalslagen har du alltid minst 14 dagars ångerrätt vid distansk
 
 ## Så returnerar du
 
-1. Kontakta contact@hairtpclinic.com med ordernummer och vilken produkt returen gäller.
+1. Kontakta marknad@hairtpclinic.com med ordernummer och vilken produkt returen gäller.
 2. Du får instruktioner och returadress per e-post.
 3. Skicka tillbaka produkten väl emballerad. Du ansvarar för returfrakten vid öppet köp/ångerrätt (vid godkänd reklamation står vi för frakten).
 4. När vi mottagit och kontrollerat returen återbetalar vi produktpriset samt den ursprungliga standardfrakten (vid ångerrätt) inom 14 dagar, via samma betalningsmetod som vid köpet.
