@@ -63,7 +63,7 @@ fraktmetoder listas aldrig i publicerad text förrän de är aktiverade.
 Fyra sidor i denna mapp, svenska (legal språk för svensk e-handel).
 EN-versioner översätts i connect-fasen från samma struktur.
 Företagsdata ifyllda 2026-08-31 (Hair TP Clinic Gbg AB, 559034-2688,
-SE559034268801, Vasaplasten 2, 411 34 Göteborg, contact@hairtpclinic.com)
+SE559034268801, Vasaplasten 2, 411 34 Göteborg, marknad@hairtpclinic.com)
 och sidorna publicerade i butiken. Juristgranskning rekommenderas
 fortfarande innan lansering. Betal- och fraktmetoder anges generiskt
 ("de alternativ som visas i kassan") tills de är aktiverade — specificera

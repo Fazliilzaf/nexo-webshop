@@ -59,7 +59,7 @@ no glass, no JS, only type, space and principles.
 Resolved 2026-08-31: product prices live in the store (329/269/249/729 kr,
 brush 299 kr), footer company details filled (Hair TP Clinic Gbg AB,
 559034-2688, SE559034268801, Vasaplasten 2, 411 34 Göteborg,
-contact@hairtpclinic.com), legal pages published with real content.
+marknad@hairtpclinic.com), legal pages published with real content.
 
 ## Pages to create in Shopify admin
 

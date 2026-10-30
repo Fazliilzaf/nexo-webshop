@@ -5,7 +5,7 @@ Den här integritetspolicyn beskriver hur Hair TP Clinic Gbg AB ("NEXO", "vi"), 
 ## Personuppgiftsansvarig
 
 Hair TP Clinic Gbg AB, org.nr 559034-2688, Vasaplasten 2, 411 34 Göteborg
-E-post: contact@hairtpclinic.com
+E-post: marknad@hairtpclinic.com
 
 ## Vilka uppgifter vi samlar in och varför
 
@@ -34,7 +34,7 @@ Vi använder endast cookies som krävs för att butiken ska fungera (varukorg, s
 
 ## Dina rättigheter
 
-Du har rätt att få tillgång till, rätta eller radera dina uppgifter, begränsa eller invända mot behandling, få ut dina uppgifter (dataportabilitet) och återkalla samtycken. Kontakta contact@hairtpclinic.com. Du kan också klaga till Integritetsskyddsmyndigheten (IMY), imy.se.
+Du har rätt att få tillgång till, rätta eller radera dina uppgifter, begränsa eller invända mot behandling, få ut dina uppgifter (dataportabilitet) och återkalla samtycken. Kontakta marknad@hairtpclinic.com. Du kan också klaga till Integritetsskyddsmyndigheten (IMY), imy.se.
 
 ## Ändringar
 

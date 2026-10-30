@@ -1,6 +1,6 @@
 # Köpvillkor — NEXO
 
-Dessa villkor gäller för köp hos Hair TP Clinic Gbg AB, org.nr 559034-2688, Vasaplasten 2, 411 34 Göteborg ("NEXO", "vi") via ne8xo.com. Kontakt: contact@hairtpclinic.com
+Dessa villkor gäller för köp hos Hair TP Clinic Gbg AB, org.nr 559034-2688, Vasaplasten 2, 411 34 Göteborg ("NEXO", "vi") via ne8xo.com. Kontakt: marknad@hairtpclinic.com
 
 ## Avtal
 
@@ -24,7 +24,7 @@ Du har 14 dagars ångerrätt enligt distansavtalslagen. Utöver det erbjuder vi 
 
 ## Reklamation
 
-Har du fått en felaktig eller skadad vara? Kontakta contact@hairtpclinic.com så snart som möjligt, gärna med ordernummer och foto. Du har enligt konsumentköplagen tre års reklamationsrätt på fel i varan. Vid godkänd reklamation står vi för returfrakten.
+Har du fått en felaktig eller skadad vara? Kontakta marknad@hairtpclinic.com så snart som möjligt, gärna med ordernummer och foto. Du har enligt konsumentköplagen tre års reklamationsrätt på fel i varan. Vid godkänd reklamation står vi för returfrakten.
 
 ## Tvist
 
