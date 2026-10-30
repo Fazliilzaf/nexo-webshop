@@ -67,6 +67,18 @@ sale) — optional later redirect. Domain sweep at connect-phase:
 canonical URLs, sitemap/robots, OG, JSON-LD, footer
 (contact@ne8xo.com now wired), mailto, label/site consistency.
 
+**No subscriptions for now (2026-10-30, owner decision "det ska jag inte som det ser ut just nu"):**
+NEXO does not sell subscriptions or other purchase options at this time. Verified
+on the live store: all five products return zero `selling_plan_groups`, so no
+customer can buy one. Consequence: Shopify's "Avbokningspolicy for kopalternativ",
+which the admin labels Obligatorisk, is NOT required — that label comes from the
+Appstle Subscription app being installed, not from Swedish law and not from any
+active purchase option. It blocks nothing and the store can launch without it.
+Appstle is on a free tier (no app charges on the billing invoices). Left installed;
+uninstalling it removes the label, and that is the owner's call. If subscriptions
+are introduced later, the interval, discount and cancellation terms are owner
+decisions and the policy must be written from them, never invented.
+
 **Return window = 14 days (2026-10-30, owner decision "14"):** the voluntary
 30-day open-purchase promise is dropped. The return window is the statutory
 14-day right of withdrawal under distansavtalslagen, which matches the 14-day
@@ -131,7 +143,7 @@ to take effect for customers — the repo change alone does not update a live pa
 
 | # | Question |
 |---|---------|
-| 8 | Subscription: which app/native selling plans, what discount, what interval? |
+| 8 | ~~Subscription~~ — DECIDED 2026-10-30: no subscriptions for now (see owner decision below) |
 | 9 | Email platform — Klaviyo, Shopify Email, something else? Affects the capture form. |
 | 10 | Do you want reviews (Judge.me / Okendo)? If so, reserve the PDP slot now. |
 | 11 | Cookie consent vendor (required for EU) — Cookiebot, Shopify's own, other? |
