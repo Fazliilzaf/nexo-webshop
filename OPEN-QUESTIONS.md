@@ -66,6 +66,31 @@ sale) — optional later redirect. Domain sweep at connect-phase:
 canonical URLs, sitemap/robots, OG, JSON-LD, footer
 (contact@ne8xo.com now wired), mailto, label/site consistency.
 
+**Contact routing (2026-10-30, owner decision):** all order notifications and
+all customer inquiries are to be DELIVERED to `marknad@hairtpclinic.com`.
+Neither setting lives in this repo:
+
+1. Shopify admin → Settings → Notifications → recipient for new orders =
+   `marknad@hairtpclinic.com`. Sender/reply-to stays on the `ne8xo.com` domain
+   for deliverability — only the recipient changes.
+2. Mail routing: `contact@hairtpclinic.com` forwards to
+   `marknad@hairtpclinic.com` (Microsoft 365 admin).
+
+**OPEN — needs owner decision (legal text):** should the *published* address
+change too, or stay `contact@hairtpclinic.com`? It is published today in
+`theme/locales/sv.default.json` and `en.json` (`footer.email`) and in all four
+documents under `production/legal/`. Recommendation: keep
+`contact@hairtpclinic.com` published and forward it — "marknad" reads as
+marketing to a consumer, and no legal document has to be reissued. **Not
+changed pending decision.**
+
+**Address inconsistencies found while checking (not changed):**
+- `production/patientberattelser/samtycke.md` names `info@ne8xo.com` — an
+  address used nowhere else in the project.
+- The eight files under `preview/` print `contact@ne8xo.com` in the footer,
+  while the live theme prints `contact@hairtpclinic.com`.
+- The physical labels carry `contact@ne8xo.com`, which the site never shows.
+
 ## Blocking (cannot launch without)
 
 | # | Question | Placeholder to use meanwhile |
